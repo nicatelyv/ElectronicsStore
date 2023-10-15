@@ -1,0 +1,174 @@
+@import "../../style.scss";
+
+nav {
+    @include themify($themes) {
+
+        width: 100%;
+        height: 80px;
+        background-color: themed("bg");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            width: 80%;
+            display: flex;
+            align-items: center;
+
+            h1 {
+                flex: 3;
+                color: themed("textColor");
+                font-family: 'Noto Serif', serif;
+
+                span {
+                    color: green;
+                }
+            }
+
+            .topnavUls {
+                flex: 8;
+                display: flex;
+                align-items: center;
+                color: themed("textColor");
+                font-family: 'DM Sans', sans-serif;
+                font-size: 18px;
+                gap: 20px;
+
+                a {
+                    color: themed("textColor");
+
+                    ul {
+                        display: flex;
+                    }
+                }
+
+                #navLi {
+                    cursor: pointer;
+                    position: relative;
+
+                    .dropdownMenu {
+                        display: none;
+
+                        #navLi2 {
+                            position: relative;
+                            color: themed("textColor");
+
+                            i {
+                                color: themed("textColorSoft");
+                                font-size: 12px;
+                            }
+
+                            .dropdownMenu2 {
+                                display: none;
+                            }
+                        }
+                    }
+
+                }
+
+                #navLi:first-child {
+                    background-color: green;
+                    width: 90px;
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    border-radius: 8px;
+                    color: white;
+                }
+
+                #navLi:hover {
+                    .dropdownMenu {
+                        display: block;
+                        background-color: themed("bg");
+                        position: absolute;
+                        min-width: 250px;
+                        padding: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 15px;
+                        left: -20px;
+                        top: 35px;
+                        border-radius: 8px;
+                        background-color: themed("bgSoft");
+
+                        li {
+                            width: 220px;
+                        }
+                    }
+
+                    #navLi2:hover {
+                        .dropdownMenu2 {
+                            background-color: themed("bg");
+                            position: absolute;
+                            min-width: 100px;
+                            padding: 20px;
+                            display: flex;
+                            justify-content: center;
+                            gap: 15px;
+                            left: 220px;
+                            top: -20px;
+                            background-color: themed("bgSoft");
+                            border-radius: 8px;
+                            border-top-left-radius: 0;
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+
+                                li {
+                                    width: 150px;
+                                    line-height: 22px;
+                                    color: themed("textColorSoft");
+                                }
+
+
+                                li:hover {
+                                    color: red;
+                                    transition: .2s;
+                                }
+
+                                li:first-child {
+                                    color: themed("textColor");
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+            .topnavRight {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                font-size: 17px;
+
+                i {
+                    color: themed("textColor");
+                }
+
+                #topnavCart {
+                    display: flex;
+                    position: relative;
+
+                    i {
+                        color: themed("textColor");
+                    }
+
+                    #cartCount {
+                        position: absolute;
+                        margin-left: 18px;
+                        top: -10px;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
