@@ -55,44 +55,254 @@ function Navbar() {
                                         <li>{t("SD kartlar")}</li>
                                         <li>{t("Micro kartlar")}</li>
                                     </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Qulaqlıqlar")}</li>
+                                        <li>{t("Apple")}</li>
+                                        <li>{t("Samsung")}</li>
+                                        <li>{t("Xiaomi")}</li>
+                                        <li>{t("Honor")}</li>
+                                        <li>{t("A4tech")}</li>
+                                        <li>{t("Baseus")}</li>
+                                        <li>{t("Beats")}</li>
+                                        <li>{t("Celebrat")}</li>
+                                        <li>{t("JBL")}</li>
+                                        <li>{t("Porodo")}</li>
+                                        <li>{t("QCY")}</li>
+                                        <li>{t("Remax")}</li>
+                                        <li>{t("Skullcandy")}</li>
+                                        <li>{t("TCL")}</li>
+                                        <li>{t("The House of Marley")}</li>
+                                        <li>{t("Aiwa")}</li>
+                                        <li>{t("Lenovo")}</li>
+                                        <li>{t("Borofone")}</li>
+                                    </ul>
                                 </ul>
                             </li>
 
                             <li id='navLi2'>{t("Böyük məişət texnikası")} <i class="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>İqlim</li>
-                                        <li>Kondisioner</li>
-                                        <li>Kombi sistemləri</li>
-                                        <li>Kombi aksesuarları</li>
-                                        <li>İran sobaları</li>
-                                        <li>Sərinkeş</li>
-                                        <li>Radiatorlar</li>
-                                        <li>Qızdırıcılar</li>
-                                        <li>Su qızdırıcı kalonkalar</li>
-                                        <li>Hava təmizləyicilər</li>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("İqlim")}</li>
+                                        <li>{t("Kondisioner")}</li>
+                                        <li>{t("Kombi sistemləri")}</li>
+                                        <li>{t("Kombi aksesuarları")}</li>
+                                        <li>{t("İran sobaları")}</li>
+                                        <li>{t("Sərinkeş")}</li>
+                                        <li>{t("Radiatorlar")}</li>
+                                        <li>{t("Qızdırıcılar")}</li>
+                                        <li>{t("Su qızdırıcı kalonkalar")}</li>
+                                        <li>{t("Hava təmizləyicilər")}</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>Stasionar</li>
-                                        <li>Soyuducu</li>
-                                        <li>Paltaryuyan maşınlar</li>
-                                        <li>Qabyuyanlar</li>
-                                        <li>Sobalar</li>
-                                        <li>Mikrodalğalı soba</li>
-                                        <li>Qurutma Maşınları</li>
-                                        <li>Dondurucu</li>
-                                        <li>Dispenser</li>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Stasionar")}</li>
+                                        <li>{t("Soyuducu")}</li>
+                                        <li>{t("Paltaryuyan maşınlar")}</li>
+                                        <li>{t("Qabyuyanlar")}</li>
+                                        <li>{t("Sobalar")}</li>
+                                        <li>{t("Mikrodalğalı soba")}</li>
+                                        <li>{t("Qurutma Maşınları")}</li>
+                                        <li>{t("Dondurucu")}</li>
+                                        <li>{t("Dispenser")}</li>
                                     </ul>
                                 </ul>
                             </li>
 
-                            <li id='navLi2'>{t("Kiçik məişət texnikası")} <i class="fa-solid fa-arrow-right-long"></i></li>
-                            <li id='navLi2'>{t("Tv və audio")} <i class="fa-solid fa-arrow-right-long"></i></li>
-                            <li id='navLi2'>{t("Foto texnika")} <i class="fa-solid fa-arrow-right-long"></i></li>
-                            <li id='navLi2'>{t("Notbuk, planşet və kompüter texnikası")} <i class="fa-solid fa-arrow-right-long"></i></li>
+                            <li id='navLi2'>{t("Kiçik məişət texnikası")} <i class="fa-solid fa-arrow-right-long"></i>
+                                <ul className='dropdownMenu2'>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mətbəx")}</li>
+                                        <li>{t("Ətçəkənlər")}</li>
+                                        <li>{t("Şirəçəkən")}</li>
+                                        <li>{t("Mikser")}</li>
+                                        <li>{t("Blenderlər")}</li>
+                                        <li>{t("Çaydanlar")}</li>
+                                        <li>{t("Multibişiricilər")}</li>
+                                        <li>{t("Tosterlər")}</li>
+                                        <li>{t("Qəhvəbişirənlər")}</li>
+                                        <li>{t("Mətbəx robotu")}</li>
+                                        <li>{t("Meyvə və tərəvəz qurudan")}</li>
+                                        <li>{t("Çörəkbişirənlər")}</li>
+                                        <li>{t("Fritozlar")}</li>
+                                        <li>{t("Qəhvə üyüdənlər")}</li>
+                                        <li>{t("Doğrayıcılar")}</li>
+                                        <li>{t("Buxarlı bişiricilər")}</li>
+                                        <li>{t("Elektrikli sac")}</li>
+                                        <li>{t('Su filtri')}</li>
+                                        <li>{t('Termopotlar')}</li>
+                                        <li>{t('Samovarlar')}</li>
+                                        <li>{t('Popkorn bişiricisi')}</li>
+                                        <li>{t("Buz generatorları")}</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Robot tozsoranlar")}</li>
+                                        <li>Xiaomi</li>
+                                        <li>Kyvol</li>
+                                        <li>Roborock</li>
+                                        <li>Eufy</li>
+                                        <li>Samsung</li>
+                                        <li>Yeedi</li>
+                                        <li>Ecovacs</li>
+                                        <li>Fakir</li>
+                                        <li>Tefal</li>
+                                        <li>Karcher</li>
+                                        <li>Viomi</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Tozsoran")}</li>
+                                        <li>Hotpoint Ariston</li>
+                                        <li>Panasonic</li>
+                                        <li>Samsung</li>
+                                        <li>Xiaomi</li>
+                                        <li>LG</li>
+                                        <li>Fakir</li>
+                                        <li>Philips</li>
+                                        <li>Rowenta</li>
+                                        <li>Karcher</li>
+                                        <li>Tefal</li>
+                                        <li>Bort</li>
+                                        <li>Baseus</li>
+                                        <li>Bosch</li>
+                                        <li>Hitachi</li>
+                                        <li>Essen</li>
+                                        <li>Bort</li>
+                                        <li>Robert</li>
+                                        <li>Kenwood</li>
+                                        <li>BQ</li>
+                                        <li>Franko</li>
+                                        <li>Sem</li>
+                                        <li>Arnica</li>
+                                        <li>Sencor</li>
+                                        <li>Gorenje</li>
+                                        <li>Goldmaster</li>
+                                        <li>Viomi</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Qab-qacaq")}</li>
+                                        <li>{t("Qazanlar")}</li>
+                                        <li>{t("Tavalar")}</li>
+                                        <li>{t('Bıçaqlar')}</li>
+                                        <li>{t('Çörəkqabı')}</li>
+                                        <li>{t("Termoslar")}</li>
+                                        <li>{t("Mətbəx ləvazimatları")}</li>
+                                        <li>{t("Yemək dəsti")}</li>
+                                        <li>{t("Cehizlik dəst")}</li>
+                                    </ul>
+                                </ul>
+                            </li>
+
+                            <li id='navLi2'>{t("Tv və audio")} <i class="fa-solid fa-arrow-right-long"></i>
+                                <ul className='dropdownMenu2'>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Televizorlar")}</li>
+                                        <li>Taube</li>
+                                        <li>LG</li>
+                                        <li>Samsung</li>
+                                        <li>Arçelik</li>
+                                        <li>JVC</li>
+                                        <li>AIWA</li>
+                                        <li>Xiaomi</li>
+                                        <li>Hisense</li>
+                                        <li>TCL</li>
+                                        <li>Artel</li>
+                                        <li>Tesla</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Televizor aksesuarları")}</li>
+                                        <li>{t("TV Box")}</li>
+                                        <li>{t("TV çərçivələri")}</li>
+                                        <li>{t("Kronşteyn")}</li>
+                                        <li>{t("HDMİ Kabellər")}</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Səs-akustika")}</li>
+                                        <li>{t("Səs gücləndiricilər")}</li>
+                                        <li>{t("Qulaqlıq aksesuarları")}</li>
+                                        <li>{t("Pioneer aksesuarları")}</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li id='navLi2'>{t("Foto texnika")} <i class="fa-solid fa-arrow-right-long"></i>
+                                <ul className='dropdownMenu2'>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Fotoaparatlar")}</li>
+                                        <li>Canon</li>
+                                        <li>Fujifilm</li>
+                                        <li>Nikon</li>
+                                        <li>Jabra</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Foto aksesuarlar")}</li>
+                                        <li>Manfrotto</li>
+                                        <li>Joby</li>
+                                        <li>Vanguard</li>
+                                        <li>Jabra</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Linzalar")}</li>
+                                        <li>Nikon</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li id='navLi2'>{t("Notbuk və kompüter texnikası")} <i class="fa-solid fa-arrow-right-long"></i>
+                                <ul className='dropdownMenu2'>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Notbuklar")}</li>
+                                        <li>Apple</li>
+                                        <li>Asus</li>
+                                        <li>Acer</li>
+                                        <li>Dell</li>
+                                        <li>HP</li>
+                                        <li>Honor</li>
+                                        <li>Lenovo</li>
+                                        <li>MSI</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Masaüstü kompüterlər")}</li>
+                                        <li>HP</li>
+                                        <li>Lenovo</li>
+                                        <li>Asus</li>
+                                        <li>Dell</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Monitorlar")}</li>
+                                        <li>Acer</li>
+                                        <li>AOC</li>
+                                        <li>Asus</li>
+                                        <li>Philips</li>
+                                        <li>Dell</li>
+                                        <li>HP</li>
+                                        <li>Lenovo</li>
+                                        <li>Xiaomi</li>
+                                        <li>Samsung</li>
+                                        <li>X-Game</li>
+                                    </ul>
+                                    <ul>
+                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Kompüter aksesuarları")}</li>
+                                        <li>{t("Qulaqlıq")}</li>
+                                        <li>{t("Klaviatura")}</li>
+                                        <li>{t("Mouse")}</li>
+                                        <li>{t("Mousepad")}</li>
+                                        <li>{t("Kamera")}</li>
+                                        <li>{t("Modem")}</li>
+                                        <li>{t("Portativ HDD")}</li>
+                                        <li>{t("SSD")}</li>
+                                        <li>{t("USB Flash")}</li>
+                                        <li>{t("Notbuk üçün soyuducu altlıq")}</li>
+                                        <li>{t("Antiviruslar")}</li>
+                                        <li>{t("Mikrofon")}</li>
+                                        <li>{t("Təmizlik vasitələri")}</li>
+                                        <li>{t("Monitor üçün işıq")}</li>
+                                        <li>{t("USB Hub")}</li>
+                                        <li>{t("Monitor üçün altlıq")}</li>
+                                        <li>{t("Printer üçün kabel")}</li>
+                                        <li>{t("Monitor üçün kronşteyn")}</li>
+                                    </ul>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <NavLink to={"/magazalar"}><li>{t('Mağazalar')}</li></NavLink>
+                    <input type="text" placeholder={t("Axtarış")} />
                 </ul>
                 <div className='topnavRight'>
                     <div id='topnavCart'>
