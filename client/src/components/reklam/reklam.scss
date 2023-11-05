@@ -1,0 +1,17 @@
+.reklamDiv {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        width: 50%;
+        height: 20vh;
+
+        img {
+            width: 100%;
+            height: 20vh;
+        }
+    }
+}

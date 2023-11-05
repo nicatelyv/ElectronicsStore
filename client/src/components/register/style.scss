@@ -1,0 +1,187 @@
+@import "../../style.scss";
+
+i {
+    color: gray;
+}
+
+.errorInp {
+    border: 1px solid red;
+}
+
+.registerPage {
+    @include themify($themes) {
+        width: 100%;
+        height: 100vh;
+        background-color: themed("bgSoft");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .registerMain {
+            margin-top: 80px;
+            width: 450px;
+            min-height: 600px;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            justify-content: center;
+
+            .formDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 80%;
+
+                Form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+
+                    #haveaccount {
+                        color: #85a9c9;
+                    }
+
+                    #first_last_name {
+                        margin-top: 20px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        overflow: hidden;
+
+                        #frstNameDiv {
+                            display: flex;
+                            flex-direction: column;
+                            width: 45%;
+                            gap: 5px;
+
+                            .errorInp {
+                                border-bottom: 2px solid red;
+                            }
+
+                            input {
+                                outline: none;
+                                border: none;
+                                border-bottom: 1px solid black;
+                                width: 100%;
+                            }
+                        }
+
+                        #lstNameDiv {
+                            width: 45%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+
+                            .errorInp {
+                                border-bottom: 2px solid red;
+                            }
+
+                            input {
+                                outline: none;
+                                border: none;
+                                border-bottom: 1px solid black;
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .email_usrname_password {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+
+                        #inputDiv {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .errorInp {
+                                border-bottom: 2px solid red;
+                            }
+
+                            input {
+                                margin-top: 5px;
+                                outline: none;
+                                border: none;
+                                border-bottom: 1px solid black;
+                            }
+                        }
+                    }
+
+                    #submitbtn {
+                        width: 150px;
+                        height: 40px;
+                        border: 1px solid gray;
+                        background: none;
+                        border-radius: 15px;
+                        font-size: 15px;
+                        color: black;
+                        cursor: pointer;
+                    }
+
+                    #submitbtn:hover {
+                        background-color: rgb(166, 202, 233);
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .registerPage {
+        .registerMain {
+            width: 350px;
+            min-height: 600px;
+            transition: 1s;
+
+            .formDiv {
+                width: 80%;
+
+                Form {
+                    gap: 10px;
+                    width: 100%;
+
+                    #first_last_name {
+                        flex-direction: column;
+
+                        #frstNameDiv {
+                            width: 100%;
+                        }
+
+                        #lstNameDiv {
+                            margin-top: 10px;
+                            width: 100%;
+                        }
+                    }
+
+                    .email_usrname_password {
+                        margin-top: 10px;
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .registerPage {
+        .registerMain {
+            width: 85%;
+
+            .formDiv {
+                width: 85%;
+            }
+        }
+    }
+}

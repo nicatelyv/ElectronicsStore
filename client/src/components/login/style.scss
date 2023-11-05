@@ -1,0 +1,130 @@
+@import "../../style.scss";
+
+i {
+    color: gray;
+}
+
+.loginPage {
+    @include themify($themes) {
+
+        width: 100%;
+        height: 100vh;
+        background-color: themed("bgSoft");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .loginMain {
+            margin-top: 80px;
+            width: 350px;
+            min-height: 450px;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            justify-content: center;
+
+            .formDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 90%;
+                gap: 10px;
+
+                Form {
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+
+                    #havenotaccount {
+                        color: #85a9c9;
+                    }
+
+                    .login_usrname_password {
+                        margin-top: 10px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+
+                        #loginDiv {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .errorInp {
+                                border-bottom: 2px solid red;
+                            }
+
+                            input {
+                                margin-top: 5px;
+                                outline: none;
+                                border: none;
+                                border-bottom: 1px solid black;
+                            }
+                        }
+                    }
+
+                    #submitbtn {
+                        width: 150px;
+                        height: 40px;
+                        border: 1px solid gray;
+                        background: none;
+                        border-radius: 15px;
+                        font-size: 15px;
+                        color: black;
+                        cursor: pointer;
+                    }
+
+                    #submitbtn:hover {
+                        background-color: rgb(166, 202, 233);
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .loginPage {
+        .loginMain {
+            min-height: 400px;
+            transition: 1s;
+
+            .formDiv {
+                width: 80%;
+                gap: 15px;
+
+                Form {
+                    gap: 20px;
+                    width: 100%;
+
+                    .login_usrname_password {
+                        margin-top: 10px;
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .loginPage {
+        .loginMain {
+            width: 85%;
+
+            .formDiv {
+                width: 85%;
+            }
+        }
+    }
+}

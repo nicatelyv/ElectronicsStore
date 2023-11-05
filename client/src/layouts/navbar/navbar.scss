@@ -9,7 +9,7 @@ nav {
         align-items: center;
         justify-content: center;
         position: fixed;
-        z-index: 3;
+        z-index: 11;
 
         .container {
             width: 80%;
@@ -35,7 +35,7 @@ nav {
                 align-items: center;
                 color: themed("textColor");
                 font-family: 'DM Sans', sans-serif;
-                font-size: 18px;
+                font-size: 16px;
                 gap: 20px;
 
                 input {
@@ -174,8 +174,26 @@ nav {
                 gap: 20px;
                 font-size: 17px;
 
+                h3 {
+                    color: themed("textColor");
+                    position: relative;
+
+                    h4 {
+                        display: none;
+                    }
+                }
+                h3:hover{
+                    h4{
+                        position: absolute;
+                        display: block;
+                        color: themed("textColor");
+                        font-size: 18px;
+                    }
+                }
+
                 i {
                     color: themed("textColor");
+                    cursor: pointer;
                 }
 
                 #topnavCart {

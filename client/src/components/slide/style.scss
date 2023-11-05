@@ -1,0 +1,28 @@
+@import "../../style.scss";
+
+.each-slide-effect>div {
+    @include themify($themes) {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        justify-content: flex-start;
+        background-size: cover;
+        width: 100%;
+        height: 80vh;
+        margin-top: 80px;
+    }
+}
+
+.each-slide-effect span {
+    @include themify($themes) {
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+    }
+}
+
+.slideShow {
+    width: 100%;
+    float: right;
+}

@@ -21,7 +21,7 @@ function Navbar() {
                     <li id='navLi'>{t('Kataloq')}
                         <ul className='dropdownMenu'>
 
-                            <li id='navLi2'>{t("Telefon və aksesuarlar")} <i class="fa-solid fa-arrow-right-long"></i>
+                            <li id='navLi2'>{t("Telefon və aksesuarlar")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mobil telefonlar")}</li>
@@ -79,7 +79,7 @@ function Navbar() {
                                 </ul>
                             </li>
 
-                            <li id='navLi2'>{t("Böyük məişət texnikası")} <i class="fa-solid fa-arrow-right-long"></i>
+                            <li id='navLi2'>{t("Böyük məişət texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("İqlim")}</li>
@@ -107,7 +107,7 @@ function Navbar() {
                                 </ul>
                             </li>
 
-                            <li id='navLi2'>{t("Kiçik məişət texnikası")} <i class="fa-solid fa-arrow-right-long"></i>
+                            <li id='navLi2'>{t("Kiçik məişət texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mətbəx")}</li>
@@ -190,7 +190,7 @@ function Navbar() {
                                 </ul>
                             </li>
 
-                            <li id='navLi2'>{t("Tv və audio")} <i class="fa-solid fa-arrow-right-long"></i>
+                            <li id='navLi2'>{t("Tv və audio")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Televizorlar")}</li>
@@ -221,7 +221,7 @@ function Navbar() {
                                     </ul>
                                 </ul>
                             </li>
-                            <li id='navLi2'>{t("Foto texnika")} <i class="fa-solid fa-arrow-right-long"></i>
+                            <li id='navLi2'>{t("Foto texnika")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Fotoaparatlar")}</li>
@@ -243,7 +243,7 @@ function Navbar() {
                                     </ul>
                                 </ul>
                             </li>
-                            <li id='navLi2'>{t("Notbuk və kompüter texnikası")} <i class="fa-solid fa-arrow-right-long"></i>
+                            <li id='navLi2'>{t("Notbuk və kompüter texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Notbuklar")}</li>
@@ -305,6 +305,12 @@ function Navbar() {
                     <input type="text" placeholder={t("Axtarış")} />
                 </ul>
                 <div className='topnavRight'>
+                    {localStorage.getItem("username") ?
+                        <NavLink to={"/my-account"}><h3>{localStorage.getItem("firstName")}
+                            <NavLink to={"/logout"}><h4>{t("Çıxış")}</h4></NavLink>
+                        </h3></NavLink>
+                        : <NavLink to={"/login"}><i className="fa-solid fa-user"></i></NavLink>
+                    }
                     <div id='topnavCart'>
                         <i className="fa-solid fa-cart-shopping"></i>
                         <p id='cartCount'>0</p>
