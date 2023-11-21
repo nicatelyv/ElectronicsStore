@@ -14,7 +14,7 @@ const SlideShow = () => {
             >
                 <div className="each-slide-effect">
                     <div style={{ backgroundImage: 'url(https://www.91-cdn.com/hub/wp-content/uploads/2023/09/iphone-15-battery-life.jpg)' }}>
-                        <span>New Iphone 15 Pro</span>
+                        {/* <span>New Iphone 15 Pro</span> */}
                     </div>
                 </div>
                 <div className="each-slide-effect">

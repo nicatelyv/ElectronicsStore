@@ -1,17 +1,40 @@
+@import "../../style.scss";
+
 .reklamDiv {
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include themify($themes) {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: themed("bg");
+        transition: .5s;
 
-    a {
-        width: 50%;
-        height: 20vh;
-
-        img {
-            width: 100%;
+        @include tablet {
             height: 20vh;
+        }
+        @include mobile {
+            height: 15vh;
+        }
+
+        a {
+            width: 50%;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: 20vh;
+
+                @include tablet {
+                    height: 10vh;
+                }
+                @include mobile {
+                    height: 7vh;
+                }
+            }
         }
     }
 }

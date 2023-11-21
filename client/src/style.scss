@@ -54,8 +54,8 @@ $themes: (
     }
 }
 
-// html{
-//     @include themify($themes){
-//         background-color: themed("bg");
-//     }
-// }
+html {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+}

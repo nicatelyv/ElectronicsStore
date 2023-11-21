@@ -24,7 +24,7 @@ function Navbar() {
                             <li id='navLi2'>{t("Telefon və aksesuarlar")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mobil telefonlar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mobil telefonlar")}</li>
                                         <li>Apple</li>
                                         <li>OPPO</li>
                                         <li>Samsung</li>
@@ -36,7 +36,7 @@ function Navbar() {
                                         <li>Honor</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Planşetlər")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Planşetlər")}</li>
                                         <li>Apple</li>
                                         <li>OPPO</li>
                                         <li>Samsung</li>
@@ -44,7 +44,7 @@ function Navbar() {
                                         <li>Blackview</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Telefon aksessuarları")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Telefon aksessuarları")}</li>
                                         <li>{t("Qoruyucu şüşə")}</li>
                                         <li>{t("Simsiz enerji toplama cihazı")}</li>
                                         <li>{t("Qoruyucu örtük")}</li>
@@ -56,7 +56,7 @@ function Navbar() {
                                         <li>{t("Micro kartlar")}</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Qulaqlıqlar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Qulaqlıqlar")}</li>
                                         <li>{t("Apple")}</li>
                                         <li>{t("Samsung")}</li>
                                         <li>{t("Xiaomi")}</li>
@@ -82,7 +82,7 @@ function Navbar() {
                             <li id='navLi2'>{t("Böyük məişət texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("İqlim")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("İqlim")}</li>
                                         <li>{t("Kondisioner")}</li>
                                         <li>{t("Kombi sistemləri")}</li>
                                         <li>{t("Kombi aksesuarları")}</li>
@@ -94,7 +94,7 @@ function Navbar() {
                                         <li>{t("Hava təmizləyicilər")}</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Stasionar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Stasionar")}</li>
                                         <li>{t("Soyuducu")}</li>
                                         <li>{t("Paltaryuyan maşınlar")}</li>
                                         <li>{t("Qabyuyanlar")}</li>
@@ -110,7 +110,7 @@ function Navbar() {
                             <li id='navLi2'>{t("Kiçik məişət texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mətbəx")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mətbəx")}</li>
                                         <li>{t("Ətçəkənlər")}</li>
                                         <li>{t("Şirəçəkən")}</li>
                                         <li>{t("Mikser")}</li>
@@ -134,7 +134,7 @@ function Navbar() {
                                         <li>{t("Buz generatorları")}</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Robot tozsoranlar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Robot tozsoranlar")}</li>
                                         <li>Xiaomi</li>
                                         <li>Kyvol</li>
                                         <li>Roborock</li>
@@ -148,7 +148,7 @@ function Navbar() {
                                         <li>Viomi</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Tozsoran")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Tozsoran")}</li>
                                         <li>Hotpoint Ariston</li>
                                         <li>Panasonic</li>
                                         <li>Samsung</li>
@@ -177,7 +177,7 @@ function Navbar() {
                                         <li>Viomi</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Qab-qacaq")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Qab-qacaq")}</li>
                                         <li>{t("Qazanlar")}</li>
                                         <li>{t("Tavalar")}</li>
                                         <li>{t('Bıçaqlar')}</li>
@@ -193,7 +193,7 @@ function Navbar() {
                             <li id='navLi2'>{t("Tv və audio")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Televizorlar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Televizorlar")}</li>
                                         <li>Taube</li>
                                         <li>LG</li>
                                         <li>Samsung</li>
@@ -207,14 +207,14 @@ function Navbar() {
                                         <li>Tesla</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Televizor aksesuarları")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Televizor aksesuarları")}</li>
                                         <li>{t("TV Box")}</li>
                                         <li>{t("TV çərçivələri")}</li>
                                         <li>{t("Kronşteyn")}</li>
                                         <li>{t("HDMİ Kabellər")}</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Səs-akustika")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Səs-akustika")}</li>
                                         <li>{t("Səs gücləndiricilər")}</li>
                                         <li>{t("Qulaqlıq aksesuarları")}</li>
                                         <li>{t("Pioneer aksesuarları")}</li>
@@ -224,21 +224,21 @@ function Navbar() {
                             <li id='navLi2'>{t("Foto texnika")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Fotoaparatlar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Fotoaparatlar")}</li>
                                         <li>Canon</li>
                                         <li>Fujifilm</li>
                                         <li>Nikon</li>
                                         <li>Jabra</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Foto aksesuarlar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Foto aksesuarlar")}</li>
                                         <li>Manfrotto</li>
                                         <li>Joby</li>
                                         <li>Vanguard</li>
                                         <li>Jabra</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Linzalar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Linzalar")}</li>
                                         <li>Nikon</li>
                                     </ul>
                                 </ul>
@@ -246,7 +246,7 @@ function Navbar() {
                             <li id='navLi2'>{t("Notbuk və kompüter texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
                                 <ul className='dropdownMenu2'>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Notbuklar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Notbuklar")}</li>
                                         <li>Apple</li>
                                         <li>Asus</li>
                                         <li>Acer</li>
@@ -257,14 +257,14 @@ function Navbar() {
                                         <li>MSI</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Masaüstü kompüterlər")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Masaüstü kompüterlər")}</li>
                                         <li>HP</li>
                                         <li>Lenovo</li>
                                         <li>Asus</li>
                                         <li>Dell</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Monitorlar")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Monitorlar")}</li>
                                         <li>Acer</li>
                                         <li>AOC</li>
                                         <li>Asus</li>
@@ -277,7 +277,7 @@ function Navbar() {
                                         <li>X-Game</li>
                                     </ul>
                                     <ul>
-                                        <li style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "10px" }}>{t("Kompüter aksesuarları")}</li>
+                                        <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Kompüter aksesuarları")}</li>
                                         <li>{t("Qulaqlıq")}</li>
                                         <li>{t("Klaviatura")}</li>
                                         <li>{t("Mouse")}</li>
@@ -301,7 +301,7 @@ function Navbar() {
                             </li>
                         </ul>
                     </li>
-                    <NavLink to={"/magazalar"}><li>{t('Mağazalar')}</li></NavLink>
+                    <NavLink to={"/magazalar"}><li id='stores'>{t('Mağazalar')}</li></NavLink>
                     <input type="text" placeholder={t("Axtarış")} />
                 </ul>
                 <div className='topnavRight'>
@@ -319,6 +319,7 @@ function Navbar() {
                     {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
                     <Languageoption onChange={e => handleClick(e)} />
                 </div>
+                <div className="darkmode"><Languageoption onChange={e => handleClick(e)} /> {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}</div>
             </div>
         </nav>
     )
