@@ -3,15 +3,19 @@ $themes: (
         bg: white,
         logo:darkblue,
         bgSoft: #f6f3f3,
+        bgSoft2: #eaeaea,
         textColorSoft: #555,
         border: lightgray,
+        green-lightgreen: green,
     ),
     dark:(textColor: whitesmoke,
         bg: #222,
         logo:white,
         bgSoft: #333,
+        bgSoft2: #2e2e2e,
         textColorSoft: lightgray,
         border: #444,
+        green-lightgreen: lightgreen,
     ),
 );
 
@@ -55,7 +59,7 @@ $themes: (
 }
 
 html {
-        &::-webkit-scrollbar {
-            display: none;
-        }
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }

@@ -130,6 +130,71 @@ nav {
                         border-radius: 8px;
                         background-color: themed("bgSoft");
                         font-size: 14px;
+                        min-height: 230px;
+
+                        @include tablet {
+                            min-height: 350px;
+                            gap: 20px;
+                        }
+
+
+                        #navLi2:nth-child(1):hover {
+                            .dropdownMenu2 {
+                                @include tablet {
+                                    top: -65px;
+                                }
+                            }
+                        }
+
+                        #navLi2:nth-child(2):hover {
+                            .dropdownMenu2 {
+                                top: -53px;
+
+                                @include tablet {
+                                    top: -103px;
+                                }
+                            }
+                        }
+
+                        #navLi2:nth-child(3):hover {
+                            .dropdownMenu2 {
+                                top: -85px;
+
+                                @include tablet {
+                                    top: -141px;
+                                }
+                            }
+                        }
+
+                        #navLi2:nth-child(4):hover {
+                            .dropdownMenu2 {
+                                top: -118px;
+
+                                @include tablet {
+                                    top: -177px;
+                                }
+                            }
+                        }
+
+                        #navLi2:nth-child(5):hover {
+                            .dropdownMenu2 {
+                                top: -150px;
+
+                                @include tablet {
+                                    top: -215px;
+                                }
+                            }
+                        }
+
+                        #navLi2:nth-child(6):hover {
+                            .dropdownMenu2 {
+                                top: -183px;
+
+                                @include tablet {
+                                    top: -253px;
+                                }
+                            }
+                        }
 
                         @include tablet {
                             overflow: auto;
@@ -150,8 +215,9 @@ nav {
                     }
 
                     #navLi2:hover {
+                        color: themed("green-lightgreen");
+
                         .dropdownMenu2 {
-                            background-color: themed("bg");
                             position: absolute;
                             min-width: 100px;
                             padding: 20px;
@@ -160,12 +226,14 @@ nav {
                             gap: 20px;
                             left: 200px;
                             top: -20px;
-                            background-color: themed("bgSoft");
+                            background-color: themed("bgSoft2");
                             border-radius: 8px;
                             border-top-left-radius: 0;
                             font-size: 14px;
+                            min-height: 238px;
 
                             @include mobile {
+                                min-height: 350px;
                                 gap: 10px;
                             }
 
@@ -176,7 +244,7 @@ nav {
                                 padding-left: 10px;
 
                                 li {
-                                    width: 150px;
+                                    width: 100px;
                                     line-height: 22px;
                                     color: themed("textColorSoft");
                                     list-style: disc;
