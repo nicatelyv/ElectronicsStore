@@ -96,21 +96,26 @@ i {
 
 @media only screen and (max-width: 600px) {
     .loginPage {
-        .loginMain {
-            min-height: 400px;
-            transition: 1s;
+        @include themify($themes) {
+            height: 80vh;
 
-            .formDiv {
-                width: 80%;
-                gap: 15px;
+            .loginMain {
+                min-height: 400px;
+                transition: 1s;
+                margin-top: 0;
 
-                Form {
-                    gap: 20px;
-                    width: 100%;
+                .formDiv {
+                    width: 80%;
+                    gap: 15px;
 
-                    .login_usrname_password {
-                        margin-top: 10px;
+                    Form {
                         gap: 20px;
+                        width: 100%;
+
+                        .login_usrname_password {
+                            margin-top: 10px;
+                            gap: 20px;
+                        }
                     }
                 }
             }
@@ -120,11 +125,13 @@ i {
 
 @media only screen and (max-width: 450px) {
     .loginPage {
-        .loginMain {
-            width: 85%;
-
-            .formDiv {
+        @include themify($themes) {
+            .loginMain {
                 width: 85%;
+
+                .formDiv {
+                    width: 85%;
+                }
             }
         }
     }

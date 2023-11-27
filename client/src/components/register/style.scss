@@ -140,34 +140,39 @@ i {
 
 @media only screen and (max-width: 600px) {
     .registerPage {
-        .registerMain {
-            width: 350px;
-            min-height: 600px;
-            transition: 1s;
+        @include themify($themes) {
+            height: 90vh;
 
-            .formDiv {
-                width: 80%;
+            .registerMain {
+                width: 350px;
+                min-height: 600px;
+                transition: 1s;
+                margin-top: 0px;
 
-                Form {
-                    gap: 10px;
-                    width: 100%;
+                .formDiv {
+                    width: 80%;
 
-                    #first_last_name {
-                        flex-direction: column;
+                    Form {
+                        gap: 10px;
+                        width: 100%;
 
-                        #frstNameDiv {
-                            width: 100%;
+                        #first_last_name {
+                            flex-direction: column;
+
+                            #frstNameDiv {
+                                width: 100%;
+                            }
+
+                            #lstNameDiv {
+                                margin-top: 10px;
+                                width: 100%;
+                            }
                         }
 
-                        #lstNameDiv {
+                        .email_usrname_password {
                             margin-top: 10px;
-                            width: 100%;
+                            gap: 20px;
                         }
-                    }
-
-                    .email_usrname_password {
-                        margin-top: 10px;
-                        gap: 20px;
                     }
                 }
             }
@@ -177,11 +182,13 @@ i {
 
 @media only screen and (max-width: 450px) {
     .registerPage {
-        .registerMain {
-            width: 85%;
-
-            .formDiv {
+        @include themify($themes) {
+            .registerMain {
                 width: 85%;
+
+                .formDiv {
+                    width: 85%;
+                }
             }
         }
     }

@@ -64,14 +64,10 @@ function Navbar() {
                                         <li>{t("A4tech")}</li>
                                         <li>{t("Baseus")}</li>
                                         <li>{t("Beats")}</li>
-                                        <li>{t("Celebrat")}</li>
                                         <li>{t("JBL")}</li>
-                                        <li>{t("Porodo")}</li>
                                         <li>{t("QCY")}</li>
                                         <li>{t("Remax")}</li>
-                                        <li>{t("Skullcandy")}</li>
                                         <li>{t("TCL")}</li>
-                                        <li>{t("The House of Marley")}</li>
                                         <li>{t("Aiwa")}</li>
                                         <li>{t("Lenovo")}</li>
                                         <li>{t("Borofone")}</li>
@@ -118,20 +114,13 @@ function Navbar() {
                                         <li>{t("Çaydanlar")}</li>
                                         <li>{t("Multibişiricilər")}</li>
                                         <li>{t("Tosterlər")}</li>
-                                        <li>{t("Qəhvəbişirənlər")}</li>
                                         <li>{t("Mətbəx robotu")}</li>
-                                        <li>{t("Meyvə və tərəvəz qurudan")}</li>
-                                        <li>{t("Çörəkbişirənlər")}</li>
                                         <li>{t("Fritozlar")}</li>
-                                        <li>{t("Qəhvə üyüdənlər")}</li>
                                         <li>{t("Doğrayıcılar")}</li>
                                         <li>{t("Buxarlı bişiricilər")}</li>
                                         <li>{t("Elektrikli sac")}</li>
                                         <li>{t('Su filtri')}</li>
-                                        <li>{t('Termopotlar')}</li>
                                         <li>{t('Samovarlar')}</li>
-                                        <li>{t('Popkorn bişiricisi')}</li>
-                                        <li>{t("Buz generatorları")}</li>
                                     </ul>
                                     <ul>
                                         <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Robot tozsoranlar")}</li>
@@ -156,25 +145,14 @@ function Navbar() {
                                         <li>LG</li>
                                         <li>Fakir</li>
                                         <li>Philips</li>
-                                        <li>Rowenta</li>
                                         <li>Karcher</li>
                                         <li>Tefal</li>
-                                        <li>Bort</li>
                                         <li>Baseus</li>
                                         <li>Bosch</li>
                                         <li>Hitachi</li>
-                                        <li>Essen</li>
-                                        <li>Bort</li>
-                                        <li>Robert</li>
                                         <li>Kenwood</li>
-                                        <li>BQ</li>
-                                        <li>Franko</li>
-                                        <li>Sem</li>
                                         <li>Arnica</li>
-                                        <li>Sencor</li>
                                         <li>Gorenje</li>
-                                        <li>Goldmaster</li>
-                                        <li>Viomi</li>
                                     </ul>
                                     <ul>
                                         <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Qab-qacaq")}</li>
@@ -287,29 +265,24 @@ function Navbar() {
                                         <li>{t("Portativ HDD")}</li>
                                         <li>{t("SSD")}</li>
                                         <li>{t("USB Flash")}</li>
-                                        <li>{t("Notbuk üçün soyuducu altlıq")}</li>
                                         <li>{t("Antiviruslar")}</li>
                                         <li>{t("Mikrofon")}</li>
                                         <li>{t("Təmizlik vasitələri")}</li>
-                                        <li>{t("Monitor üçün işıq")}</li>
                                         <li>{t("USB Hub")}</li>
-                                        <li>{t("Monitor üçün altlıq")}</li>
-                                        <li>{t("Printer üçün kabel")}</li>
-                                        <li>{t("Monitor üçün kronşteyn")}</li>
                                     </ul>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <NavLink to={"/magazalar"}><li id='stores'>{t('Mağazalar')}</li></NavLink>
+                    {/* <NavLink to={"/magazalar"}><li id='stores'>{t('Mağazalar')}</li></NavLink> */}
                     <input type="text" placeholder={t("Axtarış")} />
                 </ul>
                 <div className='topnavRight'>
                     {localStorage.getItem("username") ?
-                        <NavLink to={"/my-account"}><h3>{localStorage.getItem("firstName")}
+                        <NavLink to={"/hesabim"}><h3>{localStorage.getItem("firstName")}
                             <NavLink to={"/logout"}><h4>{t("Çıxış")}</h4></NavLink>
                         </h3></NavLink>
-                        : <NavLink to={"/login"}><i className="fa-solid fa-user"></i></NavLink>
+                        : <NavLink to={"/giris"}><i className="fa-solid fa-user"></i></NavLink>
                     }
                     <div id='topnavCart'>
                         <i className="fa-solid fa-cart-shopping"></i>

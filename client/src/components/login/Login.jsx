@@ -55,7 +55,7 @@ function Login() {
                                     </div>
                                 </div>
                                 <span className='errors' style={{ color: "#d91900" }}>{error}</span>
-                                <Link id='havenotaccount' to={'/register'}>{t("Hesabınız yoxdur ?")}</Link>
+                                <Link id='havenotaccount' to={'/qeydiyyat'}>{t("Hesabınız yoxdur ?")}</Link>
                                 <button id='submitbtn' type="submit">{t("Daxil ol")}</button>
                             </Form>
                         </div>

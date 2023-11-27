@@ -77,7 +77,7 @@ function Register() {
                   </div>
                 </div>
 
-                <Link id='haveaccount' to={'/login'}>{t("Hesabınız varmı ?")}</Link>
+                <Link id='haveaccount' to={'/giris'}>{t("Hesabınız varmı ?")}</Link>
                 <button id='submitbtn' type="submit">{t("Qeydiyyatdan keç")}</button>
               </Form>
             </div>
