@@ -141,11 +141,11 @@ i {
 @media only screen and (max-width: 600px) {
     .registerPage {
         @include themify($themes) {
-            height: 90vh;
+            height: 80vh;
 
             .registerMain {
                 width: 350px;
-                min-height: 600px;
+                min-height: 500px;
                 transition: 1s;
                 margin-top: 0px;
 

@@ -23,6 +23,14 @@ nav {
             align-items: center;
             justify-content: space-between;
 
+            @include tablet {
+                width: 90%;
+            }
+
+            @include mobile {
+                width: 80%;
+            }
+
             #navH1 {
                 @include mobile {
                     position: absolute;
@@ -47,6 +55,7 @@ nav {
                 color: themed("textColor");
                 font-family: 'DM Sans', sans-serif;
                 font-size: 16px;
+                width: 50%;
 
                 #stores {
                     @include tablet {
@@ -69,6 +78,11 @@ nav {
                     transition: .5s;
 
                     @include tablet {
+                        margin-left: 0;
+                        padding-left: 10px;
+                    }
+
+                    @include mobile {
                         display: none;
                     }
                 }

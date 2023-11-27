@@ -50,19 +50,19 @@ function Register() {
               <Form>
                 <div id='first_last_name'>
                   <div id='frstNameDiv'>
-                    <label htmlFor="firstName">{t("Ad")}</label>
+                    <label htmlFor="firstName"><i class="fa-solid fa-user-pen"></i> {t("Ad")}</label>
                     <Field className={`inp ${errors.firstName && touched.firstName && "errorInp"}`} name="firstName" type="text" />
                   </div>
 
                   <div id='lstNameDiv'>
-                    <label htmlFor="lastName">{t("Soyad")} </label>
+                    <label htmlFor="lastName"><i class="fa-solid fa-user-pen"></i> {t("Soyad")} </label>
                     <Field className={`inp ${errors.lastName && touched.lastName && "errorInp"}`} name="lastName" type="text" />
                   </div>
                 </div>
 
                 <div className='email_usrname_password'>
                   <div id='inputDiv'>
-                    <label htmlFor="username"><i className="fa-solid fa-user"></i> {t("İstifadəçi adı")}</label>
+                    <label htmlFor="username"><i class="fa-solid fa-user-tag"></i> {t("İstifadəçi adı")}</label>
                     <Field className={`inp ${errors.username && touched.username && "errorInp"}`} name="username" type="text" />
                   </div>
 
