@@ -11,9 +11,6 @@ function Home() {
             <MobileNavbar />
             <Navbar />
             <SlideShow />
-            <SlideShow />
-            <SlideShow />
-            <SlideShow />
             <Reklam />
             <Footer />
         </>
