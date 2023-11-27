@@ -14,6 +14,7 @@ nav {
 
         @include mobile {
             position: sticky;
+            height: 60px;
         }
 
         .container {
