@@ -1,0 +1,96 @@
+@import "../../style.scss";
+
+.slideBrands {
+    @include themify($themes) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: themed("bgSoft");
+        overflow: hidden;
+
+        // #slideBrandsH5 {
+        //     color: #ad9f91;
+        //     font-family: Cormorant;
+        //     font-size: 18px;
+        // }
+
+        // #slideBrandsH2 {
+        //     color: black;
+        //     font-family: Cormorant;
+        //     font-size: 50px;
+        // }
+
+        .slideBrandsCarousel {
+            cursor: grab;
+            overflow: hidden;
+
+            .inner-slideBrandsCarousel {
+                display: flex;
+                align-items: center;
+                height: 20vh;
+                justify-content: center;
+
+                .itemCarousel {
+                    width: 15rem;
+                    height: 8rem;
+                    padding: 10px;
+
+                    img {
+                        border: 1px solid themed("border");
+                        padding: 20px;
+                        cursor: grab;
+                        width: 100%;
+                        height: 100%;
+                        pointer-events: none;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .slideBrands {
+        @include themify($themes) {
+            height: 13vh;
+
+            // #slideBrandsH2 {
+            //     font-size: 35px;
+            //     font-weight: 600;
+            // }
+            .slideBrandsCarousel {
+                .inner-slideBrandsCarousel {
+                    height: 13vh;
+                    .itemCarousel {
+                        width: 7rem;
+                        height: 5rem;
+                        pad: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 220px) {
+    .slideBrands {
+        min-height: 30vh;
+
+        // #slideBrandsH2 {
+        //     font-size: 35px;
+        //     font-weight: 600;
+        // }
+
+        .slideBrandsCarousel {
+            .inner-slideBrandsCarousel {
+                .itemCarousel {
+                    min-height: 15rem;
+                    min-width: 20rem;
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ import Footer from "../layouts/footer/Footer"
 import SlideShow from '../components/slide/Slide'
 import Reklam from '../components/reklam/Reklam'
 import MobileNavbar from '../layouts/mobileNavbar/mobileNavbar'
+import SlideBrands from '../components/slideBrands/SlideBrands'
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
             <Navbar />
             <SlideShow />
             <Reklam />
+            <SlideBrands /> 
             <Footer />
         </>
     )
