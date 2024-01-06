@@ -84,8 +84,8 @@ function Footer() {
             <span>info@electronicsstore.az</span>
           </div>
           <div className='fRighTexts'>
-            <p>{t("Saytın hazırlanması")}</p>
-            <Link style={{ fontWeight: "400", fontSize: "20px" }} target='/' to={'https://nicateliyev.vercel.app'}>{t("Nicat Əliyev")} <i style={{ fontSize: "16px", marginTop: "10px", marginLeft: "1px", gap: "2px" }} className="fa-solid fa-arrow-pointer fa-beat"></i></Link>
+            <p id='fRighTextsP'>{t("Saytın hazırlanması")}</p>
+            <Link id='created' style={{ fontWeight: "400", fontSize: "20px" }} target='/' to={'https://nicateliyev.vercel.app'}>{t("Nicat Əliyev")} <i style={{ fontSize: "16px", marginTop: "10px", marginLeft: "1px", gap: "2px" }} className="fa-solid fa-arrow-pointer fa-beat"></i></Link>
           </div>
         </div>
       </div>
