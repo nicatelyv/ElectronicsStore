@@ -262,8 +262,7 @@ nav {
                                 display: flex;
                                 flex-direction: column;
                                 gap: 8px;
-                                text-align: center;
-                                border-left: 1px solid themed("border");
+                                // border-left: 1px solid themed("border");
                                 padding-left: 30px;
 
                                 li {
@@ -279,9 +278,9 @@ nav {
 
                                 li:first-child {
                                     list-style: none;
-                                    border-bottom: 2px solid themed("border");
-                                    text-align: center;
+                                    // border-bottom: 2px solid themed("border");
                                     padding-bottom: 5px;
+                                    margin-left: -15px;
 
                                     @include mobile {
                                         font-size: 15px !important;

@@ -13,7 +13,7 @@ function Navbar() {
         i18next.changeLanguage(e.target.value)
     }
     return (
-        <nav>
+        <nav id='nav'>
             <div className="container">
                 <NavLink id='navH1' to={"/"}><h1>Electronics <span>Store</span></h1></NavLink>
                 <ul className='topnavUls'>
@@ -282,14 +282,14 @@ function Navbar() {
                         <NavLink to={"/hesabim"}><h3>{localStorage.getItem("firstName")}
                             <NavLink to={"/logout"}><h4>{t("Çıxış")}</h4></NavLink>
                         </h3></NavLink>
-                        : <NavLink to={"/giris"}><i className="fa-solid fa-user"></i></NavLink>
+                        : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade"></i></NavLink>
                     }
                     <div id='topnavCart'>
                         <i className="fa-solid fa-cart-shopping"></i>
                         <p id='cartCount'>0</p>
                     </div>
                     <i className="fa-solid fa-heart"></i>
-                    {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
+                    {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb "></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
                     <Languageoption onChange={e => handleClick(e)} />
                 </div>
                 <div className="darkmode"><Languageoption onChange={e => handleClick(e)} /> {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}</div>

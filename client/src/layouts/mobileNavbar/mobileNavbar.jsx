@@ -10,7 +10,7 @@ export default function MobileNavbar() {
             <div className="mobilNavContainer">
                 {localStorage.getItem("username") ?
                     <NavLink to={"/hesabim"}><h3>{localStorage.getItem("firstName")}</h3></NavLink>
-                    : <NavLink to={"/giris"}><i className="fa-solid fa-user"></i></NavLink>
+                    : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade"></i></NavLink>
                 }
 
                 <input type="text" placeholder={t("Axtarış")} />

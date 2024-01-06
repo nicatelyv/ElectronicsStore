@@ -149,7 +149,7 @@
                     }
 
                     &>a>i {
-                        color: green;
+                        color: themed("phone");
                         transition: .5s;
                         font-weight: 600;
                         font-size: 24px;
@@ -159,8 +159,8 @@
                         display: flex;
                         align-items: center;
                         gap: 8px;
-                        color: themed("textColor");
                         color: green;
+                        color: themed("phone");
                         font-weight: 600;
                         transition: .5s;
                         font-size: 24px;
@@ -171,7 +171,7 @@
                     }
 
                     #created {
-                        color: lightblue;
+                        color: lightcyan;
                     }
                 }
             }

@@ -5,6 +5,7 @@ import SlideShow from '../components/slide/Slide'
 import Reklam from '../components/reklam/Reklam'
 import MobileNavbar from '../layouts/mobileNavbar/mobileNavbar'
 import SlideBrands from '../components/slideBrands/SlideBrands'
+import UpButton from '../components/upButton/UpButton'
 
 function Home() {
     return (
@@ -13,8 +14,9 @@ function Home() {
             <Navbar />
             <SlideShow />
             <Reklam />
-            <SlideBrands /> 
+            <SlideBrands />
             <Footer />
+            <UpButton />
         </>
     )
 }
