@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const SlideShow = () => {
 
     return (
-        <div className='slideShow'>
+        <div id='slideShow' className='slideShow'>
             <Slide
                 autoplay={true}
                 onChange={function noRefCheck() { }}

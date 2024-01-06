@@ -1,7 +1,9 @@
 @import "../../style.scss";
 
 i {
-    color: gray;
+    @include themify($themes) {
+        color: themed("textColorSoft");
+    }
 }
 
 .errorInp {
@@ -12,7 +14,10 @@ i {
     @include themify($themes) {
         width: 100%;
         height: 100vh;
-        background-color: themed("bgSoft");
+        background: url('https://woorise.com/wp-content/uploads/2021/03/Online-event-registration.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         transition: .5s;
         display: flex;
         align-items: center;
@@ -23,13 +28,14 @@ i {
             margin-top: 80px;
             width: 450px;
             min-height: 600px;
-            background-color: white;
+            background-color: themed("bgSoft");
             border-radius: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
             overflow: hidden;
             justify-content: center;
+            color: themed("textColor");
 
             .formDiv {
                 display: flex;
@@ -71,6 +77,9 @@ i {
                                 border: none;
                                 border-bottom: 1px solid black;
                                 width: 100%;
+                                background-color: inherit;
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
                             }
                         }
 
@@ -89,6 +98,9 @@ i {
                                 border: none;
                                 border-bottom: 1px solid black;
                                 width: 100%;
+                                background-color: inherit;
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
                             }
                         }
                     }
@@ -113,6 +125,9 @@ i {
                                 outline: none;
                                 border: none;
                                 border-bottom: 1px solid black;
+                                background-color: inherit;
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
                             }
                         }
                     }
@@ -120,12 +135,12 @@ i {
                     #submitbtn {
                         width: 150px;
                         height: 40px;
-                        border: 1px solid gray;
+                        border: 1px solid themed("borderSoft");
                         background: none;
                         border-radius: 15px;
                         font-size: 15px;
-                        color: black;
                         cursor: pointer;
+                        color: themed("textColor");
                     }
 
                     #submitbtn:hover {

@@ -1,7 +1,9 @@
 @import "../../style.scss";
 
 i {
-    color: gray;
+    @include themify($themes) {
+        color: themed("textColorSoft");
+    }
 }
 
 .loginPage {
@@ -9,7 +11,10 @@ i {
 
         width: 100%;
         height: 100vh;
-        background-color: themed("bgSoft");
+        background: url('https://woorise.com/wp-content/uploads/2021/03/Online-event-registration.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -20,13 +25,14 @@ i {
             margin-top: 80px;
             width: 350px;
             min-height: 450px;
-            background-color: white;
+            background-color: themed("bgSoft");
             border-radius: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
             overflow: hidden;
             justify-content: center;
+            color: themed("textColor");
 
             .formDiv {
                 display: flex;
@@ -69,6 +75,10 @@ i {
                                 outline: none;
                                 border: none;
                                 border-bottom: 1px solid black;
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
+                                background-color: inherit;
+                                color: themed("textColorSoft");
                             }
                         }
                     }
@@ -76,11 +86,11 @@ i {
                     #submitbtn {
                         width: 150px;
                         height: 40px;
-                        border: 1px solid gray;
+                        border: 1px solid themed("borderSoft");
                         background: none;
                         border-radius: 15px;
                         font-size: 15px;
-                        color: black;
+                        color: themed("textColor");
                         cursor: pointer;
                     }
 

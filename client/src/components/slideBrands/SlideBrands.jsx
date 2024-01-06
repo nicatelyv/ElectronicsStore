@@ -9,8 +9,10 @@ const SliderImages = [
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/816/fakir-logo-157ad97981-seeklogocom.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/1244/tefal-logosvg.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/204/acer-2011svg.png' },
+    { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/3109/2560px-jvc-logosvg.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/2430/asus-logo-1995-present.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/2368/baseus-logo-black.png' },
+    { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/4508/jbl-logosvg.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/568/new-beko-logosvg.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/848/download-4.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/1024/braun-logosvg.png' },
@@ -22,9 +24,7 @@ const SliderImages = [
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/573/hisense-logo.jpg' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/2453/hp-new-logo-2dsvg.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/95/indesit-logo-logotype.png' },
-    { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/4508/jbl-logosvg.png' },
-    { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/3109/2560px-jvc-logosvg.png' },
-    { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/1240/1280px-karcher-logo-2015svg.png' },
+    { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/3522/forward.svg' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/1/apple-authorized-reseller-seeklogo.svg' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/7/gnb-desktop-120x32.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/8/xiaomi-logo-2021.svg' },
@@ -32,7 +32,6 @@ const SliderImages = [
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/6/realme-realme-logo-box-rgb-01-with-out-back-ground.svg' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/2/huawei-honor-logo-1-2.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/10596/logo-1.png' },
-    { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/3522/forward.svg' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/3/nokia-refreshed-logo-2-1.webp' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/4/oneplus-logo.svg' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/1267/2560px-kenwood-logosvg.png' },
@@ -53,6 +52,7 @@ const SliderImages = [
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/9948/1920px-zte-logosvg.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/12402/2560px-dyson-logosvg.png' },
     { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/12462/nintendosvg.png' },
+    { imgUrl: 'https://irshad.az/cdn-cgi/image/width=201,height=90/storage/product-attributes/1240/1280px-karcher-logo-2015svg.png' },
 ]
 
 function SlideBrands() {

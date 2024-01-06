@@ -262,8 +262,8 @@ nav {
                                 display: flex;
                                 flex-direction: column;
                                 gap: 8px;
-                                padding-left: 10px;
-                                border-left: 2px solid themed("border");
+                                text-align: center;
+                                border-left: 1px solid themed("border");
                                 padding-left: 30px;
 
                                 li {
@@ -280,7 +280,6 @@ nav {
                                 li:first-child {
                                     list-style: none;
                                     border-bottom: 2px solid themed("border");
-                                    border-radius: 10px;
                                     text-align: center;
                                     padding-bottom: 5px;
 
