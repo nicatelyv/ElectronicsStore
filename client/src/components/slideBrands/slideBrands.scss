@@ -7,7 +7,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-color: themed("bgSoft");
+        background-color: themed("bgSoft2");
         overflow: hidden;
         transition: .5s;
         // #slideBrandsH5 {
@@ -25,6 +25,28 @@
         .slideBrandsCarousel {
             cursor: grab;
             overflow: hidden;
+
+            .inner-slideBrandsCarouselMobile {
+                display: none;
+                align-items: center;
+                height: 20vh;
+                justify-content: center;
+
+                .itemCarousel {
+                    width: 15rem;
+                    height: 8rem;
+                    padding: 10px;
+
+                    img {
+                        padding: 20px;
+                        cursor: grab;
+                        width: 100%;
+                        height: 100%;
+                        pointer-events: none;
+                        object-fit: contain;
+                    }
+                }
+            }
 
             .inner-slideBrandsCarousel {
                 display: flex;
@@ -61,14 +83,20 @@
             //     font-weight: 600;
             // }
             .slideBrandsCarousel {
-                .inner-slideBrandsCarousel {
-                    height: 13vh;
+                .inner-slideBrandsCarouselMobile {
+                    display: flex;
+                    height: 12vh;
 
                     .itemCarousel {
                         width: 7rem;
-                        height: 5rem;
+                        height: 7rem;
                         pad: 10px;
                     }
+                }
+
+                .inner-slideBrandsCarousel {
+                    display: none;
+
                 }
             }
         }
@@ -85,7 +113,7 @@
         // }
 
         .slideBrandsCarousel {
-            .inner-slideBrandsCarousel {
+            .inner-slideBrandsCarouselMobile {
                 .itemCarousel {
                     min-height: 15rem;
                     min-width: 20rem;

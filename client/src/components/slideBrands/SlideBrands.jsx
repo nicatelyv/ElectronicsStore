@@ -81,6 +81,18 @@ function SlideBrands() {
                         )
                     })}
                 </motion.div>
+                <motion.div
+                    drag="x"
+                    dragConstraints={{ right: 2600 + width, left: - 2600 }}
+                    className='inner-slideBrandsCarouselMobile'>
+                    {SliderImages.map(image => {
+                        return (
+                            <motion.div key={image} className='itemCarousel'>
+                                <img src={image.imgUrl} alt='foto' />
+                            </motion.div>
+                        )
+                    })}
+                </motion.div>
             </motion.div>
         </section >
     )

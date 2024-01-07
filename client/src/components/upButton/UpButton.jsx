@@ -14,7 +14,7 @@ function UpButton() {
     window.addEventListener('scroll', scrollBtn)
 
     return (
-        <button className={upBtn ? 'upBtn upBtnTrue' : 'upBtn'}><a href="/#slide-show"><i class="fa-regular fa-circle-up fa-bounce"></i></a></button>
+        <div className={upBtn ? 'upBtn upBtnTrue' : 'upBtn'}><a href="/#slide-show"><i class="fa-regular fa-circle-up fa-bounce"></i></a></div>
     )
 }
 
