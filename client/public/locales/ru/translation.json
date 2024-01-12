@@ -1,5 +1,11 @@
 {
     "Nicat Əliyev": "Ниджат Алиев",
+    "Ana səhifə": "Домашняя Страница",
+    "Oops! Page Not Found": "Упс! Страница не найдена",
+    "Sorry but the page you are looking for does not exist, have been removed or is temporarily unavailable": 
+    "Извините, но страница, которую вы ищете, не существует, была удалена или временно недоступна.",
+    "Back to homepage":"Вернуться на главную страницу",
+    "Səhifə tapılmadı": "Страница не найдена",
     "Mağazalar": "Магазины",
     "Dil": "Язык",
     "Kataloq": "Категория",
@@ -118,7 +124,6 @@
     "Monitor üçün altlıq": "Подставка для монитора",
     "Printer üçün kabel": "Кабель для принтера",
     "Monitor üçün kronşteyn": "Кронштейн монитора",
-
     "Məlumat": "Данные",
     "Kampaniyalar": "Кампании",
     "Müştəri kartı": "Карта клиента",

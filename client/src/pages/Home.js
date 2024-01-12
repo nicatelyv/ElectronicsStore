@@ -6,10 +6,17 @@ import Reklam from '../components/reklam/Reklam'
 import MobileNavbar from '../layouts/mobileNavbar/mobileNavbar'
 import SlideBrands from '../components/slideBrands/SlideBrands'
 import UpButton from '../components/upButton/UpButton'
+import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+    const { t } = useTranslation();
+    
     return (
         <>
+            <Helmet>
+                <title>{t("Ana səhifə")} - Electronics Store</title>
+            </Helmet>
             <MobileNavbar />
             <Navbar />
             <SlideShow />

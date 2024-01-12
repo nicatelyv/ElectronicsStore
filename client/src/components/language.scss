@@ -4,5 +4,6 @@ select {
     @include themify($themes) {
         background-color: themed("bg");
         color: themed("textColor");
+        transition: .5s;
     }
 }

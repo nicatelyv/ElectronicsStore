@@ -21,6 +21,10 @@ i {
         overflow: hidden;
         transition: .5s;
 
+        label {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
         .loginMain {
             margin-top: 80px;
             width: 350px;
@@ -51,7 +55,13 @@ i {
                     gap: 20px;
 
                     #havenotaccount {
-                        color: #85a9c9;
+                        color: #6c92b3;
+                        transition: .3s;
+                    }
+
+                    #havenotaccount:hover {
+                        color: lightblue;
+                        transition: .3s;
                     }
 
                     .login_usrname_password {
@@ -92,11 +102,13 @@ i {
                         font-size: 15px;
                         color: themed("textColor");
                         cursor: pointer;
+                        transition: .5s;
                     }
 
                     #submitbtn:hover {
                         background-color: rgb(166, 202, 233);
                         transition: .5s;
+                        letter-spacing: 1px;
                     }
                 }
             }

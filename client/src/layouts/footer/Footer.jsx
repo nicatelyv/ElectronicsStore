@@ -2,13 +2,9 @@ import React from 'react'
 import "./footer.scss"
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 function Footer() {
   const { t } = useTranslation();
-  const handleClick = (e) => {
-    i18next.changeLanguage(e.target.value)
-  }
 
   return (
 

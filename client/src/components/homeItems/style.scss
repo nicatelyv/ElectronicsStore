@@ -1,0 +1,46 @@
+@import "../../style.scss";
+
+.each-slide-effect>div {
+    @include themify($themes) {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        justify-content: flex-start;
+        background-size: cover;
+        width: 100%;
+        height: 85vh;
+        margin-top: 70px;
+        transition: .5s;
+
+        @include tablet {
+            height: 50vh;
+        }
+
+        @include mobile {
+            height: 30vh;
+            margin-top: 0;
+        }
+    }
+}
+
+.each-slide-effect span {
+    @include themify($themes) {
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+    }
+}
+
+.homeItems {
+    @include themify($themes) {
+        width: 100%;
+        float: right;
+
+        @include tablet {
+            button {
+                display: none;
+            }
+        }
+    }
+}
