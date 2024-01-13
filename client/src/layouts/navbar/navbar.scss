@@ -63,19 +63,38 @@ nav {
                     }
                 }
 
-                input {
-                    margin-left: 20px;
+                .navInput {
+                    margin-left: 40px;
                     margin-right: 20px;
                     width: 60%;
-                    padding: 10px;
-                    padding-left: 20px;
-                    border: none;
-                    outline: none;
-                    border-bottom: 1px solid themed("border");
-                    background-color: themed("bgSoft");
-                    color: themed("textColorSoft");
-                    border-radius: 8px;
-                    transition: .5s;
+
+                    label {
+                        color: themed("textColorSoft");
+                        transition: .5s;
+                        margin-top: -6px;
+                        margin-left: 10px;
+                    }
+
+                    div {
+                        background-color: themed("bgSoft");
+                        border-radius: 10px;
+                        transition: .5s;
+
+                        input {
+                            height: 10px !important;
+                            color: themed("textColorSoft");
+                            border: none;
+                        }
+                    }
+
+                    div::before {
+                        border: none;
+                    }
+
+                    div::after {
+                        margin-left: 10px;
+                        width: 95%;
+                    }
 
                     @include tablet {
                         margin-left: 0;
@@ -140,6 +159,38 @@ nav {
                     }
                 }
 
+                @keyframes rotate {
+                    0% {
+                        transform-origin: top;
+                        overflow: hidden;
+                        height: 0;
+                        opacity: .3;
+                    }
+
+                    100% {
+                        transform-origin: top;
+                        overflow: hidden;
+                        height: 240px;
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes rotate2 {
+                    0% {
+                        transform-origin: left;
+                        width: 0;
+                        overflow: hidden;
+                        opacity: 0;
+                    }
+
+                    100% {
+                        transform-origin: left;
+                        width: auto;
+                        overflow: hidden;
+                        opacity: 1;
+                    }
+                }
+
                 #navLi:hover {
                     transition: .5s;
 
@@ -156,11 +207,16 @@ nav {
                         left: -20px;
                         top: 35px;
                         border-radius: 8px;
-                        background-color: themed("bgSoft");
+                        background-color: themed("bgSoft2");
                         font-size: 14px;
-                        min-height: 230px;
+                        // min-height: 230px;
+                        animation: rotate 300ms ease-out;
+                        animation-direction: alternate;
                         opacity: 1;
                         transition: .5s;
+                        font-weight: 600;
+                        cursor: default;
+                        z-index: 2;
 
                         @include tablet {
                             min-height: 350px;
@@ -217,7 +273,7 @@ nav {
                             transition: .2s;
 
                             .dropdownMenu2 {
-                                top: -150px;
+                                top: -154px;
 
                                 @include tablet {
                                     top: -215px;
@@ -229,7 +285,7 @@ nav {
                             transition: .2s;
 
                             .dropdownMenu2 {
-                                top: -183px;
+                                top: -187px;
 
                                 @include tablet {
                                     top: -253px;
@@ -273,6 +329,7 @@ nav {
                             border-top-left-radius: 0;
                             font-size: 14px;
                             min-height: 238px;
+                            animation: rotate2 200ms ease;
 
                             @include mobile {
                                 min-height: 350px;
@@ -313,13 +370,14 @@ nav {
                                 li:hover {
                                     color: red;
                                     transition: .2s;
+                                    cursor: pointer;
                                 }
 
                                 li:first-child {
                                     color: themed("textColor");
+                                    cursor: default;
                                 }
                             }
-
                         }
                     }
                 }
@@ -344,19 +402,7 @@ nav {
                 h3 {
                     color: themed("textColor");
                     position: relative;
-
-                    h4 {
-                        display: none;
-                    }
-                }
-
-                h3:hover {
-                    h4 {
-                        position: absolute;
-                        display: block;
-                        color: themed("textColor");
-                        font-size: 18px;
-                    }
+                    font-weight: 400;
                 }
 
                 i {

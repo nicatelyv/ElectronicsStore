@@ -14,6 +14,7 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
+        lng: 'az',
         fallbackLng: "en",
         debug: true,
         whitelist: availableLanguages,

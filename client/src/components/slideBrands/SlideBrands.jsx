@@ -62,7 +62,7 @@ function SlideBrands() {
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }, []);
     return (
-        <section className='slideBrands'>
+        <div className='slideBrands'>
             {/* <h5 id='OurChefSliderH5'>EN İYİSİ</h5>
             <h2 id='OurChefSliderH2'>İŞ SEÇİMİ</h2> */}
             <motion.div
@@ -94,7 +94,7 @@ function SlideBrands() {
                     })}
                 </motion.div>
             </motion.div>
-        </section >
+        </div >
     )
 }
 

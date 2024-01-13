@@ -1,0 +1,10 @@
+@import '../../style.scss';
+
+.shop {
+    @include themify($themes) {
+        width: 100%;
+        min-height: 100vh;
+        background-color: themed("bgSoft");
+        transition: .5s;
+    }
+}

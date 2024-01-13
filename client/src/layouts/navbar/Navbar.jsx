@@ -1,10 +1,13 @@
 import React, { useContext } from 'react'
 import "./navbar.scss"
 import { DarkModeContext } from '../../context/DarkMode';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Languageoption from '../../components/language-dropdown';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import ShoppingMenu from "../../components/shoppingMenu/ShoppingMenu"
+import ProfileButton from "../../components/profileButton/ProfileButton"
+import TextField from '@mui/material/TextField';
 
 function Navbar() {
     const { toggle, darkMode } = useContext(DarkModeContext);
@@ -12,6 +15,7 @@ function Navbar() {
     const handleClick = (e) => {
         i18next.changeLanguage(e.target.value)
     }
+
     return (
         <nav id='nav'>
             <div className="container">
@@ -275,20 +279,19 @@ function Navbar() {
                         </ul>
                     </li>
                     {/* <NavLink to={"/magazalar"}><li id='stores'>{t('Mağazalar')}</li></NavLink> */}
-                    <input type="text" placeholder={t("Axtarış")} />
+                    {/* <input type="text" placeholder={t("Axtarış")} /> */}
+                    <TextField className='navInput' id="filled-basic" label={t("Axtarış")} variant="filled" />
                 </ul>
                 <div className='topnavRight'>
                     {localStorage.getItem("username") ?
-                        <NavLink to={"/hesabim"}><h3>{localStorage.getItem("firstName")}
-                            <NavLink to={"/logout"}><h4>{t("Çıxış")}</h4></NavLink>
-                        </h3></NavLink>
+                        <ProfileButton />
                         : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade"></i></NavLink>
                     }
                     <div id='topnavCart'>
-                        <i className="fa-solid fa-cart-shopping"></i>
+                        <ShoppingMenu />
                         <p id='cartCount'>0</p>
                     </div>
-                    <i className="fa-solid fa-heart"></i>
+                    <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
                     {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb "></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
                     <Languageoption onChange={e => handleClick(e)} />
                 </div>

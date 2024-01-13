@@ -1,27 +1,29 @@
 import React from 'react'
 import "./mobileNavbar.scss"
 import { useTranslation } from 'react-i18next'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import ShoppingMenuMobile from "../../components/shoppingMenu/ShoppingMenuMobile"
+import ProfileButton from "../../components/profileButton/ProfileButton"
 
 export default function MobileNavbar() {
     const { t } = useTranslation()
     return (
         <div className='mobileNavbar'>
             <div className="mobilNavContainer">
-                {localStorage.getItem("username") ?
-                    <NavLink to={"/hesabim"}><h3>{localStorage.getItem("firstName")}</h3></NavLink>
-                    : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade"></i></NavLink>
-                }
-
-                <input type="text" placeholder={t("Axtarış")} />
-
                 <div className="mobileNavRight">
                     <div id='topnavCart'>
-                        <i className="fa-solid fa-cart-shopping"></i>
+                        <ShoppingMenuMobile />
                         <p id='cartCount'>0</p>
                     </div>
-                    <i className="fa-solid fa-heart"></i>
-                    {localStorage.getItem("username") ? <NavLink to={"/logout"}><h4>{t("Çıxış")}</h4></NavLink> : <></>}
+                    <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
+
+                    {/* {localStorage.getItem("username") ? <NavLink to={"/logout"}><h4>{t("Çıxış")}</h4></NavLink> : <></>} */}
+
+                    <input type="text" placeholder={t("Axtarış")} />
+                    {localStorage.getItem("username") ?
+                        <ProfileButton />
+                        : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade"></i></NavLink>
+                    }
                 </div>
             </div>
         </div>
