@@ -24,7 +24,7 @@ const NewProducts = () => {
             <div className='newProducts'>
                 <h3 id='newH3'>{t("New products")}</h3>
                 <Slide
-                    autoplay={false}
+                    autoplay={true}
                     onChange={function noRefCheck() { }}
                     onStartChange={function noRefCheck() { }}
                 >
@@ -81,7 +81,7 @@ const NewProducts = () => {
             <div className='newProductsTablet'>
                 <h3 id='newH3'>{t("New products")}</h3>
                 <Slide
-                    autoplay={false}
+                    autoplay={true}
                     onChange={function noRefCheck() { }}
                     onStartChange={function noRefCheck() { }}
                 >
@@ -139,7 +139,7 @@ const NewProducts = () => {
             <div className='newProductsTablet2'>
                 <h3 id='newH3'>Yeni Mehsullar</h3>
                 <Slide
-                    autoplay={false}
+                    autoplay={true}
                     onChange={function noRefCheck() { }}
                     onStartChange={function noRefCheck() { }}
                 >
@@ -227,7 +227,7 @@ const NewProducts = () => {
             <div className='newProductsMobile'>
                 <h3 id='newH3'>Yeni məhsullar</h3>
                 <Slide
-                    autoplay={false}
+                    autoplay={true}
                     onChange={function noRefCheck() { }}
                     onStartChange={function noRefCheck() { }}
                 >
