@@ -11,7 +11,7 @@ const NewProducts = () => {
     const [product, setProduct] = useState(false, [])
 
     const getData = async () => {
-        const response = await axios.get("http://localhost:5555/api/products");
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products");
         setProduct(response.data);
     };
     useEffect(() => {
