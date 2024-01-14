@@ -12,8 +12,14 @@ function Login() {
     const navigate = useNavigate();
     const [error, setError] = useState("")
 
+    function wait() {
+        let button = document.getElementById('submitbtn');
+        button.style.cursor = 'wait'
+    }
+
     async function handleSubmit(values) {
         try {
+            wait()
             let response = await axios.post('https://electronics-store-api.vercel.app/api/auth/login/', values)
             localStorage.setItem('username', response.data.username)
             localStorage.setItem('firstName', response.data.firstName)
@@ -34,8 +40,8 @@ function Login() {
                 <Formik
                     initialValues={{ username: '', password: '' }}
                     validationSchema={Yup.object({
-                        username: Yup.string().required("*Kullanıcı adı boş olamaz"),
-                        password: Yup.string().required("*Şifre boş olamaz"),
+                        username: Yup.string().required("*"),
+                        password: Yup.string().required("*"),
                     })}
                     onSubmit={(values) => handleSubmit(values)}
                 >

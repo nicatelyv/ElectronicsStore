@@ -1,5 +1,13 @@
 @import "../../style.scss";
 
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 nav {
     @include themify($themes) {
         width: 100%;
@@ -35,13 +43,22 @@ nav {
                 @include mobile {
                     position: absolute;
                     margin-left: 120px;
-                    font-size: 12px
                 }
 
                 h1 {
                     color: themed("textColor");
                     transition: .5s;
                     font-family: 'Noto Serif', serif;
+                    font-size: 26px;
+
+                    @include tablet {
+                        font-size: 22px;
+                    }
+
+                    @include mobile {
+                        margin-top: 6px;
+                        font-size: 18px;
+                    }
 
                     span {
                         color: green;
@@ -49,8 +66,13 @@ nav {
                 }
             }
 
+            #navH1:hover {
+                text-decoration: none;
+            }
+
             .topnavUls {
                 display: flex;
+                padding-top: 15px;
                 align-items: center;
                 color: themed("textColor");
                 font-family: 'DM Sans', sans-serif;
@@ -66,13 +88,14 @@ nav {
                 .navInput {
                     margin-left: 40px;
                     margin-right: 20px;
-                    width: 60%;
+                    width: 70%;
 
                     label {
                         color: themed("textColorSoft");
                         transition: .5s;
-                        margin-top: -6px;
+                        margin-top: -4px;
                         margin-left: 10px;
+                        font-size: 14px;
                     }
 
                     div {
@@ -84,6 +107,7 @@ nav {
                             height: 10px !important;
                             color: themed("textColorSoft");
                             border: none;
+                            font-size: 16px;
                         }
                     }
 
@@ -109,7 +133,7 @@ nav {
                 a {
                     color: themed("textColor");
 
-                    x ul {
+                    ul {
                         display: flex;
                     }
                 }

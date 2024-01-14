@@ -61,6 +61,19 @@ $themes: (
     @media (max-width: 998px) {
         @content;
     }
+
+}
+
+@mixin pc {
+    @media (max-width: 3000px) {
+        @content;
+    }
+}
+
+@mixin tablet2 {
+    @media (max-width: 800px) {
+        @content;
+    }
 }
 
 html {

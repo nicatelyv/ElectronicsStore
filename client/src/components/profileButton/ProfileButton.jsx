@@ -30,12 +30,12 @@ export default function AccountMenu() {
                     <IconButton
                         onClick={handleClick}
                         size="small"
-                        sx={{ ml: 2 }}
+                        sx={{ ml: 0 }}
                         aria-controls={open ? 'account-menu' : undefined}
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined}
                     >
-                        <h3>{localStorage.getItem("firstName")}</h3>
+                        <h3 style={{ fontSize: "20px", marginTop: "5px" }}>{localStorage.getItem("firstName")}</h3>
                     </IconButton>
                 </Tooltip>
             </Box>

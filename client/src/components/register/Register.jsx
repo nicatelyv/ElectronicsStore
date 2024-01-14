@@ -13,8 +13,14 @@ function Register() {
   const navigate = useNavigate();
   const [error, setError] = useState("")
 
+  function wait() {
+    let button = document.getElementById('submitbtn');
+    button.style.cursor = 'wait'
+  }
+
   async function handleButton(values) {
     try {
+      wait()
       let response = await axios.post('https://electronics-store-api.vercel.app/api/auth/register/', values)
       localStorage.setItem('username', response.data.username)
       localStorage.setItem('firstName', response.data.firstName)

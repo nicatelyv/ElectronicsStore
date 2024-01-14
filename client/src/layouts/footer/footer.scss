@@ -3,7 +3,7 @@
 .footer {
     @include themify($themes) {
         width: 100%;
-        min-height: 65vh;
+        min-height: 75vh;
         background-color: themed("bg");
         display: flex;
         align-items: center;
@@ -15,7 +15,7 @@
 
         .footerLeft {
             width: 70%;
-            min-height: 50vh;
+            min-height: 60vh;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -27,9 +27,15 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                min-height: 45vh;
+                min-height: 60vh;
                 text-align: start;
                 margin-top: 30px;
+
+                @include mobile {
+                    min-height: 50vh;
+                    margin-top: 10px;
+                    padding-top: 20px !important;
+                }
 
                 &>li {
                     display: flex;
@@ -84,6 +90,15 @@
                         flex-direction: column;
                         gap: 10px;
 
+                        @include mobile {
+                            margin-top: -100px;
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+
+
                         &>a {
                             color: themed("textColor");
                             transition: .2s;
@@ -113,7 +128,7 @@
 
         .footerRight {
             width: 30%;
-            min-height: 65vh;
+            min-height: 75vh;
             background-color: themed("bgSoft");
             transition: .5s;
             background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);
