@@ -77,9 +77,15 @@ $themes: (
 }
 
 html {
+    scroll-behavior: smooth;
+
     &::-webkit-scrollbar {
-        display: none;
+        height: 5px;
+        width: 10px;
     }
 
-    scroll-behavior: smooth;
+    &::-webkit-scrollbar-thumb {
+        // border-radius: 5px;
+        background-color: green;
+    }
 }
