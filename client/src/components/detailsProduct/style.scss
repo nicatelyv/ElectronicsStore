@@ -22,6 +22,11 @@ img {
             align-items: center;
             justify-content: space-between;
 
+            img {
+                width: 400px;
+                height: 400px;
+            }
+
             .detailImgs {
                 width: 650px;
                 height: 70vh;
@@ -29,15 +34,18 @@ img {
                 justify-content: space-between;
                 align-items: center;
 
-                img {
-                    background-image: url('https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493bb08m8f32c9282ywxu9mv1rh3ldfmt6psbs52uxtn&rid=200w.gif&ct=g');
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                .detailMainImg {
                     border-radius: 15px;
                     width: 450px;
                     height: 65vh;
                     transition: 1s;
+                }
+
+                .detailMainImgOpen {
+                    width: 90%;
+                    height: 90%;
+                    object-fit: contain;
+                    transition: .5s;
                 }
 
                 img:hover {
@@ -68,10 +76,6 @@ img {
                     }
 
                     img {
-                        background-image: url('https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493bb08m8f32c9282ywxu9mv1rh3ldfmt6psbs52uxtn&rid=200w.gif&ct=g');
-                        background-position: center;
-                        background-size: cover;
-                        background-repeat: no-repeat;
                         width: 150px;
                         height: 15vh;
                         object-fit: contain;
@@ -138,6 +142,19 @@ img {
                     opacity: .7;
                     text-transform: capitalize;
                 }
+
+                .price {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    #salePrice {
+                        color: gray !important;
+                        font-size: 18px;
+                        margin: 0;
+                        text-decoration: line-through;
+                    }
+                }
             }
         }
     }
@@ -153,9 +170,17 @@ img {
                     width: 800px;
                     height: 80vh;
 
-                    img {
+                    .detailMainImg {
+                        border-radius: 15px;
                         width: 600px;
                         height: 65vh;
+                        transition: 1s;
+                    }
+
+                    .detailMainImgOpen {
+                        width: 90%;
+                        height: 90%;
+                        object-fit: contain;
                     }
 
                     #imgmsItem {
@@ -210,11 +235,21 @@ img {
             .detailpageMain {
                 .detailImgs {
                     width: 100%;
-                     height: 50vh;
+                    height: 50vh;
+                    justify-content: start;
+                    gap: 50px;
 
-                    img {
+                    .detailMainImg {
+                        border-radius: 15px;
                         width: 400px;
                         height: 50vh;
+                        transition: 1s;
+                    }
+
+                    .detailMainImgOpen {
+                        width: 90%;
+                        height: 90%;
+                        object-fit: contain;
                     }
 
                     #imgmsItem {
@@ -262,7 +297,7 @@ img {
     }
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:630px) {
     .detailPage {
         @include themify($themes) {
             padding-top: 20px;
@@ -271,15 +306,20 @@ img {
             .detailpageMain {
                 .detailImgs {
                     width: 100%;
-                    min-height: 20vh;
+                    min-height: 60vh;
                     flex-direction: column;
                     flex-wrap: wrap;
+                    justify-content: center;
+                    flex-wrap: nowrap;
 
-                    img {
-                        
-                        width: 280px;
-                        height: 30vh;
-                        object-fit: contain;
+                    .detailMainImg {
+                        width: 300px;
+                        height: 40vh;
+                    }
+
+                    .detailMainImgOpen {
+                        width: 90%;
+                        height: 90%;
                     }
 
                     #imgmsItem {
@@ -336,12 +376,18 @@ img {
         @include themify($themes) {
             .detailpageMain {
                 .detailImgs {
-                    min-height: 40vh;
+                    min-height: 60vh;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
 
-                    img {
-                        width: 80%;
-                        height: 25vh;
-                        object-fit: contain;
+                    .detailMainImg {
+                        width: 300px;
+                        height: 40vh;
+                    }
+
+                    .detailMainImgOpen {
+                        width: 90%;
+                        height: 90%;
                     }
 
                     #imgmsItem {

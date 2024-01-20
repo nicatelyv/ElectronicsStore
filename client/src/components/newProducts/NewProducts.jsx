@@ -35,12 +35,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -50,12 +51,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -65,12 +67,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                 </Slide >
@@ -78,6 +81,7 @@ const NewProducts = () => {
             </div >
 
 
+            {/* Tablet */}
             <div className='newProductsTablet'>
                 <h3 id='newH3'>{t("New products")}</h3>
                 <Slide
@@ -92,12 +96,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -107,12 +112,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -122,12 +128,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                 </Slide>
@@ -135,9 +142,9 @@ const NewProducts = () => {
             </div>
 
 
-
+            {/* Tablet2 */}
             <div className='newProductsTablet2'>
-                <h3 id='newH3'>Yeni Mehsullar</h3>
+                <h3 id='newH3'>{t("New products")}</h3>
                 <Slide
                     autoplay={true}
                     onChange={function noRefCheck() { }}
@@ -150,12 +157,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -165,12 +173,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -180,12 +189,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -195,12 +205,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -210,12 +221,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                 </Slide>
@@ -223,9 +235,9 @@ const NewProducts = () => {
             </div>
 
 
-
+            {/* Mobile */}
             <div className='newProductsMobile'>
-                <h3 id='newH3'>Yeni məhsullar</h3>
+                <h3 id='newH3'>{t("New products")}</h3>
                 <Slide
                     autoplay={true}
                     onChange={function noRefCheck() { }}
@@ -238,12 +250,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -253,12 +266,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -268,12 +282,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -283,12 +298,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -298,12 +314,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -313,12 +330,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -328,12 +346,13 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                     <div className="slideProductDiv">
@@ -343,12 +362,61 @@ const NewProducts = () => {
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
-                                        <h4 className='cardH4'>{data.price}</h4>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
                                         <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
-                            : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
+                        }
+                    </div>
+                    <div className="slideProductDiv">
+                        {product ?
+                            product.slice(product.length - 9, product.length - 8).map((data, index) => {
+                                return (
+                                    <div key={index} className='homeProduct'>
+                                        <img src={data.img1} alt="" />
+                                        <h3 className='cardH3'>{data.productname}</h3>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
+                                    </div>
+                                )
+                            })
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
+                        }
+                    </div>
+                    <div className="slideProductDiv">
+                        {product ?
+                            product.slice(product.length - 10, product.length - 9).map((data, index) => {
+                                return (
+                                    <div key={index} className='homeProduct'>
+                                        <img src={data.img1} alt="" />
+                                        <h3 className='cardH3'>{data.productname}</h3>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
+                                    </div>
+                                )
+                            })
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
+                        }
+                    </div>
+                    <div className="slideProductDiv">
+                        {product ?
+                            product.slice(product.length - 11, product.length - 10).map((data, index) => {
+                                return (
+                                    <div key={index} className='homeProduct'>
+                                        <img src={data.img1} alt="" />
+                                        <h3 className='cardH3'>{data.productname}</h3>
+                                        {data.salePrice ? <h4 className='salePrice'>{data.salePrice} AZN</h4> : <></>}
+                                        <h4 className='cardH4'>{data.price} AZN</h4>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
+                                    </div>
+                                )
+                            })
+                            : <h2 style={{ textAlign: "center" }}>{t("Loading")} ...</h2>
                         }
                     </div>
                 </Slide>

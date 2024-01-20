@@ -4,16 +4,22 @@ import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
 import ShoppingMenuMobile from "../../components/shoppingMenu/ShoppingMenuMobile"
 import ProfileButton from "../../components/profileButton/ProfileButton"
+import { useSelector } from 'react-redux'
+import Badge from '@mui/material/Badge';
+
 
 export default function MobileNavbar() {
     const { t } = useTranslation()
+    const quantity = useSelector(state => state.cart.quantity)
+
     return (
         <div className='mobileNavbar'>
             <div className="mobilNavContainer">
                 <div className="mobileNavRight">
                     <div id='topnavCart'>
-                        <ShoppingMenuMobile />
-                        <p id='cartCount'>0</p>
+                        <Badge badgeContent={quantity} color="primary">
+                            <ShoppingMenuMobile />
+                        </Badge>
                     </div>
                     <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
 

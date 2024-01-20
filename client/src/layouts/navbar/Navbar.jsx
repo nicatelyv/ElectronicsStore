@@ -9,6 +9,7 @@ import ShoppingMenu from "../../components/shoppingMenu/ShoppingMenu"
 import ProfileButton from "../../components/profileButton/ProfileButton"
 import TextField from '@mui/material/TextField';
 import { useSelector } from 'react-redux';
+import Badge from '@mui/material/Badge';
 
 function Navbar() {
     const { toggle, darkMode } = useContext(DarkModeContext);
@@ -289,8 +290,9 @@ function Navbar() {
                         : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade"></i></NavLink>
                     }
                     <div id='topnavCart'>
-                        <ShoppingMenu />
-                        <p id='cartCount'>{quantity}</p>
+                        <Badge badgeContent={quantity} color="primary">
+                            <ShoppingMenu />
+                        </Badge>
                     </div>
                     <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
                     {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb "></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
