@@ -1,0 +1,429 @@
+img {
+    cursor: pointer;
+}
+
+@import "../../style.scss";
+
+.detailPage {
+    @include themify($themes) {
+        width: 100%;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .detailpageMain {
+            width: 90%;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .detailImgs {
+                width: 650px;
+                height: 70vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    background-image: url('https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493bb08m8f32c9282ywxu9mv1rh3ldfmt6psbs52uxtn&rid=200w.gif&ct=g');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 15px;
+                    width: 450px;
+                    height: 65vh;
+                    transition: 1s;
+                }
+
+                img:hover {
+                    scale: 1.05;
+                    transition: 1s;
+                }
+
+                #imgmsItem {
+                    width: 180px;
+                    height: 70vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    overflow: auto;
+                    gap: 40px;
+
+
+                    &::-webkit-scrollbar {
+                        border-radius: 20px;
+                        background-color: rgb(239, 237, 237);
+                        height: 10px;
+                        width: 8px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 20px;
+                        background-color: gray;
+                    }
+
+                    img {
+                        background-image: url('https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493bb08m8f32c9282ywxu9mv1rh3ldfmt6psbs52uxtn&rid=200w.gif&ct=g');
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        width: 150px;
+                        height: 15vh;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            .detailsItemTexts {
+                width: 40%;
+                height: 65vh;
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                justify-content: center;
+                gap: 10px;
+
+                #detailsH2 {
+                    font-size: 50px;
+                    font-family: Cormorant;
+                    margin: 0;
+                }
+
+                #detailsH5 {
+                    font-size: 20px;
+                    font-family: Cormorant;
+                    margin: 0;
+                }
+
+                #detailsP {
+                    font-size: 18px;
+                    font-family: Cormorant;
+                    margin: 0;
+                }
+
+                #addtobasket {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    background: none;
+                    border: 1px solid gray;
+                    border-radius: 10px;
+                }
+
+                #addtowishlist {
+                    width: 25px;
+                    background: none;
+                    font-size: 25px;
+                    color: black;
+                    cursor: pointer;
+                }
+
+                #detailsH3 {
+                    margin: 0;
+                    font-size: 18px;
+                    font-family: Cormorant;
+                    opacity: .7;
+                    text-transform: capitalize;
+                }
+
+                #detailsH4 {
+                    margin: 0;
+                    font-size: 18px;
+                    font-family: Cormorant;
+                    opacity: .7;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1230px) {
+    .detailPage {
+        @include themify($themes) {
+            .detailpageMain {
+                flex-direction: column;
+
+                .detailImgs {
+                    width: 800px;
+                    height: 80vh;
+
+                    img {
+                        width: 600px;
+                        height: 65vh;
+                    }
+
+                    #imgmsItem {
+                        width: 150px;
+                    }
+                }
+
+                .detailsItemTexts {
+                    width: 100%;
+                    height: 50vh;
+
+                    #detailsH2 {
+                        font-size: 50px;
+                    }
+
+                    #detailsH5 {
+                        font-size: 20px;
+                    }
+
+                    #detailsP {
+                        font-size: 18px;
+                    }
+
+                    #detailsToBasket {
+                        #addtobasket {
+                            width: 150px;
+                            height: 30px;
+                        }
+                    }
+
+                    #addtowishlist {
+                        width: 180px;
+                        height: 30px;
+                    }
+
+                    #detailsH3 {
+                        font-size: 18px;
+                    }
+
+                    #detailsH4 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .detailPage {
+        @include themify($themes) {
+            .detailpageMain {
+                .detailImgs {
+                    width: 100%;
+                     height: 50vh;
+
+                    img {
+                        width: 400px;
+                        height: 50vh;
+                    }
+
+                    #imgmsItem {
+                        width: 150px;
+                        height: 50vh;
+
+                        img {
+                            width: 100px;
+                            height: 10vh;
+                        }
+                    }
+                }
+
+                .detailsItemTexts {
+                    width: 100%;
+                    height: 50vh;
+
+                    #detailsH2 {
+                        font-size: 50px;
+                    }
+
+                    #detailsH5 {
+                        font-size: 20px;
+                    }
+
+                    #detailsP {
+                        font-size: 18px;
+                    }
+
+                    #addtowishlist {
+                        width: 180px;
+                        height: 30px;
+                    }
+
+                    #detailsH3 {
+                        font-size: 18px;
+                    }
+
+                    #detailsH4 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .detailPage {
+        @include themify($themes) {
+            padding-top: 20px;
+            padding-bottom: 0;
+
+            .detailpageMain {
+                .detailImgs {
+                    width: 100%;
+                    min-height: 20vh;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+                    img {
+                        
+                        width: 280px;
+                        height: 30vh;
+                        object-fit: contain;
+                    }
+
+                    #imgmsItem {
+                        width: 70%;
+                        height: 20vh;
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+
+                        img {
+                            width: 70px;
+                            height: 8vh;
+                            object-fit: contain;
+                        }
+                    }
+                }
+
+                .detailsItemTexts {
+                    width: 100%;
+                    height: 60vh;
+
+                    #detailsH2 {
+                        font-size: 40px;
+                    }
+
+                    #detailsH5 {
+                        font-size: 18px;
+                    }
+
+                    #detailsP {
+                        width: 100%;
+                        font-size: 16px;
+                    }
+
+
+                    #addtowishlist {
+                        width: 140px;
+                    }
+
+                    #detailsH3 {
+                        font-size: 16px;
+                    }
+
+                    #detailsH4 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .detailPage {
+        @include themify($themes) {
+            .detailpageMain {
+                .detailImgs {
+                    min-height: 40vh;
+
+                    img {
+                        width: 80%;
+                        height: 25vh;
+                        object-fit: contain;
+                    }
+
+                    #imgmsItem {
+                        width: 80%;
+                        height: 20vh;
+                        overflow: auto;
+
+                        img {
+                            width: 70px;
+                            height: 8vh;
+                        }
+                    }
+                }
+
+                .detailsItemTexts {
+                    height: 70vh;
+
+                    #detailsH2 {
+                        font-size: 40px;
+                    }
+
+                    #detailsH5 {
+                        font-size: 18px;
+                    }
+
+                    #detailsP {
+                        width: 100%;
+                        font-size: 16px;
+                    }
+
+                    #addtowishlist {
+                        width: 140px;
+                    }
+
+                    #detailsH3 {
+                        font-size: 16px;
+                    }
+
+                    #detailsH4 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 230px) {
+    .detailPage {
+        @include themify($themes) {
+            min-height: 150vh;
+
+            .detailpageMain {
+                min-height: 50vh;
+
+                .detailImgs {
+                    height: 40vh;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .detailsItemTexts {
+                    min-height: 80vh;
+                    margin-top: 20px;
+
+                    #detailsH2 {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+
+                    #addtobasket {
+                        width: 100%;
+                        min-height: 50px;
+                    }
+
+                    #addtowishlist {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

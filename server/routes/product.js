@@ -81,17 +81,10 @@ router.delete("/:id", (req, res) => {
 
 
 //Get product
-router.get("/find/:id", (req, res) => {
+router.get("/find/:id", async (req, res) => {
     const { id } = req.params;
-    Product.findById(id, (err, doc) => {
-        if (!err) {
-            if (doc) {
-                res.send(doc)
-            } else {
-                res.status(404).json({ message: err })
-            }
-        }
-    })
+    let result = await Product.findById(id)
+    res.send(result)
 })
 
 

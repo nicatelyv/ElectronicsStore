@@ -8,6 +8,7 @@ import i18next from 'i18next';
 import ShoppingMenu from "../../components/shoppingMenu/ShoppingMenu"
 import ProfileButton from "../../components/profileButton/ProfileButton"
 import TextField from '@mui/material/TextField';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
     const { toggle, darkMode } = useContext(DarkModeContext);
@@ -15,7 +16,7 @@ function Navbar() {
     const handleClick = (e) => {
         i18next.changeLanguage(e.target.value)
     }
-
+    const quantity = useSelector(state => state.cart.quantity)
     return (
         <nav id='nav'>
             <div className="container">
@@ -289,7 +290,7 @@ function Navbar() {
                     }
                     <div id='topnavCart'>
                         <ShoppingMenu />
-                        <p id='cartCount'>0</p>
+                        <p id='cartCount'>{quantity}</p>
                     </div>
                     <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
                     {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb "></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}

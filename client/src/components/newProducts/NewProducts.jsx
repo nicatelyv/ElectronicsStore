@@ -36,7 +36,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -51,31 +51,31 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
                             : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
                         }
                     </div>
-                    {/* <div className="slideProductDiv">
+                    <div className="slideProductDiv">
                         {product ?
-                            product.slice(product.length - 16, product.length - 8).map((data, index) => {
+                            product.slice(product.length - 12, product.length - 8).map((data, index) => {
                                 return (
                                     <div key={index} className='homeProduct'>
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
                             : <h2 style={{ textAlign: "center" }}>Loading ...</h2>
                         }
-                    </div> */}
-                </Slide>
-                <Link className='moreLink' to={'/shop'}><button className='moreBtn'>Daha çoxuna bax</button></Link>
-            </div>
+                    </div>
+                </Slide >
+                <Link className='moreLink' to={'/shop'}><button className='moreBtn'>{t("See more")}</button></Link>
+            </div >
 
 
             <div className='newProductsTablet'>
@@ -93,7 +93,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -108,7 +108,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -123,7 +123,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -131,7 +131,7 @@ const NewProducts = () => {
                         }
                     </div>
                 </Slide>
-                <Link className='moreLink' to={'/shop'}><button className='moreBtn'>Daha çoxuna bax</button></Link>
+                <Link className='moreLink' to={'/shop'}><button className='moreBtn'>{t("See more")}</button></Link>
             </div>
 
 
@@ -151,7 +151,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -166,7 +166,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -181,7 +181,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -196,7 +196,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -211,7 +211,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -219,7 +219,7 @@ const NewProducts = () => {
                         }
                     </div>
                 </Slide>
-                <Link className='moreLink' to={'/shop'}><button className='moreBtn'>Daha çoxuna bax</button></Link>
+                <Link className='moreLink' to={'/shop'}><button className='moreBtn'>{t("See more")}</button></Link>
             </div>
 
 
@@ -239,7 +239,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -254,7 +254,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -269,7 +269,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -284,7 +284,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -299,7 +299,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -314,7 +314,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -329,7 +329,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -344,7 +344,7 @@ const NewProducts = () => {
                                         <img src={data.img1} alt="" />
                                         <h3 className='cardH3'>{data.productname}</h3>
                                         <h4 className='cardH4'>{data.price}</h4>
-                                        <button className='cardMoreBtn'>{t("More details")}</button>
+                                        <Link to={'/shop/' + data._id + "/details"}><button className='cardMoreBtn'>{t("More details")}</button></Link>
                                     </div>
                                 )
                             })
@@ -352,7 +352,7 @@ const NewProducts = () => {
                         }
                     </div>
                 </Slide>
-                <Link className='moreLink' to={'/shop'}><button className='moreBtn'>Daha çoxuna bax</button></Link>
+                <Link className='moreLink' to={'/shop'}><button className='moreBtn'>{t("See more")}</button></Link>
             </div>
         </>
     );
