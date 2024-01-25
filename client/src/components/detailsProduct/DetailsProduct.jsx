@@ -27,7 +27,7 @@ function DetailsProduct() {
     const handleQuantity = (type) => {
         if (type === 'dec') {
             quantity > 1 && setQuantity(quantity - 1)
-            quantity < 2 && window.confirm(t("Minimum 1 product"))
+            quantity < 2 && window.alert(t("Minimum 1 product"))
         } else {
             setQuantity(quantity + 1)
         }

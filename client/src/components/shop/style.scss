@@ -6,5 +6,23 @@
         min-height: 100vh;
         background-color: themed("bgSoft");
         transition: .5s;
+        padding: 20px;
+        padding-top: 100px;
+        display: flex;
+        gap: 50px;
+
+        .shopLeftBar {
+            width: 400px;
+            min-height: 80vh;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .shopMain {
+            width: 100%;
+            min-height: 80vh;
+            border: 1px solid black;
+        }
     }
 }
