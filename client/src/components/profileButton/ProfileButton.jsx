@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
+import "./style.scss"
 
 export default function AccountMenu() {
 
@@ -74,20 +74,20 @@ export default function AccountMenu() {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <Link to={'/hesabim'}>
+                <Link className='profileA' to={'/hesabim'}>
                     <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                         <Avatar /> {t("My Account")}
                     </MenuItem>
                 </Link>
                 <Divider />
-                <Link to={'/giris'}><MenuItem onClick={handleClose} style={{ color: 'black' }}>
+                {/* <Link to={'/giris'}><MenuItem onClick={handleClose} style={{ color: 'black' }}>
                     <ListItemIcon>
                         <i class="fa-solid fa-user-plus"></i>
                     </ListItemIcon>
                     {t("Add another account")}
                 </MenuItem>
-                </Link>
-                <Link to={'/hesabim/parametrler'}>
+                </Link> */}
+                <Link className='profileA' to={'/hesabim/parametrler'}>
                     <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                         <ListItemIcon>
                             <i class="fa-solid fa-gear"></i>
@@ -95,7 +95,7 @@ export default function AccountMenu() {
                         {t("Settings")}
                     </MenuItem>
                 </Link>
-                <Link to={'/logout'}>
+                <Link className='profileA' to={'/logout'}>
                     <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                         <ListItemIcon>
                             <i class="fa-solid fa-right-from-bracket"></i>

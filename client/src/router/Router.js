@@ -24,11 +24,17 @@ export const router = createBrowserRouter([
         path: "/shop/:id/details",
         element: <Details />
     },
-    {
+    localStorage.getItem("username") ? {
+        path: "/giris",
+        element: <Home />,
+    } : {
         path: "/giris",
         element: <LoginPage />
     },
-    {
+    localStorage.getItem("username") ? {
+        path: "/qeydiyyat",
+        element: <Home />
+    } : {
         path: "/qeydiyyat",
         element: <RegisterPage />
     },

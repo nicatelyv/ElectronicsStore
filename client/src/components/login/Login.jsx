@@ -6,6 +6,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Login() {
     const { t } = useTranslation();
@@ -16,11 +19,16 @@ function Login() {
         let button = document.getElementById('submitbtn');
         button.style.cursor = 'wait'
     }
+    function defaultCursor() {
+        let button = document.getElementById('submitbtn');
+        button.style.cursor = 'pointer'
+    }
 
     async function handleSubmit(values) {
         try {
             wait()
             let response = await axios.post('https://electronics-store-api.vercel.app/api/auth/login/', values)
+            notify()
             localStorage.setItem('username', response.data.username)
             localStorage.setItem('firstName', response.data.firstName)
             localStorage.setItem('lastName', response.data.lastName)
@@ -28,12 +36,15 @@ function Login() {
             localStorage.setItem('token', response.data.token)
             localStorage.setItem('isAdmin', response.data.isAdmin)
             navigate("/")
+            window.location.reload(false);
 
         } catch (err) {
+            defaultCursor()
             console.log(err.response)
             setError(err.response.data.message)
         }
     }
+    const notify = () => toast.warning(t("Minimum 1 product"));
     return (
         <section className='loginPage'>
             <div className='loginMain'>

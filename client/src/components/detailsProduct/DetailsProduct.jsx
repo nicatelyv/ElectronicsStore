@@ -5,6 +5,9 @@ import { addProduct } from '../../redux/cartRedux';
 import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next';
 import Backdrop from '@mui/material/Backdrop';
+import Button from 'react-bootstrap/Button';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './style.scss'
 
 function DetailsProduct() {
@@ -24,14 +27,16 @@ function DetailsProduct() {
     const dispatch = useDispatch();
     const { t } = useTranslation();
 
+
     const handleQuantity = (type) => {
         if (type === 'dec') {
             quantity > 1 && setQuantity(quantity - 1)
-            quantity < 2 && window.alert(t("Minimum 1 product"))
+            quantity < 2 && notify()
         } else {
             setQuantity(quantity + 1)
         }
     }
+    const notify = () => toast.warning(t("Minimum 1 product"));
 
     const handleClick = () => {
         dispatch(addProduct({ ...product, quantity, }))
@@ -91,12 +96,12 @@ function DetailsProduct() {
                     </div>
                     <p id='detailsP'>{product.desc}</p>
                     <div id='addbasketDiv' style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                        <button onClick={() => handleQuantity("dec")} style={{ width: "30px", height: "30px", borderRadius: "100%", cursor: "pointer", background: "none", border: "1px solid gray" }}>-</button>
+                        <i onClick={() => handleQuantity("dec")} class="fa-solid fa-circle-minus" style={{ color: '#74C0FC', fontSize: "30px", cursor: "pointer" }}></i>
                         <p style={{ margin: "0", fontSize: "18px" }}>{quantity}</p>
-                        <button onClick={() => handleQuantity("inc")} style={{ width: "30px", height: "30px", borderRadius: "100%", cursor: "pointer", background: "none", border: "1px solid gray" }}>+</button>
+                        <i onClick={() => handleQuantity("inc")} class="fa-solid fa-circle-plus" style={{ color: '#74C0FC', fontSize: "30px", cursor: "pointer" }}></i>
 
                         {/* {localStorage.getItem('username') ? */}
-                        <button style={{ cursor: "pointer" }} onClick={handleClick} id='addtobasket'>{t("Add to basket")}</button>
+                        <Button variant='success' style={{ cursor: "pointer", borderRadius: "10px" }} onClick={handleClick} >{t("Add to basket")}</Button>
                         {/* : <Link to={'/giris'}><button style={{ cursor: "pointer" }} id='addtobasket'>{t("Add to basket")}</button></Link>} */}
                     </div>
                     {/* {localStorage.getItem('username') ? */}
@@ -110,6 +115,7 @@ function DetailsProduct() {
                 </div>
 
             </div>
+            <ToastContainer />
         </section >
     )
 }

@@ -8,6 +8,7 @@ export default function Index() {
     function logout() {
         localStorage.clear()
         navigate("/")
+        window.location.reload(false);
     }
     useEffect(() => {
         logout()

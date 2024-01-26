@@ -18,6 +18,11 @@ function Register() {
     button.style.cursor = 'wait'
   }
 
+  function defaultCursor() {
+    let button = document.getElementById('submitbtn');
+    button.style.cursor = 'pointer'
+  }
+
   async function handleButton(values) {
     try {
       wait()
@@ -29,9 +34,11 @@ function Register() {
       localStorage.setItem('token', response.data.token)
       localStorage.setItem('isAdmin', response.data.isAdmin)
       navigate("/")
-      console.log(response)
+      window.location.reload(false);
+      // console.log(response)
 
     } catch (err) {
+      defaultCursor()
       console.log(err.response)
       setError(error.response.data.message)
     }
