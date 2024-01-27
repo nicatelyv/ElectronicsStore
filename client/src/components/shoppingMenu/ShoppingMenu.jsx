@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { clearBasket } from '../../redux/cartRedux'
 import { useTranslation } from 'react-i18next';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+
 
 export default function TemporaryDrawer() {
     const cart = useSelector(state => state.cart)
@@ -32,17 +34,18 @@ export default function TemporaryDrawer() {
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
+            // onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
             className={'cartMenu'}
         >
             <div className='cartItems'>
+                <i onClick={toggleDrawer(anchor, false)} style={{ cursor: "pointer", fontSize: "25px", alignSelf: "flex-end", position: "absolute" }} className="fa-solid fa-xmark"></i>
                 {cart.products.map((product, index) => (
                     <div className="cartItem" key={index}>
                         <div className='cartLeft'>
                             <img src={product.img1} alt='foto' />
                             <div className='cartItemTexts'>
-                                <h5 id='cartItemH5'>{product.productname}</h5>
+                                <Link to={'/shop/' + product._id + "/details"} onClick={toggleDrawer(anchor, false)}><h5 id='cartItemH5'>{product.productname}</h5></Link>
                                 {/* <p id='cartItemP'>AZN {product.price}</p> */}
                                 {product.color ? <p id='cartItemP'>{t("Color")}: {product.color}</p> : <></>}
                                 {product.storage ? <p id='cartItemP'>{t("Storage")}: {product.storage}</p> : <></>}
@@ -54,8 +57,10 @@ export default function TemporaryDrawer() {
                         </div>
                     </div>
                 ))}
-                <h2 id='cartTotalPrice'>{t('Total price:')} {(cart.total).toFixed(2)} AZN</h2>
-                <Button onClick={handleClick} className='cartBtn'>{t("Confirm")}</Button>
+                <div className="total">
+                    <h2 id='cartTotalPrice'>{t('Total price:')} {(cart.total).toFixed(2)} AZN</h2>
+                    <Button onClick={handleClick} className='cartBtn'>{t("Confirm")}</Button>
+                </div>
             </div>
         </Box>
     );

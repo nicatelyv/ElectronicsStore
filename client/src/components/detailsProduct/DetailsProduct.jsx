@@ -59,6 +59,7 @@ function DetailsProduct() {
                 {detailImg ?
                     <div className='detailImgs'>
                         <div id='imgmsItem'>
+                            {product.img4 ? <i className="fa-solid fa-arrows-left-right"></i> : <></>}
                             {product.img1 ? <img onClick={(e) => { setDetailImg(e.target.src) }} src={product.img1} alt='foto' /> : <></>}
                             {product.img2 ? <img onClick={(e) => { setDetailImg(e.target.src) }} src={product.img2} alt='foto' /> : <></>}
                             {product.img3 ? <img onClick={(e) => { setDetailImg(e.target.src) }} src={product.img3} alt='foto' /> : <></>}

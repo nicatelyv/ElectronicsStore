@@ -2,11 +2,20 @@
     min-width: 500px;
     display: flex;
     align-items: center;
-    justify-content: start !important;
+    justify-content: flex-start !important;
     padding: 20px;
     flex-direction: column;
     height: 100vh;
     overflow: auto;
+
+    &::-webkit-scrollbar {
+        height: 5px;
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: green;
+    }
 
     .cartItems {
         width: 100%;
@@ -34,6 +43,10 @@
                     width: 120px;
                 }
 
+                img:hover {
+                    cursor: default;
+                }
+
                 .cartItemTexts {
                     display: flex;
                     flex-direction: column;
@@ -47,6 +60,7 @@
                     #cartItemP {
                         font-size: 12px;
                         margin: 0;
+                        text-transform: capitalize;
                     }
                 }
             }
@@ -59,6 +73,7 @@
                 align-self: flex-end;
                 width: 30%;
                 padding: 10px;
+                justify-self: flex-end;
 
                 #cartItemH4 {
                     font-size: 12px;
@@ -77,8 +92,13 @@
             margin-top: 0;
         }
 
-        #cartTotalPrice {
-            font-size: 16px;
+        .total {
+            display: flex;
+            flex-direction: column;
+
+            #cartTotalPrice {
+                font-size: 16px;
+            }
         }
     }
 }

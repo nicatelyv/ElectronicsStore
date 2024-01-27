@@ -1,6 +1,96 @@
-.cartMenu {
+.cartMenuMobile {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start !important;
+    padding: 20px;
+    flex-direction: column;
     min-height: 300px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        height: 5px;
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: green;
+    }
+
+    .cartItemsMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+
+        .cartItemMobile {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: space-between;
+            padding-right: 10px;
+            border-bottom: 1px solid black;
+
+            .cartLeftMobile {
+                display: flex;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                gap: 10px;
+                align-items: center;
+
+                img {
+                    width: 100px;
+                }
+
+                .cartItemTextsMobile {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 10px;
+                    width: 100%;
+
+                    #cartItemH5Mobile {
+                        font-size: 14px;
+                        margin: 0;
+                    }
+
+                    #cartItemPMobile {
+                        font-size: 12px;
+                        margin: 0;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+
+            #cartItemCountMobile {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                align-self: flex-end;
+                width: 30%;
+                padding: 10px;
+
+                #cartItemH4Mobile {
+                    font-size: 12px;
+                    margin: 0;
+                }
+
+                #cartItemH3Mobile {
+                    font-size: 12px;
+                    display: flex;
+                    margin: 0;
+                }
+            }
+        }
+
+        .cartItem:nth-child(1) {
+            margin-top: 0;
+        }
+
+        #cartTotalPriceMobile {
+            font-size: 16px;
+        }
+    }
 }

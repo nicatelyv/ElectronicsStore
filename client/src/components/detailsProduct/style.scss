@@ -14,6 +14,9 @@ img {
         overflow: hidden;
         padding-top: 100px;
         padding-bottom: 100px;
+        background-color: themed("bgSoft");
+        color: themed("textColor") !important;
+        transition: .5s;
 
         .detailpageMain {
             width: 90%;
@@ -61,7 +64,20 @@ img {
                     align-items: center;
                     overflow: auto;
                     gap: 40px;
+                    position: relative;
 
+                    .fa-arrows-left-right {
+                        display: none;
+                        color: black;
+
+                        @include mobile {
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            right: 50%;
+                        }
+                    }
 
                     &::-webkit-scrollbar {
                         border-radius: 20px !important;
@@ -235,7 +251,7 @@ img {
             .detailpageMain {
                 .detailImgs {
                     width: 100%;
-                    height: 50vh;
+                    min-height: 50vh;
                     justify-content: start;
                     gap: 50px;
 
@@ -244,6 +260,7 @@ img {
                         width: 400px;
                         height: 50vh;
                         transition: 1s;
+                        object-fit: contain;
                     }
 
                     .detailMainImgOpen {
@@ -259,6 +276,7 @@ img {
                         img {
                             width: 100px;
                             height: 10vh;
+                            object-fit: contain;
                         }
                     }
                 }
@@ -301,13 +319,17 @@ img {
 @media only screen and (max-width:630px) {
     .detailPage {
         @include themify($themes) {
-            padding-top: 20px;
+            padding-top: 80px;
             padding-bottom: 0;
+
+            @include mobile {
+                padding-top: 10px;
+            }
 
             .detailpageMain {
                 .detailImgs {
                     width: 100%;
-                    min-height: 60vh;
+                    height: 60vh;
                     flex-direction: column;
                     flex-wrap: wrap;
                     justify-content: center;
@@ -324,7 +346,7 @@ img {
                     }
 
                     #imgmsItem {
-                        width: 70%;
+                        width: 90%;
                         height: 20vh;
                         flex-direction: row-reverse;
                         justify-content: space-between;
