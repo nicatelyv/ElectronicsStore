@@ -28,23 +28,27 @@ function Login() {
         try {
             wait()
             let response = await axios.post('https://electronics-store-api.vercel.app/api/auth/login/', values)
-            notify()
             localStorage.setItem('username', response.data.username)
             localStorage.setItem('firstName', response.data.firstName)
             localStorage.setItem('lastName', response.data.lastName)
             localStorage.setItem('email', response.data.email)
             localStorage.setItem('token', response.data.token)
             localStorage.setItem('isAdmin', response.data.isAdmin)
-            navigate("/")
-            window.location.reload(false);
+            let notify = () => toast.success(t('Successful login!'));
+            notify()
+            setTimeout(() => {
+                navigate("/")
+                window.location.reload(false);
+            }, 1500);
 
         } catch (err) {
+            // let notifyErr = () => toast.error(t(err.response.data.message));
+            // notifyErr()
             defaultCursor()
             console.log(err.response)
-            setError(err.response.data.message)
+            setError(t(err.response.data.message))
         }
     }
-    const notify = () => toast.warning(t("Minimum 1 product"));
     return (
         <section className='loginPage'>
             <div className='loginMain'>
@@ -78,6 +82,7 @@ function Login() {
                         </div>
                     )}
                 </Formik>
+                <ToastContainer />
             </div>
         </section>
     )

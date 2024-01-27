@@ -78,7 +78,6 @@ function DetailsProduct() {
                                     onClick={handleClose}
 
                                 >
-                                    {/* <div className={Style.diplomaDivOpen} onClick={handleOpen}></div> */}
                                     <img className='detailMainImgOpen' onClick={handleOpen} src={detailImg} alt='foto' />
                                 </Backdrop>
                             </>

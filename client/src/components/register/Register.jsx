@@ -6,6 +6,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Register() {
@@ -33,8 +35,12 @@ function Register() {
       localStorage.setItem('email', response.data.email)
       localStorage.setItem('token', response.data.token)
       localStorage.setItem('isAdmin', response.data.isAdmin)
-      navigate("/")
-      window.location.reload(false);
+      let notify = () => toast.success(t('Successful login!'));
+      notify()
+      setTimeout(() => {
+        navigate("/")
+        window.location.reload(false);
+      }, 1500);
       // console.log(response)
 
     } catch (err) {
@@ -96,6 +102,7 @@ function Register() {
             </div>
           )}
         </Formik>
+        <ToastContainer />
       </div>
     </section>
   )
