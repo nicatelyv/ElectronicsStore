@@ -66,16 +66,16 @@ function Login() {
                             <Form>
                                 <div className='login_usrname_password'>
                                     <div id='loginDiv'>
-                                        <label htmlFor="username"><i className="fa-solid fa-user"></i> {t("İstifadəçi adı")}:</label>
+                                        <label htmlFor="username"><i className="fa-solid fa-user" style={{ color: "#63E6BE" }}></i> {t("İstifadəçi adı")}:</label>
                                         <Field className={`inp ${errors.username && touched.username && "errorInp"}`} name="username" type="text" />
                                     </div>
 
                                     <div id='loginDiv'>
-                                        <label htmlFor="password"><i className="fa-solid fa-lock"></i> {t("Şifrə")}:</label>
+                                        <label htmlFor="password"><i className="fa-solid fa-lock" style={{ color: "#74C0FC" }}></i> {t("Şifrə")}:</label>
                                         <Field className={`inp ${errors.password && touched.password && "errorInp"}`} name="password" type="password" />
                                     </div>
                                 </div>
-                                <span className='errors' style={{ color: "#d91900" }}>{error}</span>
+                                {error ? <span className='errors' style={{ color: "#d91900" }}>{error}</span> :<></>}
                                 <Link id='havenotaccount' to={'/qeydiyyat'}>{t("Hesabınız yoxdur ?")}</Link>
                                 <button id='submitbtn' type="submit">{t("Daxil ol")}</button>
                             </Form>

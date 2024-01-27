@@ -8,9 +8,8 @@ i {
 
 .loginPage {
     @include themify($themes) {
-
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         background: url('https://woorise.com/wp-content/uploads/2021/03/Online-event-registration.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -20,6 +19,8 @@ i {
         justify-content: center;
         overflow: hidden;
         transition: .5s;
+        padding-bottom: 30px;
+        padding-top: 30px;
 
         label {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -37,6 +38,7 @@ i {
             overflow: hidden;
             justify-content: center;
             color: themed("textColor");
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
             .formDiv {
                 display: flex;
@@ -89,6 +91,7 @@ i {
                                 border-top-right-radius: 0;
                                 background-color: inherit;
                                 color: themed("textColorSoft");
+                                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
                             }
                         }
                     }
@@ -103,6 +106,7 @@ i {
                         color: themed("textColor");
                         cursor: pointer;
                         transition: .5s;
+                        box-shadow: rgba(46, 240, 98, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
                     }
 
                     #submitbtn:hover {
@@ -119,10 +123,10 @@ i {
 @media only screen and (max-width: 600px) {
     .loginPage {
         @include themify($themes) {
-            height: 80vh;
+            min-height: 80vh;
 
             .loginMain {
-                min-height: 400px;
+                min-height: 450px;
                 transition: 1s;
                 margin-top: 0;
 

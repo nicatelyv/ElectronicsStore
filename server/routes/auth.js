@@ -5,6 +5,11 @@ const jwt = require("jsonwebtoken")
 
 // Register
 router.post("/register", async (req, res) => {
+    const user = await User.findOne({ username: req.body.username });
+    const email = await User.findOne({ email: req.body.email });
+    if (user || email) {
+        return res.status(401).json({ message: "Username or email has been used" })
+    }
     const newUser = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -19,7 +24,7 @@ router.post("/register", async (req, res) => {
         const savedUser = await newUser.save();
         res.status(201).json({ username: savedUser.username, firstName: savedUser.firstName, lastName: savedUser.lastName, email: savedUser.email });
     } catch (err) {
-        res.status(500).json(err);
+        return res.status(500).json({ message: err });
     }
 });
 
@@ -50,7 +55,7 @@ router.post("/login", async (req, res) => {
 
     const { password, ...others } = user._doc;
 
-    return res.status(200).json({ email: user.email, firstName: user.firstName, lastName: user.lastName, username: user.username, ...others, accessToken , isAdmin : user.isAdmin })
+    return res.status(200).json({ email: user.email, firstName: user.firstName, lastName: user.lastName, username: user.username, ...others, accessToken, isAdmin: user.isAdmin })
 })
 
 module.exports = router  
