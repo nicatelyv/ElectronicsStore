@@ -10,6 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useSound from 'use-sound';
 import sound from "../../assets/sounds/mixkit-wind-chimes-2014.wav"
+import wrongSound from "../../assets/sounds/dats-wrong.mp3"
 
 function Login() {
     const [inputType, setInputType] = useState('password');
@@ -18,6 +19,7 @@ function Login() {
         setInputType(inputType === 'password' ? 'text' : 'password');
     };
     const [playSound] = useSound(sound);
+    const [playWrongSound] = useSound(wrongSound);
 
 
     const { t } = useTranslation();
@@ -52,8 +54,9 @@ function Login() {
             }, 1500);
 
         } catch (err) {
-            // let notifyErr = () => toast.error(t(err.response.data.message));
-            // notifyErr()
+            let notifyErr = () => toast.error(t(err.response.data.message));
+            notifyErr()
+            playWrongSound()
             defaultCursor()
             console.log(err.response)
             setError(t(err.response.data.message))
@@ -72,7 +75,7 @@ function Login() {
                 >
                     {({ errors, touched }) => (
                         <div className='formDiv'>
-                            <h2 id='loginH2'>{t("Daxil ol")}</h2>
+                            <h2 id='loginH2'><i className="fa-solid fa-store"></i> {t("Daxil ol")}</h2>
                             <Form>
                                 <div className='login_usrname_password'>
                                     <div id='loginDiv'>
@@ -88,7 +91,7 @@ function Login() {
                                 </div>
                                 {error ? <span className='errors' style={{ color: "#d91900" }}>{error}</span> : <></>}
                                 <Link id='havenotaccount' to={'/qeydiyyat'}>{t("Hesabınız yoxdur ?")}</Link>
-                                <button id='submitbtn' type="submit">{t("Daxil ol")}</button>
+                                <button id='submitbtn' type="submit"><i className="fa-solid fa-right-to-bracket"></i> {t("Daxil ol")}</button>
                             </Form>
                         </div>
                     )}

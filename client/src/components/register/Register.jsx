@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useSound from 'use-sound';
 import sound from "../../assets/sounds/notification-confirmation-with-echo-smartsound-fx-lower-tone-2-00-01.mp3"
-
+import wrongSound from "../../assets/sounds/dats-wrong.mp3"
 
 function Register() {
   const [inputType, setInputType] = useState('password');
@@ -18,7 +18,9 @@ function Register() {
   const toggleInputType = () => {
     setInputType(inputType === 'password' ? 'text' : 'password');
   };
+  //Sound effect
   const [playSound] = useSound(sound);
+  const [playWrongSound] = useSound(wrongSound);
 
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -51,11 +53,11 @@ function Register() {
         navigate("/")
         window.location.reload(false);
       }, 1500);
-      // console.log(response)
 
     } catch (err) {
       let notify = () => toast.error(t('Username or email has been used!'));
       notify()
+      playWrongSound()
       defaultCursor()
       console.log(err.response)
       setError(error.response.data.message)
@@ -77,7 +79,7 @@ function Register() {
         >
           {({ errors, touched }) => (
             <div className='formDiv'>
-              <h2 id='registerH2'>{t("Qeydiyyat")} <i class="fa-regular fa-address-card"></i></h2>
+              <h2 id='registerH2'><i class="fa-regular fa-address-card"></i> {t("Qeydiyyat")}</h2>
               <Form>
                 <div id='first_last_name'>
                   <div id='frstNameDiv'>
@@ -110,7 +112,7 @@ function Register() {
                 </div>
                 {error ? <span className='errors' style={{ color: "#d91900" }}>{error}</span> : <></>}
                 <Link id='haveaccount' to={'/giris'}>{t("Hesabınız varmı ?")}</Link>
-                <button id='submitbtn' type="submit">{t("Qeydiyyatdan keç")}</button>
+                <button id='submitbtn' type="submit"><i class="fa-solid fa-right-to-bracket"></i> {t("Qeydiyyatdan keç")}</button>
               </Form>
             </div>
           )}

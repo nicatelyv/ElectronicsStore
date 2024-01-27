@@ -434,6 +434,7 @@ nav {
                 i {
                     color: themed("textColor");
                     cursor: pointer;
+                    transition: .5s;
                 }
 
                 #topnavCart {
@@ -442,6 +443,7 @@ nav {
 
                     i {
                         color: themed("textColor");
+                        transition: .5s;
                     }
 
                     #cartCount {

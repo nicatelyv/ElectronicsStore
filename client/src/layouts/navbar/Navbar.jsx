@@ -287,7 +287,7 @@ function Navbar() {
                 <div className='topnavRight'>
                     {localStorage.getItem("username") ?
                         <ProfileButton />
-                        : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade"></i></NavLink>
+                        : <NavLink to={"/giris"}><i style={{ color: "#74C0FC" }} className="fa-solid fa-user fa-fade"></i></NavLink>
                     }
                     <div id='topnavCart'>
                         <Badge badgeContent={quantity} color="primary">
@@ -295,10 +295,10 @@ function Navbar() {
                         </Badge>
                     </div>
                     <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
-                    {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb "></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
+                    {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "#FFD43B", cursor: "pointer" }} class="fa-solid fa-sun"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
                     <Languageoption onChange={e => handleClick(e)} />
                 </div>
-                <div className="darkmode"><Languageoption onChange={e => handleClick(e)} /> {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "white", cursor: "pointer" }} class="fa-regular fa-lightbulb"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}</div>
+                <div className="darkmode"><Languageoption onChange={e => handleClick(e)} /> {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "#FFD43B", cursor: "pointer" }} class="fa-solid fa-sun"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}</div>
             </div>
         </nav>
     )

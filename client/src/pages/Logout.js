@@ -11,8 +11,8 @@ export default function Index() {
         playSound()
         localStorage.clear()
         setTimeout(() => {
-            navigate("/")
             window.location.reload(false);
+            navigate("/")
         }, 1000);
     }
     useEffect(() => {

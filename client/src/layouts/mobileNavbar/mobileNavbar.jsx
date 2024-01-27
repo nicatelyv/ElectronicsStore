@@ -28,7 +28,7 @@ export default function MobileNavbar() {
                     <input type="text" placeholder={t("Axtarış")} />
                     {localStorage.getItem("username") ?
                         <ProfileButton />
-                        : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade"></i></NavLink>
+                        : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade" style={{color:"#74C0FC"}}></i></NavLink>
                     }
                 </div>
             </div>

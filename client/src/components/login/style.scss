@@ -50,6 +50,21 @@ i {
                 gap: 10px;
                 transition: .5s;
 
+                #loginH2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    color: themed('logo2');
+                    transition: .5s;
+
+                    i {
+                        font-size: 30px;
+                        color: themed('logo2');
+                        transition: .5s;
+                    }
+                }
+
                 Form {
                     width: 80%;
                     display: flex;
@@ -100,6 +115,11 @@ i {
                             flex-direction: column;
                             position: relative;
 
+                            label {
+                                color: themed('textColor');
+                                transition: .5s;
+                            }
+
                             .errorInp {
                                 border-bottom: 2px solid red;
                             }
@@ -108,7 +128,8 @@ i {
                                 margin-top: 5px;
                                 outline: none;
                                 border: none;
-                                border-bottom: 1px solid black;
+                                border-bottom: 1px solid themed('textColor');
+                                transition: .5s;
                                 border-top-left-radius: 0;
                                 border-top-right-radius: 0;
                                 background-color: inherit;
@@ -124,12 +145,13 @@ i {
                                 bottom: 5px;
                                 right: -10px;
                                 cursor: pointer;
+                                transition: .5s;
+
                             }
                         }
                     }
 
                     #submitbtn {
-                        width: 150px;
                         height: 40px;
                         border: 1px solid themed("borderSoft");
                         background: none;
@@ -138,7 +160,17 @@ i {
                         color: themed("textColor");
                         cursor: pointer;
                         transition: .5s;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        gap: 5px;
                         box-shadow: rgba(46, 240, 98, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+
+                        &>i {
+                            transition: .5s;
+                        }
                     }
 
                     #submitbtn:hover {
