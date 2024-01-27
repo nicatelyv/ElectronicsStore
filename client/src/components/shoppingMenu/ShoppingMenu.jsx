@@ -7,14 +7,17 @@ import { clearBasket } from '../../redux/cartRedux'
 import { useTranslation } from 'react-i18next';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-
+import useSound from 'use-sound';
+import sound from "../../assets/sounds/success-1-6297.mp3"
 
 export default function TemporaryDrawer() {
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
     const { t } = useTranslation();
 
+    const [playSound] = useSound(sound);
     function handleClick() {
+        playSound()
         dispatch(clearBasket())
     }
 

@@ -39,6 +39,7 @@ i {
             justify-content: center;
             color: themed("textColor");
             box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            transition: .5s;
 
             .formDiv {
                 display: flex;
@@ -47,6 +48,7 @@ i {
                 flex-direction: column;
                 width: 90%;
                 gap: 10px;
+                transition: .5s;
 
                 Form {
                     width: 80%;
@@ -55,6 +57,24 @@ i {
                     align-items: center;
                     justify-content: center;
                     gap: 20px;
+                    transition: .5s;
+
+                    span {
+                        transition: .5s;
+                        animation: errorScale 1s infinite alternate;
+                    }
+
+                    @keyframes errorScale {
+                        0% {
+                            scale: 1;
+                            transition: .5s;
+                        }
+
+                        100% {
+                            scale: 1.2;
+                            transition: .5s;
+                        }
+                    }
 
                     #havenotaccount {
                         color: #6c92b3;
@@ -72,11 +92,13 @@ i {
                         display: flex;
                         flex-direction: column;
                         gap: 30px;
+                        transition: .5s;
 
                         #loginDiv {
                             width: 100%;
                             display: flex;
                             flex-direction: column;
+                            position: relative;
 
                             .errorInp {
                                 border-bottom: 2px solid red;
@@ -92,6 +114,16 @@ i {
                                 background-color: inherit;
                                 color: themed("textColorSoft");
                                 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                                width: 95%;
+                            }
+
+                            &>.fa-eye,
+                            .fa-eye-slash {
+                                position: absolute;
+                                bottom: 5px;
+                                right: -10px;
+                                cursor: pointer;
                             }
                         }
                     }

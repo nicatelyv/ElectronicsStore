@@ -8,9 +8,18 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import useSound from 'use-sound';
+import sound from "../../assets/sounds/mixkit-wind-chimes-2014.wav"
 
 function Login() {
+    const [inputType, setInputType] = useState('password');
+    // Function to toggle input type
+    const toggleInputType = () => {
+        setInputType(inputType === 'password' ? 'text' : 'password');
+    };
+    const [playSound] = useSound(sound);
+
+
     const { t } = useTranslation();
     const navigate = useNavigate();
     const [error, setError] = useState("")
@@ -28,6 +37,7 @@ function Login() {
         try {
             wait()
             let response = await axios.post('https://electronics-store-api.vercel.app/api/auth/login/', values)
+            playSound()
             localStorage.setItem('username', response.data.username)
             localStorage.setItem('firstName', response.data.firstName)
             localStorage.setItem('lastName', response.data.lastName)
@@ -72,10 +82,11 @@ function Login() {
 
                                     <div id='loginDiv'>
                                         <label htmlFor="password"><i className="fa-solid fa-lock" style={{ color: "#74C0FC" }}></i> {t("Şifrə")}:</label>
-                                        <Field className={`inp ${errors.password && touched.password && "errorInp"}`} name="password" type="password" />
+                                        <Field className={`inp ${errors.password && touched.password && "errorInp"}`} name="password" type={inputType} />
+                                        {inputType === 'password' ? <i onClick={toggleInputType} className="fa-regular fa-eye"></i> : <i onClick={toggleInputType} className="fa-regular fa-eye-slash"></i>}
                                     </div>
                                 </div>
-                                {error ? <span className='errors' style={{ color: "#d91900" }}>{error}</span> :<></>}
+                                {error ? <span className='errors' style={{ color: "#d91900" }}>{error}</span> : <></>}
                                 <Link id='havenotaccount' to={'/qeydiyyat'}>{t("Hesabınız yoxdur ?")}</Link>
                                 <button id='submitbtn' type="submit">{t("Daxil ol")}</button>
                             </Form>

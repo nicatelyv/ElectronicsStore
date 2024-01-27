@@ -31,7 +31,7 @@ i {
 
         .registerMain {
             margin-top: 80px;
-            width: 450px;
+            width: 480px;
             min-height: 600px;
             background-color: themed("bgSoft");
             border-radius: 30px;
@@ -42,6 +42,7 @@ i {
             justify-content: center;
             color: themed("textColor");
             box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            transition: .5s;
 
             .formDiv {
                 display: flex;
@@ -99,6 +100,7 @@ i {
                                 background-color: inherit;
                                 border-top-left-radius: 0;
                                 border-top-right-radius: 0;
+                                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                                 // box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
                             }
                         }
@@ -121,6 +123,7 @@ i {
                                 background-color: inherit;
                                 border-top-left-radius: 0;
                                 border-top-right-radius: 0;
+                                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                                 // box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
                             }
                         }
@@ -136,6 +139,7 @@ i {
                             width: 100%;
                             display: flex;
                             flex-direction: column;
+                            position: relative;
 
                             .errorInp {
                                 border-bottom: 2px solid red;
@@ -150,6 +154,15 @@ i {
                                 border-top-left-radius: 0;
                                 border-top-right-radius: 0;
                                 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            }
+
+                            &>.fa-eye,
+                            .fa-eye-slash {
+                                position: absolute;
+                                bottom: 5px;
+                                right: -25px;
+                                cursor: pointer;
                             }
                         }
                     }
