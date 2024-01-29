@@ -10,19 +10,131 @@
         padding-top: 100px;
         display: flex;
         gap: 50px;
+        overflow: hidden;
 
         .shopLeftBar {
-            width: 400px;
+            width: 350px;
             min-height: 80vh;
-            border: 1px solid black;
+            border-right: 1px solid themed("border");
             display: flex;
             flex-direction: column;
+            overflow: auto;
+
+            @include tablet {
+                width: 30%;
+            }
+
+            @include mobile {
+                display: none;
+            }
+
+            .accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .accordion-item {
+                    .accordion-collapse {
+
+                        .accordion-body {
+                            .list-group {
+                                .list-group-item {
+                                    background-color: themed('bg') !important;
+                                    color: themed("textColor");
+                                    transition: .5s;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+
+                    .accordion-header {
+                        font-size: 25px;
+
+
+                        .accordion-button {
+                            width: 100%;
+                            text-align: left;
+                            cursor: pointer;
+                            border: none;
+                            border-bottom: 1px solid themed('border');
+                            background-color: themed("bgSoft");
+                            color: themed('textColor');
+                            transition: .5s;
+                            display: flex;
+                            align-items: center;
+
+                            i {
+                                margin-left: 10px;
+                                font-size: 16px;
+                                color: themed('textColor');
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .shopMain {
             width: 100%;
             min-height: 80vh;
-            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include mobile {
+                gap: 10px;
+            }
+
+            .card {
+                width: 33.3% !important;
+                transition: .5s;
+                background-color: themed("bg");
+
+                .card-body {
+                    #detailsP {
+                        color: themed('textColorSoft');
+                        text-transform: capitalize;
+                    }
+                }
+
+                .list-group-flush {
+                    background-color: themed("bg") !important;
+
+                    .list-group-item {
+                        background-color: themed("bg") !important;
+                        color: themed('textColor');
+                        border: 1px solid themed('bgSoft');
+                        border-left: none;
+                        border-right: none;
+                        p{
+                            margin: 0;
+                        }
+                    }
+
+                }
+
+                .cardTitle {
+                    color: themed('textColor');
+                    .h5{
+                        margin: 0;
+                    }
+                }
+
+                @include tablet {
+                    width: 50% !important;
+                }
+
+                @include mobile {
+                    width: 100% !important;
+                }
+            }
+
+            .card:hover {
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                z-index: 5;
+                transition: .5s;
+            }
         }
     }
 }

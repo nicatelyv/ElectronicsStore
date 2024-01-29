@@ -29,10 +29,12 @@ function Login() {
     function wait() {
         let button = document.getElementById('submitbtn');
         button.style.cursor = 'wait'
+        document.body.style.cursor = 'wait'
     }
     function defaultCursor() {
         let button = document.getElementById('submitbtn');
         button.style.cursor = 'pointer'
+        document.body.style.cursor = 'default'
     }
 
     async function handleSubmit(values) {
