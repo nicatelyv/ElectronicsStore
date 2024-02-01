@@ -7,9 +7,9 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
-import { useDispatch } from "react-redux";
-import { addProduct } from '../../redux/cartRedux';
+// import Button from 'react-bootstrap/Button';
+// import { useDispatch } from "react-redux";
+// import { addProduct } from '../../redux/cartRedux';
 
 function ShopComponents() {
     const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
@@ -66,10 +66,10 @@ function ShopComponents() {
         getData();
     }, [])
 
-    const dispatch = useDispatch();
-    const handleClick = () => {
-        dispatch(addProduct({ ...product }))
-    }
+    // const dispatch = useDispatch();
+    // const handleClick = () => {
+    //     dispatch(addProduct({ ...product }))
+    // }
 
 
     function filterPhone() {
@@ -122,7 +122,7 @@ function ShopComponents() {
                             <Card style={{ width: '18rem' }}>
                                 <Card.Link href={'/shop/' + data._id + "/details"}><Card.Img style={{ width: "100%", height: "200px", objectFit: "contain", marginTop: "30px" }} variant="top" src={data.img1} /></Card.Link>
                                 <Card.Body>
-                                    {data.category ? <p id='detailsP'>{t(data.category)}</p> : <></>}
+                                    {data.category ? <p id=' '>{t(data.category)}</p> : <></>}
                                     <Card.Link className="cardTitle" href={'/shop/' + data._id + "/details"}><Card.Title>{data.productname}</Card.Title></Card.Link>
                                     {/* <Card.Text>
                                         Some quick example text to build on the card title and make up the
@@ -142,7 +142,7 @@ function ShopComponents() {
                                 </ListGroup>
                                 <Card.Body style={{ display: "flex", alignItems: "center", gap: "20px" }}>
                                     <Card.Link href={'/shop/' + data._id + "/details"}>{t("More details")}</Card.Link>
-                                    <Button variant='success' style={{ cursor: "pointer", borderRadius: "10px" }} onClick={handleClick} >{t("Add to basket")}</Button>
+                                    {/* <Button variant='success' style={{ cursor: "pointer", borderRadius: "10px" }} onClick={handleClick} >{t("Add to basket")}</Button> */}
                                 </Card.Body>
                             </Card>
                         )

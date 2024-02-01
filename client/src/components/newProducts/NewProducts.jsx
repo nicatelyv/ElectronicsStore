@@ -10,11 +10,13 @@ const NewProducts = () => {
     const { t } = useTranslation();
     const [product, setProduct] = useState(false, [])
 
+    const getData = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products");
+        setProduct(response.data);
+    };
+
     useEffect(() => {
-        const getData = async () => {
-            const response = await axios.get("https://electronics-store-api.vercel.app/api/products");
-            setProduct(response.data);
-        };
+        getData()
     }, [])
 
 
