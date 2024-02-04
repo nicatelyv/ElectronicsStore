@@ -10,12 +10,12 @@ import axios from 'axios';
 // import { addProduct } from '../../redux/cartRedux';
 import { Link } from 'react-router-dom'
 
-function ShopComponents() {
+function TvAndAuidio() {
     const { t } = useTranslation();
     const [product, setProduct] = useState([])
 
     const getData = async () => {
-        const response = await axios.get("https://electronics-store-api.vercel.app/api/products/");
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=tv-and-audio");
         setProduct(response.data);
     };
     useEffect(() => {
@@ -92,10 +92,6 @@ function ShopComponents() {
                                     }
                                     {data.storage ? <ListGroup.Item><p>{t("Storage")}: {data.storage}</p></ListGroup.Item> : <></>}
                                     {data.ram ? <ListGroup.Item><p>RAM: {data.ram}</p></ListGroup.Item> : <></>}
-                                    {data.typeOfCooling ? <ListGroup.Item>{t("Type of cooling")}: {data.typeOfCooling}</ListGroup.Item> : <></>}
-                                    {data.classOfEnergyConsumption ? <ListGroup.Item>{t("Class of energy consumption")}: {data.classOfEnergyConsumption}</ListGroup.Item> : <></>}
-                                    {data.washingMachineCapacity ? <ListGroup.Item>{t("Washing machine capacity")}: {t(data.washingMachineCapacity)}</ListGroup.Item> : <></>}
-                                    {data.energyClassWashingMachine ? <ListGroup.Item>{t("Energy class")}: {data.energyClassWashingMachine}</ListGroup.Item> : <></>}
                                 </ListGroup>
                                 <Card.Body style={{ display: "flex", alignItems: "center", gap: "20px" }}>
                                     <Card.Link href={'/shop/' + data._id + "/details"}>{t("More details")}</Card.Link>
@@ -110,4 +106,4 @@ function ShopComponents() {
         </div>
     )
 }
-export default ShopComponents
+export default TvAndAuidio

@@ -1,18 +1,19 @@
 import React from 'react'
 import Navbar from '../layouts/navbar/Navbar'
 import Footer from '../layouts/footer/Footer'
-import ShopComponents from '../components/shop/ShopComponents'
+import PhotoTechniqueComponents from '../components/shop/PhotoTechniqueComponents'
 import MobileNavbar from '../layouts/mobileNavbar/mobileNavbar'
 
-function Shop() {
+
+function PhotoTechnique() {
     return (
         <>
             <MobileNavbar />
             <Navbar />
-            <ShopComponents />
+            <PhotoTechniqueComponents />
             <Footer />
         </>
     )
 }
 
-export default Shop
+export default PhotoTechnique

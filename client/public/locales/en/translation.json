@@ -20,7 +20,27 @@
     "Color":"Color",
     "Storage":"Storage",
     "Category":"Category",
-    "phone":"phone",
+    "Producing country":"Producing country",
+    "Turkey":"Turkey",
+    "China":"China",
+
+
+    "Refrigeration":"Refrigeration",
+    "Class of energy consumption":"Class of energy consumption",
+    "Type of cooling":"Type of cooling",
+
+    
+    "Washing machine":"Washing machine",
+    "Washing machine capacity":"Washing machine capacity",
+    "Washing machine spin speed":"Washing machine spin speed (rev/min)",
+    "Washing machine weight":"Washing machine weight",
+    "Program count":"Program count",
+    "Energy class":"Energy class",
+    "Var":"+",
+
+    "Brand":"Brand",
+    "Phone":"Phone",
+    "phone":"Phone",
     "Minimum 1 product":"Minimum 1 product",
     "Add to basket":"Add to basket",
     "New products":"New products",
@@ -57,6 +77,7 @@
     "SD kartlar": "SD cards",
     "Micro kartlar": "Micro cards",
     "Böyük məişət texnikası": "Large appliances",
+    "large-appliances": "Large appliances",
     "İqlim": "Climate",
     "Kondisioner": "Air Conditioner",
     "Kombi sistemləri": "Combi systems",

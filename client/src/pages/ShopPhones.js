@@ -1,18 +1,19 @@
 import React from 'react'
 import Navbar from '../layouts/navbar/Navbar'
 import Footer from '../layouts/footer/Footer'
-import ShopComponents from '../components/shop/ShopComponents'
+import ShopPhoneComponents from '../components/shop/ShopPhoneComponents'
 import MobileNavbar from '../layouts/mobileNavbar/mobileNavbar'
 
-function Shop() {
+
+function ShopPhone() {
     return (
         <>
             <MobileNavbar />
             <Navbar />
-            <ShopComponents />
+            <ShopPhoneComponents />
             <Footer />
         </>
     )
 }
 
-export default Shop
+export default ShopPhone

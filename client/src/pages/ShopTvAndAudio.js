@@ -1,18 +1,19 @@
 import React from 'react'
 import Navbar from '../layouts/navbar/Navbar'
 import Footer from '../layouts/footer/Footer'
-import ShopComponents from '../components/shop/ShopComponents'
+import TvAndAudio from '../components/shop/TvAndAudio'
 import MobileNavbar from '../layouts/mobileNavbar/mobileNavbar'
 
-function Shop() {
+
+function TvAndAudioo() {
     return (
         <>
             <MobileNavbar />
             <Navbar />
-            <ShopComponents />
+            <TvAndAudio />
             <Footer />
         </>
     )
 }
 
-export default Shop
+export default TvAndAudioo

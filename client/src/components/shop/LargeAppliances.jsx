@@ -5,28 +5,33 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
-// import Button from 'react-bootstrap/Button';
-// import { useDispatch } from "react-redux";
-// import { addProduct } from '../../redux/cartRedux';
 import { Link } from 'react-router-dom'
 
-function ShopComponents() {
+
+function LargeAppliances() {
     const { t } = useTranslation();
     const [product, setProduct] = useState([])
 
     const getData = async () => {
-        const response = await axios.get("https://electronics-store-api.vercel.app/api/products/");
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=large-appliances");
         setProduct(response.data);
     };
+
+    // Filter
+    const AllRefrigeration = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=refrigeration");
+        setProduct(response.data);
+    }
+    const AllWashingMachine = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=washingMachine");
+        setProduct(response.data);
+    }
+
+
+
     useEffect(() => {
         getData();
     }, [])
-
-    // const dispatch = useDispatch();
-    // const handleClick = () => {
-    //     dispatch(addProduct({ ...product }))
-    // }
-
     const reversedItems = [...product].reverse();
     return (
         <div className="shop">
@@ -45,7 +50,17 @@ function ShopComponents() {
                             </ListGroup>
                         </Accordion.Body>
                     </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                            <Accordion.Header>{t("Stasionar")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                            <Accordion.Body>
+                                <ListGroup>
+                                    <ListGroup.Item onClick={()=>AllRefrigeration()}>{t("Soyuducu")}</ListGroup.Item>
+                                    <ListGroup.Item onClick={()=>AllWashingMachine()}>{t("Paltaryuyan maşınlar")}</ListGroup.Item>
+                                </ListGroup>
+                            </Accordion.Body>
+                        </Accordion.Item>
                 </Accordion>
+
 
                 <div className="filterMobile">
                     <Accordion defaultActiveKey={[]} alwaysOpen>
@@ -60,6 +75,15 @@ function ShopComponents() {
                                     <ListGroup.Item><Link to={'/shop/category=photo-technique'}>{t("Foto texnika")}</Link></ListGroup.Item>
                                     <ListGroup.Item><Link to={'/shop/category=notebook-and-computer-equipment'}>{t("Notbuk və kompüter texnikası")}</Link></ListGroup.Item>
                                 </ListGroup>
+                                <Accordion.Item eventKey="1">
+                            <Accordion.Header>{t("Stasionar")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                            <Accordion.Body>
+                                <ListGroup>
+                                    <ListGroup.Item onClick={()=>AllRefrigeration()}>{t("Soyuducu")}</ListGroup.Item>
+                                    <ListGroup.Item onClick={()=>AllWashingMachine()}>{t("Paltaryuyan maşınlar")}</ListGroup.Item>
+                                </ListGroup>
+                            </Accordion.Body>
+                        </Accordion.Item>
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
@@ -90,8 +114,6 @@ function ShopComponents() {
                                         </ListGroup.Item>
                                         : <ListGroup.Item>AZN {data.price}</ListGroup.Item>
                                     }
-                                    {data.storage ? <ListGroup.Item><p>{t("Storage")}: {data.storage}</p></ListGroup.Item> : <></>}
-                                    {data.ram ? <ListGroup.Item><p>RAM: {data.ram}</p></ListGroup.Item> : <></>}
                                     {data.typeOfCooling ? <ListGroup.Item>{t("Type of cooling")}: {data.typeOfCooling}</ListGroup.Item> : <></>}
                                     {data.classOfEnergyConsumption ? <ListGroup.Item>{t("Class of energy consumption")}: {data.classOfEnergyConsumption}</ListGroup.Item> : <></>}
                                     {data.washingMachineCapacity ? <ListGroup.Item>{t("Washing machine capacity")}: {t(data.washingMachineCapacity)}</ListGroup.Item> : <></>}
@@ -110,4 +132,4 @@ function ShopComponents() {
         </div>
     )
 }
-export default ShopComponents
+export default LargeAppliances

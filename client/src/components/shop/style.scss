@@ -12,6 +12,11 @@
         gap: 50px;
         overflow: hidden;
 
+        @include mobile {
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
         .shopLeftBar {
             width: 350px;
             min-height: 80vh;
@@ -20,18 +25,94 @@
             flex-direction: column;
             overflow: auto;
 
+
             @include tablet {
                 width: 30%;
             }
 
+
             @include mobile {
-                display: none;
+                width: 100%;
+                min-height: 20px;
             }
 
-            .accordion {
+
+            .filterMobile {
+                display: none;
+
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .accordion-item {
+                    @include mobile {
+                        padding-top: 20px;
+                    }
+
+                    .accordion-collapse {
+                        .accordion-body {
+                            .list-group {
+                                .list-group-item {
+                                    background-color: themed('bg') !important;
+                                    color: themed("textColor");
+                                    transition: .5s;
+                                    cursor: pointer;
+
+
+                                    &>a {
+                                        color: themed('textColor');
+                                        text-decoration: none;
+                                        transition: .3s;
+                                        font-weight: 600;
+                                    }
+
+                                    &>a:hover {
+                                        color: green;
+                                        transition: .3s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .accordion-header {
+                        font-size: 18px;
+
+
+                        .accordion-button {
+                            width: 100%;
+                            text-align: left;
+                            cursor: pointer;
+                            border: none;
+                            // border-bottom: 1px solid themed('border');
+                            background-color: themed("bgSoft");
+                            color: themed('textColor');
+                            transition: .5s;
+                            display: flex;
+                            align-items: center;
+
+                            i {
+                                margin-left: 10px;
+                                font-size: 16px;
+                                color: themed('textColor');
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .filterPC {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
+                @include mobile {
+                    display: none !important;
+                }
 
                 .accordion-item {
                     .accordion-collapse {
@@ -43,13 +124,25 @@
                                     color: themed("textColor");
                                     transition: .5s;
                                     cursor: pointer;
+
+                                    &>a {
+                                        color: themed('textColor');
+                                        text-decoration: none;
+                                        transition: .3s;
+                                        font-weight: 600;
+                                    }
+
+                                    &>a:hover {
+                                        color: green;
+                                        transition: .3s;
+                                    }
                                 }
                             }
                         }
                     }
 
                     .accordion-header {
-                        font-size: 25px;
+                        font-size: 18px;
 
 
                         .accordion-button {
@@ -57,7 +150,7 @@
                             text-align: left;
                             cursor: pointer;
                             border: none;
-                            border-bottom: 1px solid themed('border');
+                            // border-bottom: 1px solid themed('border');
                             background-color: themed("bgSoft");
                             color: themed('textColor');
                             transition: .5s;
@@ -78,7 +171,7 @@
 
         .shopMain {
             width: 100%;
-            min-height: 80vh;
+            min-height: 50vh;
             display: flex;
             flex-wrap: wrap;
 
@@ -90,6 +183,7 @@
                 width: 33.3% !important;
                 transition: .5s;
                 background-color: themed("bg");
+                height: 570px;
 
                 .card-body {
                     #detailsP {
@@ -107,7 +201,8 @@
                         border: 1px solid themed('bgSoft');
                         border-left: none;
                         border-right: none;
-                        p{
+
+                        p {
                             margin: 0;
                         }
                     }
@@ -116,7 +211,8 @@
 
                 .cardTitle {
                     color: themed('textColor');
-                    .h5{
+
+                    .h5 {
                         margin: 0;
                     }
                 }

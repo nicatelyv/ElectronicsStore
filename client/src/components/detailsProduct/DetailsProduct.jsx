@@ -108,10 +108,30 @@ function DetailsProduct() {
                     <i id='addtowishlist' className="fa-regular fa-heart"></i>
                     {/* : <Link to={'/giris'}><i id='addtowishlist' className="fa-regular fa-heart"></i></Link>} */}
 
-                    {product.color ? <h3 id='detailsH3'>{t("Color")}: {product.color}</h3> : <></>}
+
+                    {/* Telephone */}
+                    {product.color ? <h3 id='detailsH3'>{t("Color")}: {t(product.color)}</h3> : <></>}
+                    {product.brand ? <h4 id='detailsH4'>{t("Brand")}: {product.brand}</h4> : <></>}
                     {product.storage ? <h4 id='detailsH4'>{t("Storage")}: {product.storage}</h4> : <></>}
                     {product.ram ? <h4 id='detailsH4'>{t("RAM")}: {product.ram}</h4> : <></>}
-                    {product.category ? <h3 id='detailsH3'>{t("Category")}: <Link to={'/shop/category=' + product.category}>{t(product.category)}</Link></h3> : <></>}
+
+                    {/* Refrigator */}
+                    {product.typeOfCooling ? <h4 id='detailsH4'>{t("Type of cooling")}: {product.typeOfCooling}</h4> : <></>}
+                    {product.classOfEnergyConsumption ? <h4 id='detailsH4'>{t("Class of energy consumption")}: {product.classOfEnergyConsumption}</h4> : <></>}
+
+
+                    {/* Washing machine */}
+                    {product.washingMachineCapacity ? <h4 id='detailsH4'>{t("Washing machine capacity")}: {t(product.washingMachineCapacity)}</h4> : <></>}
+                    {product.washingMachineSpinSpeed ? <h4 id='detailsH4'>{t("Washing machine spin speed")}: {t(product.washingMachineSpinSpeed)}</h4> : <></>}
+                    {product.weightWashingMachine ? <h4 id='detailsH4'>{t("Washing machine weight")}: {t(product.weightWashingMachine)}</h4> : <></>}
+                    {product.displayWashingMachine ? <h4 id='detailsH4'>{t("Display")}: {t(product.displayWashingMachine)}</h4> : <></>}
+                    {product.programCountWashingMachine ? <h4 id='detailsH4'>{t("Program count")}: {t(product.programCountWashingMachine)}</h4> : <></>}
+                    {product.energyClassWashingMachine ? <h4 id='detailsH4'>{t("Energy class")}: {t(product.energyClassWashingMachine)}</h4> : <></>}
+
+
+                    {product.producingCountry ? <h4 id='detailsH4'>{t("Producing country")}: {t(product.producingCountry)}</h4> : <></>}
+                    {product.category ? <h3 id='detailsH3'>{t("Category")}: <Link to={'/shop/category=' + product.categories[0]}>{t(product.categories[0])}</Link></h3> : <></>}
+                    {/* {product.categories == 'large-appliances' ? <h3 id='detailsH3'>{t("Category")}: <Link to={'/shop/category=' + product.categories}>{t(product.categories)}, {product.category}</Link></h3> : <></>} */}
                 </div>
 
             </div>

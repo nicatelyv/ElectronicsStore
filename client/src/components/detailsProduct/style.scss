@@ -148,7 +148,10 @@ img {
                     font-size: 18px;
                     font-family: Cormorant;
                     opacity: .7;
-                    text-transform: capitalize;
+                }
+
+                #detailsH3::first-letter {
+                    text-transform: uppercase
                 }
 
                 #detailsH4 {
@@ -156,7 +159,10 @@ img {
                     font-size: 18px;
                     font-family: Cormorant;
                     opacity: .7;
-                    text-transform: capitalize;
+                }
+
+                #detailsH4::first-letter {
+                    text-transform: uppercase
                 }
 
                 .price {
