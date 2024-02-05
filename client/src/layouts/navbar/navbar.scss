@@ -227,8 +227,36 @@ nav {
                     }
                 }
 
+                .dropdownMenuMobile {
+                    display: none;
+                }
+
                 #navLi:hover {
                     transition: .5s;
+
+                    .dropdownMenuMobile {
+                            display: block;
+                            background-color: themed("bg");
+                            position: absolute;
+                            min-width: 250px;
+                            padding: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 15px;
+                            left: -20px;
+                            top: 35px;
+                            border-radius: 8px;
+                            background-color: themed("bgSoft2");
+                            font-size: 14px;
+                            animation: rotate 300ms ease-out;
+                            animation-direction: alternate;
+                            opacity: 1;
+                            transition: .5s;
+                            font-weight: 600;
+                            cursor: default;
+                            z-index: 2;
+                    }
 
                     .dropdownMenu {
                         display: block;
@@ -253,6 +281,10 @@ nav {
                         font-weight: 600;
                         cursor: default;
                         z-index: 2;
+
+                        @include mobile {
+                            display: none;
+                        }
 
                         @include tablet {
                             min-height: 350px;

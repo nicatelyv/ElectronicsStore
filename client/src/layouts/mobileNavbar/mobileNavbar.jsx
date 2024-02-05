@@ -21,11 +21,12 @@ export default function MobileNavbar() {
                             <ShoppingMenuMobile />
                         </Badge>
                     </div>
-                    <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
+                    <Link to={'/shop'}><i className="fa-solid fa-shop fa-beat"></i></Link>
 
                     {/* {localStorage.getItem("username") ? <NavLink to={"/logout"}><h4>{t("Çıxış")}</h4></NavLink> : <></>} */}
 
                     <input type="text" placeholder={t("Axtarış")} />
+                    <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
                     {localStorage.getItem("username") ?
                         <ProfileButton />
                         : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade" style={{color:"#74C0FC"}}></i></NavLink>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import "./navbar.scss"
 import { DarkModeContext } from '../../context/DarkMode';
 import { Link, NavLink } from 'react-router-dom';
@@ -17,6 +17,12 @@ function Navbar() {
     const handleClick = (e) => {
         i18next.changeLanguage(e.target.value)
     }
+
+    const [mobilenav, setMobilenav] = useState(false)
+    function mobilnav() {
+        setMobilenav(!mobilenav)
+    }
+
     const quantity = useSelector(state => state.cart.quantity)
     return (
         <nav id='nav'>
@@ -24,11 +30,22 @@ function Navbar() {
                 <NavLink id='navH1' to={"/"}><h1>Electronics <span>Store</span></h1></NavLink>
                 <ul className='topnavUls'>
                     <Link to={'/shop'}><i class="fa-solid fa-shop fa-beat"></i></Link>
-                    <li id='navLi'>{t('Kataloq')}
-                        <ul className='dropdownMenu'>
+                    <li onClick={mobilnav} id='navLi'>{t('Kataloq')}
 
+                        {mobilenav &&
+                            <ul className='dropdownMenuMobile'>
+                                <Link to={'/shop/category=phone'}><li id='navLi2'>{t("Telefon və aksesuarlar")} <i className="fa-solid fa-arrow-right-long"></i> </li></Link>
+                                <Link to={'/shop/category=large-appliances'}> <li id='navLi2'>{t("Böyük məişət texnikası")} <i className="fa-solid fa-arrow-right-long"></i></li></Link>
+                                <Link to={'/shop/category=small-appliances'}><li id='navLi2'>{t("Kiçik məişət texnikası")} <i className="fa-solid fa-arrow-right-long"></i></li></Link>
+                                <Link to={'/shop/category=tv-and-audio'}><li id='navLi2'>{t("Tv və audio")} <i className="fa-solid fa-arrow-right-long"></i></li></Link>
+                                <Link to={'/shop/category=photo-technique'}><li id='navLi2'>{t("Foto texnika")} <i className="fa-solid fa-arrow-right-long"></i></li></Link>
+                                <Link to={'/shop/category=notebook-and-computer-equipment'}><li id='navLi2'>{t("Notbuk və kompüter texnikası")} <i className="fa-solid fa-arrow-right-long"></i></li></Link>
+                            </ul>
+                        }
+
+                        <ul className='dropdownMenu'>
                             <Link to={'/shop/category=phone'}><li id='navLi2'>{t("Telefon və aksesuarlar")} <i className="fa-solid fa-arrow-right-long"></i>
-                                 {/* <ul className='dropdownMenu2'>
+                                {/* <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mobil telefonlar")}</li>
                                         <li>Apple</li>
@@ -109,7 +126,7 @@ function Navbar() {
                                 </ul> */}
                             </li></Link>
 
-                            <li id='navLi2'>{t("Kiçik məişət texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
+                            <Link to={'/shop/category=small-appliances'}><li id='navLi2'>{t("Kiçik məişət texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
                                 {/* <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Mətbəx")}</li>
@@ -172,9 +189,9 @@ function Navbar() {
                                         <li>{t("Cehizlik dəst")}</li>
                                     </ul>
                                 </ul> */}
-                            </li>
+                            </li></Link>
 
-                            <li id='navLi2'>{t("Tv və audio")} <i className="fa-solid fa-arrow-right-long"></i>
+                            <Link to={'/shop/category=tv-and-audio'}><li id='navLi2'>{t("Tv və audio")} <i className="fa-solid fa-arrow-right-long"></i>
                                 {/* <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Televizorlar")}</li>
@@ -204,10 +221,9 @@ function Navbar() {
                                         <li>{t("Pioneer aksesuarları")}</li>
                                     </ul>
                                 </ul> */}
+                            </li></Link>
 
-                            </li>
-
-                            <li id='navLi2'>{t("Foto texnika")} <i className="fa-solid fa-arrow-right-long"></i>
+                            <Link to={'/shop/category=photo-technique'}><li id='navLi2'>{t("Foto texnika")} <i className="fa-solid fa-arrow-right-long"></i>
                                 {/* <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Fotoaparatlar")}</li>
@@ -228,9 +244,9 @@ function Navbar() {
                                         <li>Nikon</li>
                                     </ul>
                                 </ul> */}
-                            </li>
+                            </li></Link>
 
-                            <li id='navLi2'>{t("Notbuk və kompüter texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
+                            <Link to={'/shop/category=notebook-and-computer-equipment'}><li id='navLi2'>{t("Notbuk və kompüter texnikası")} <i className="fa-solid fa-arrow-right-long"></i>
                                 {/* <ul className='dropdownMenu2'>
                                     <ul>
                                         <li style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "10px" }}>{t("Notbuklar")}</li>
@@ -280,7 +296,7 @@ function Navbar() {
                                         <li>{t("USB Hub")}</li>
                                     </ul>
                                 </ul> */}
-                            </li>
+                            </li></Link>
                         </ul>
                     </li>
                     {/* <NavLink to={"/magazalar"}><li id='stores'>{t('Mağazalar')}</li></NavLink> */}
