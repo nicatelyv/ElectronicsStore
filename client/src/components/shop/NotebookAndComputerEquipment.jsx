@@ -34,10 +34,6 @@ function NotebookAndComputerEquipment() {
         const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=xiaomiTablet");
         setProduct(response.data);
     }
-    const OppoTablet = async () => {
-        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=oppoTablet");
-        setProduct(response.data);
-    }
     const BlackviewTablet = async () => {
         const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=blackviewTablet");
         setProduct(response.data);
@@ -69,7 +65,6 @@ function NotebookAndComputerEquipment() {
                                 <ListGroup.Item onClick={() => AppleTablet()}>Apple</ListGroup.Item>
                                 <ListGroup.Item onClick={() => SamsungTablet()}>Samsung</ListGroup.Item>
                                 <ListGroup.Item onClick={() => XiaomiTablet()}>Xiaomi</ListGroup.Item>
-                                <ListGroup.Item onClick={() => OppoTablet()}>OPPO</ListGroup.Item>
                                 <ListGroup.Item onClick={() => BlackviewTablet()}>Blackview</ListGroup.Item>
                             </ListGroup>
                         </Accordion.Body>
@@ -96,7 +91,6 @@ function NotebookAndComputerEquipment() {
                                             <ListGroup.Item onClick={() => AppleTablet()}>Apple</ListGroup.Item>
                                             <ListGroup.Item onClick={() => SamsungTablet()}>Samsung</ListGroup.Item>
                                             <ListGroup.Item onClick={() => XiaomiTablet()}>Xiaomi</ListGroup.Item>
-                                            <ListGroup.Item onClick={() => OppoTablet()}>OPPO</ListGroup.Item>
                                             <ListGroup.Item onClick={() => BlackviewTablet()}>Blackview</ListGroup.Item>
                                         </ListGroup>
                                     </Accordion.Body>
