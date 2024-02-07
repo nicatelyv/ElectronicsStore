@@ -19,6 +19,14 @@
     "Color": "Цвет",
 
 
+    "Recommended room area":"Рекомендуемая площадь помещения",
+    "Thermal power":"Тепловая мощность",
+    "Cooling power":"Охлаждающая способность",
+    "Compressor type":"Тип компрессора",
+    "Basic modes":"Основные режимы",
+    "Soyutma/Isitmə":"Охлаждение/Отопление",
+
+
     "Refrigeration":"Охлаждение",
     "Class of energy consumption":"Класс энергопотребления",
     "Type of cooling":"Тип охлаждения",

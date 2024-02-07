@@ -129,6 +129,14 @@ function DetailsProduct() {
                     {product.energyClassWashingMachine ? <h4 id='detailsH4'>{t("Energy class")}: {t(product.energyClassWashingMachine)}</h4> : <></>}
 
 
+                    {/* Air Conditioning */}
+                    {product.recommendedRoomArea ? <h4 id='detailsH4'>{t("Recommended room area")}: {t(product.recommendedRoomArea)}</h4> : <></>}
+                    {product.heatingPower ? <h4 id='detailsH4'>{t("Thermal power")}: {t(product.heatingPower)}</h4> : <></>}
+                    {product.coolingPower ? <h4 id='detailsH4'>{t("Cooling power")}: {t(product.coolingPower)}</h4> : <></>}
+                    {product.compressorType ? <h4 id='detailsH4'>{t("Compressor type")}: {t(product.compressorType)}</h4> : <></>}
+                    {product.basicModes ? <h4 id='detailsH4'>{t("Basic modes")}: {t(product.basicModes)}</h4> : <></>}
+
+
                     {product.producingCountry ? <h4 id='detailsH4'>{t("Producing country")}: {t(product.producingCountry)}</h4> : <></>}
                     {product.category ? <h3 id='detailsH3'>{t("Category")}: <Link to={'/shop/category=' + product.categories[0]}>{t(product.categories[0])}</Link></h3> : <></>}
                     {/* {product.categories == 'large-appliances' ? <h3 id='detailsH3'>{t("Category")}: <Link to={'/shop/category=' + product.categories}>{t(product.categories)}, {product.category}</Link></h3> : <></>} */}

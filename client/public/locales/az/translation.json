@@ -18,6 +18,14 @@
     "Color": "Rəng",
 
  
+    "Recommended room area":"Tövsiyə olunan otaq sahəsi",
+    "Thermal power":"İstilik gücü",
+    "Cooling power":"Soyutma gücü",
+    "Compressor type":"Kompressor tipi",
+    "Basic modes":"Əsas rejimlər",
+    "Soyutma/Isitmə":"Soyutma/Isitmə",
+
+
     "Refrigeration": "Soyuducu",
     "Class of energy consumption": "Enerji sərfiyyatının sinfi",
     "Type of cooling": "Soyutma növü",

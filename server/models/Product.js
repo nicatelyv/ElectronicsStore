@@ -30,13 +30,19 @@ const ProductSchema = new mongoose.Schema({
     energyClassWashingMachine: { type: String },
     washingMachineCapacity: { type: String },
     washingMachineSpinSpeed: { type: String },
-    
-    
+
+
     typeOfCooling: { type: String },
     classOfEnergyConsumption: { type: String },
     producingCountry: { type: String },
+
+    recommendedRoomArea: { type: String },
+    heatingPower: { type: String },
+    coolingPower: { type: String },
+    compressorType: { type: String },
+    basicModes: { type: String },
 },
-{ timestamps: true }
+    { timestamps: true }
 );
 
 module.exports = mongoose.model("Product", ProductSchema);

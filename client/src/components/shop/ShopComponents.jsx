@@ -96,6 +96,8 @@ function ShopComponents() {
                                     {data.classOfEnergyConsumption ? <ListGroup.Item>{t("Class of energy consumption")}: {data.classOfEnergyConsumption}</ListGroup.Item> : <></>}
                                     {data.washingMachineCapacity ? <ListGroup.Item>{t("Washing machine capacity")}: {t(data.washingMachineCapacity)}</ListGroup.Item> : <></>}
                                     {data.energyClassWashingMachine ? <ListGroup.Item>{t("Energy class")}: {data.energyClassWashingMachine}</ListGroup.Item> : <></>}
+                                    {data.recommendedRoomArea ? <ListGroup.Item>{t("Recommended room area")}: {data.recommendedRoomArea}</ListGroup.Item> : <></>}
+                                    {data.compressorType ? <ListGroup.Item>{t("Compressor type")}: {data.compressorType}</ListGroup.Item> : <></>}
                                 </ListGroup>
                                 <Card.Body style={{ display: "flex", alignItems: "center", gap: "20px" }}>
                                     <Card.Link href={'/shop/' + data._id + "/details"}>{t("More details")}</Card.Link>

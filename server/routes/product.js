@@ -39,6 +39,13 @@ router.post("/", (req, res) => {
         typeOfCooling: req.body.typeOfCooling,
         classOfEnergyConsumption: req.body.classOfEnergyConsumption,
         producingCountry: req.body.producingCountry,
+
+
+        recommendedRoomArea: req.body.recommendedRoomArea,
+        heatingPower: req.body.heatingPower,
+        coolingPower: req.body.coolingPower,
+        compressorType: req.body.compressorType,
+        basicModes: req.body.basicModes,
     })
     products.save()
     res.send("Success")

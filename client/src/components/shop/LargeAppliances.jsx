@@ -26,6 +26,10 @@ function LargeAppliances() {
         const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=washingMachine");
         setProduct(response.data);
     }
+    const AllAirConditioning = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=air-conditioning");
+        setProduct(response.data);
+    }
 
 
 
@@ -51,14 +55,22 @@ function LargeAppliances() {
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
-                            <Accordion.Header>{t("Stasionar")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
-                            <Accordion.Body>
-                                <ListGroup>
-                                    <ListGroup.Item onClick={()=>AllRefrigeration()}>{t("Soyuducu")}</ListGroup.Item>
-                                    <ListGroup.Item onClick={()=>AllWashingMachine()}>{t("Paltaryuyan maşınlar")}</ListGroup.Item>
-                                </ListGroup>
-                            </Accordion.Body>
-                        </Accordion.Item>
+                        <Accordion.Header>{t("Stasionar")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                        <Accordion.Body>
+                            <ListGroup>
+                                <ListGroup.Item onClick={() => AllRefrigeration()}>{t("Soyuducu")}</ListGroup.Item>
+                                <ListGroup.Item onClick={() => AllWashingMachine()}>{t("Paltaryuyan maşınlar")}</ListGroup.Item>
+                            </ListGroup>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2">
+                        <Accordion.Header>{t("İqlim")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                        <Accordion.Body>
+                            <ListGroup>
+                                <ListGroup.Item onClick={() => AllAirConditioning()}>{t("Kondisioner")}</ListGroup.Item>
+                            </ListGroup>
+                        </Accordion.Body>
+                    </Accordion.Item>
                 </Accordion>
 
 
@@ -76,14 +88,22 @@ function LargeAppliances() {
                                     <ListGroup.Item><Link to={'/shop/category=notebook-and-computer-equipment'}>{t("Notbuk və kompüter texnikası")}</Link></ListGroup.Item>
                                 </ListGroup>
                                 <Accordion.Item eventKey="1">
-                            <Accordion.Header>{t("Stasionar")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
-                            <Accordion.Body>
-                                <ListGroup>
-                                    <ListGroup.Item onClick={()=>AllRefrigeration()}>{t("Soyuducu")}</ListGroup.Item>
-                                    <ListGroup.Item onClick={()=>AllWashingMachine()}>{t("Paltaryuyan maşınlar")}</ListGroup.Item>
-                                </ListGroup>
-                            </Accordion.Body>
-                        </Accordion.Item>
+                                    <Accordion.Header>{t("Stasionar")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                                    <Accordion.Body>
+                                        <ListGroup>
+                                            <ListGroup.Item onClick={() => AllRefrigeration()}>{t("Soyuducu")}</ListGroup.Item>
+                                            <ListGroup.Item onClick={() => AllWashingMachine()}>{t("Paltaryuyan maşınlar")}</ListGroup.Item>
+                                        </ListGroup>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="2">
+                                    <Accordion.Header>{t("İqlim")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                                    <Accordion.Body>
+                                        <ListGroup>
+                                            <ListGroup.Item onClick={() => AllAirConditioning()}>{t("Kondisioner")}</ListGroup.Item>
+                                        </ListGroup>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
@@ -118,6 +138,8 @@ function LargeAppliances() {
                                     {data.classOfEnergyConsumption ? <ListGroup.Item>{t("Class of energy consumption")}: {data.classOfEnergyConsumption}</ListGroup.Item> : <></>}
                                     {data.washingMachineCapacity ? <ListGroup.Item>{t("Washing machine capacity")}: {t(data.washingMachineCapacity)}</ListGroup.Item> : <></>}
                                     {data.energyClassWashingMachine ? <ListGroup.Item>{t("Energy class")}: {data.energyClassWashingMachine}</ListGroup.Item> : <></>}
+                                    {data.recommendedRoomArea ? <ListGroup.Item>{t("Recommended room area")}: {data.recommendedRoomArea}</ListGroup.Item> : <></>}
+                                    {data.compressorType ? <ListGroup.Item>{t("Compressor type")}: {data.compressorType}</ListGroup.Item> : <></>}
                                 </ListGroup>
                                 <Card.Body style={{ display: "flex", alignItems: "center", gap: "20px" }}>
                                     <Card.Link href={'/shop/' + data._id + "/details"}>{t("More details")}</Card.Link>
