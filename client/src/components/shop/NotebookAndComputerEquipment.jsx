@@ -5,9 +5,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
-// import Button from 'react-bootstrap/Button';
-// import { useDispatch } from "react-redux";
-// import { addProduct } from '../../redux/cartRedux';
 import { Link } from 'react-router-dom'
 
 function NotebookAndComputerEquipment() {
@@ -22,10 +19,30 @@ function NotebookAndComputerEquipment() {
         getData();
     }, [])
 
-    // const dispatch = useDispatch();
-    // const handleClick = () => {
-    //     dispatch(addProduct({ ...product }))
-    // }
+
+
+    //Filter Tablet
+    const AppleTablet = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=appleIpad");
+        setProduct(response.data);
+    }
+    const SamsungTablet = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=samsungTablet");
+        setProduct(response.data);
+    }
+    const XiaomiTablet = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=xiaomiTablet");
+        setProduct(response.data);
+    }
+    const OppoTablet = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=oppoTablet");
+        setProduct(response.data);
+    }
+    const BlackviewTablet = async () => {
+        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=blackviewTablet");
+        setProduct(response.data);
+    }
+
 
     const reversedItems = [...product].reverse();
     return (
@@ -45,6 +62,18 @@ function NotebookAndComputerEquipment() {
                             </ListGroup>
                         </Accordion.Body>
                     </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>{t("Planşetlər")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                        <Accordion.Body>
+                            <ListGroup>
+                                <ListGroup.Item onClick={() => AppleTablet()}>Apple</ListGroup.Item>
+                                <ListGroup.Item onClick={() => SamsungTablet()}>Samsung</ListGroup.Item>
+                                <ListGroup.Item onClick={() => XiaomiTablet()}>Xiaomi</ListGroup.Item>
+                                <ListGroup.Item onClick={() => OppoTablet()}>OPPO</ListGroup.Item>
+                                <ListGroup.Item onClick={() => BlackviewTablet()}>Blackview</ListGroup.Item>
+                            </ListGroup>
+                        </Accordion.Body>
+                    </Accordion.Item>
                 </Accordion>
 
                 <div className="filterMobile">
@@ -60,6 +89,18 @@ function NotebookAndComputerEquipment() {
                                     <ListGroup.Item><Link to={'/shop/category=photo-technique'}>{t("Foto texnika")}</Link></ListGroup.Item>
                                     <ListGroup.Item><Link to={'/shop/category=notebook-and-computer-equipment'}>{t("Notbuk və kompüter texnikası")}</Link></ListGroup.Item>
                                 </ListGroup>
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header>{t("Planşetlər")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                                    <Accordion.Body>
+                                        <ListGroup>
+                                            <ListGroup.Item onClick={() => AppleTablet()}>Apple</ListGroup.Item>
+                                            <ListGroup.Item onClick={() => SamsungTablet()}>Samsung</ListGroup.Item>
+                                            <ListGroup.Item onClick={() => XiaomiTablet()}>Xiaomi</ListGroup.Item>
+                                            <ListGroup.Item onClick={() => OppoTablet()}>OPPO</ListGroup.Item>
+                                            <ListGroup.Item onClick={() => BlackviewTablet()}>Blackview</ListGroup.Item>
+                                        </ListGroup>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>

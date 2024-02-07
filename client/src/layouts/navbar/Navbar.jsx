@@ -29,7 +29,7 @@ function Navbar() {
             <div className="container">
                 <NavLink id='navH1' to={"/"}><h1>Electronics <span>Store</span></h1></NavLink>
                 <ul className='topnavUls'>
-                    <Link to={'/shop'}><i class="fa-solid fa-shop fa-beat"></i></Link>
+                    <Link to={'/shop'}><i class="fa-solid fa-shop"></i></Link>
                     <li onClick={mobilnav} id='navLi'>{t('Kataloq')}
 
                         {mobilenav &&

@@ -57,30 +57,6 @@ function ShopPhoneComponents() {
     }
 
 
-    //Filter Tablet
-    const AppleTablet = async () => {
-        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=appleTablet");
-        setProduct(response.data);
-    }
-    const SamsungTablet = async () => {
-        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=samsungTablet");
-        setProduct(response.data);
-    }
-    const XiaomiTablet = async () => {
-        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=xiaomiTablet");
-        setProduct(response.data);
-    }
-    const OppoTablet = async () => {
-        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=oppoTablet");
-        setProduct(response.data);
-    }
-    const BlackviewTablet = async () => {
-        const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=blackviewTablet");
-        setProduct(response.data);
-    }
-
-
-
 
 
     useEffect(() => {
@@ -121,18 +97,6 @@ function ShopPhoneComponents() {
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header>{t("Planşetlər")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
-                        <Accordion.Body>
-                            <ListGroup>
-                                <ListGroup.Item onClick={() => AppleTablet()}>Apple</ListGroup.Item>
-                                <ListGroup.Item onClick={() => SamsungTablet()}>Samsung</ListGroup.Item>
-                                <ListGroup.Item onClick={() => XiaomiTablet()}>Xiaomi</ListGroup.Item>
-                                <ListGroup.Item onClick={() => OppoTablet()}>OPPO</ListGroup.Item>
-                                <ListGroup.Item onClick={() => BlackviewTablet()}>Blackview</ListGroup.Item>
-                            </ListGroup>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="3">
                         <Accordion.Header>{t("Telefon aksessuarları")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
@@ -148,7 +112,7 @@ function ShopPhoneComponents() {
                             </ListGroup>
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="4">
+                    <Accordion.Item eventKey="3">
                         <Accordion.Header>{t("Qulaqlıqlar")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
@@ -201,18 +165,6 @@ function ShopPhoneComponents() {
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header>{t("Planşetlər")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
-                                    <Accordion.Body>
-                                        <ListGroup>
-                                            <ListGroup.Item onClick={() => AppleTablet()}>Apple</ListGroup.Item>
-                                            <ListGroup.Item onClick={() => SamsungTablet()}>Samsung</ListGroup.Item>
-                                            <ListGroup.Item onClick={() => XiaomiTablet()}>Xiaomi</ListGroup.Item>
-                                            <ListGroup.Item onClick={() => OppoTablet()}>OPPO</ListGroup.Item>
-                                            <ListGroup.Item onClick={() => BlackviewTablet()}>Blackview</ListGroup.Item>
-                                        </ListGroup>
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                                <Accordion.Item eventKey="3">
                                     <Accordion.Header>{t("Telefon aksessuarları")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
@@ -228,7 +180,7 @@ function ShopPhoneComponents() {
                                         </ListGroup>
                                     </Accordion.Body>
                                 </Accordion.Item>
-                                <Accordion.Item eventKey="4">
+                                <Accordion.Item eventKey="3">
                                     <Accordion.Header>{t("Qulaqlıqlar")} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
@@ -250,7 +202,6 @@ function ShopPhoneComponents() {
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion.Body>
-
                         </Accordion.Item>
                     </Accordion>
                 </div>

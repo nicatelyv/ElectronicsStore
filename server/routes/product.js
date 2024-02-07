@@ -16,15 +16,29 @@ router.post("/", (req, res) => {
         img4: req.body.img4,
         img5: req.body.img5,
         img6: req.body.img6,
+        img7: req.body.img7,
+        img8: req.body.img8,
         color: req.body.color,
         storage: req.body.storage,
+        ram: req.body.ram,
         brand: req.body.brand,
         power: req.body.power,
+        categories: req.body.categories,
         category: req.body.category,
         about: req.body.about,
-        categories: req.body.categories,
         price: req.body.price,
         salePrice: req.body.salePrice,
+
+        displayWashingMachine: req.body.displayWashingMachine,
+        programCountWashingMachine: req.body.programCountWashingMachine,
+        energyClassWashingMachine: req.body.energyClassWashingMachine,
+        washingMachineCapacity: req.body.washingMachineCapacity,
+        washingMachineSpinSpeed: req.body.washingMachineSpinSpeed,
+       
+       
+        typeOfCooling: req.body.typeOfCooling,
+        classOfEnergyConsumption: req.body.classOfEnergyConsumption,
+        producingCountry: req.body.producingCountry,
     })
     products.save()
     res.send("Success")
