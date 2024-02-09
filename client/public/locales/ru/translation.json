@@ -17,7 +17,14 @@
     "Confirm": "Подтверждать",
     "See more": "Узнать больше",
     "Color": "Цвет",
+    "Warranty period":"Гарантийный срок",
+    "1 il":"1 года",
+    "2 il":"2 года",
+    "Weight":"Масса",
+    "Dimensions":"Размеры",
 
+    "Nəğd alışda":"Скидка",
+    "manat endirim":"манат при покупке за наличный расчет.",
 
     "Recommended room area":"Рекомендуемая площадь помещения",
     "Thermal power":"Тепловая мощность",
@@ -27,6 +34,12 @@
     "Soyutma/Isitmə":"Охлаждение/Отопление",
 
 
+    "Dishwasher":"Посудомоечная машина",
+    "Water consumption (lt)":"Расход воды (л)",
+    "Sound level":"Уровень звука",
+    "Management":"Управление",
+    "Dishwasher capacity":"Вместимость посудомоечной машины",
+    
     "Refrigeration":"Охлаждение",
     "Class of energy consumption":"Класс энергопотребления",
     "Type of cooling":"Тип охлаждения",

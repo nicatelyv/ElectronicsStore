@@ -10,10 +10,14 @@ import { Link } from 'react-router-dom'
 function PhotoTechniqueComponents() {
     const { t } = useTranslation();
     const [product, setProduct] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
+
 
     const getData = async () => {
+        setIsLoading(true)
         const response = await axios.get("https://electronics-store-api.vercel.app/api/products?categories=photo-technique");
         setProduct(response.data);
+        setIsLoading(false)
     };
     useEffect(() => {
         getData();
@@ -25,15 +29,36 @@ function PhotoTechniqueComponents() {
             <div className="shopLeftBar">
                 <Accordion className="filterPC" defaultActiveKey={['0']} alwaysOpen>
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
                                 <ListGroup.Item><Link to={'/shop/category=large-appliances'}>{t("Böyük məişət texnikası")}</Link></ListGroup.Item>
                                 <ListGroup.Item><Link to={'/shop/category=small-appliances'}>{t("Kiçik məişət texnikası")}</Link></ListGroup.Item>
                                 <ListGroup.Item><Link to={'/shop/category=tv-and-audio'}>{t("Tv və audio")}</Link></ListGroup.Item>
-                                <ListGroup.Item><Link to={'/shop/category=photo-technique'}>{t("Foto texnika")}</Link></ListGroup.Item>
+                                <ListGroup.Item><Link onClick={() => window.location.reload(false)} to={'/shop/category=photo-technique'}>{t("Foto texnika")}</Link></ListGroup.Item>
                                 <ListGroup.Item><Link to={'/shop/category=notebook-and-computer-equipment'}>{t("Notbuk və kompüter texnikası")}</Link></ListGroup.Item>
+                            </ListGroup>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Fotoaparatlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Body>
+                            <ListGroup>
+                                <ListGroup.Item>Canon</ListGroup.Item>
+                                <ListGroup.Item>Fujifilm</ListGroup.Item>
+                                <ListGroup.Item>Nikon</ListGroup.Item>
+                                <ListGroup.Item>Jabra</ListGroup.Item>
+                            </ListGroup>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                    <Accordion.Item eventKey="2">
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Linzalar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Body>
+                            <ListGroup>
+                                <ListGroup.Item>Nikon</ListGroup.Item>
                             </ListGroup>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -42,16 +67,37 @@ function PhotoTechniqueComponents() {
                 <div className="filterMobile">
                     <Accordion defaultActiveKey={[]} alwaysOpen>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                             <Accordion.Body>
                                 <ListGroup>
                                     <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
                                     <ListGroup.Item><Link to={'/shop/category=large-appliances'}>{t("Böyük məişət texnikası")}</Link></ListGroup.Item>
                                     <ListGroup.Item><Link to={'/shop/category=small-appliances'}>{t("Kiçik məişət texnikası")}</Link></ListGroup.Item>
                                     <ListGroup.Item><Link to={'/shop/category=tv-and-audio'}>{t("Tv və audio")}</Link></ListGroup.Item>
-                                    <ListGroup.Item><Link to={'/shop/category=photo-technique'}>{t("Foto texnika")}</Link></ListGroup.Item>
+                                    <ListGroup.Item><Link onClick={() => window.location.reload(false)} to={'/shop/category=photo-technique'}>{t("Foto texnika")}</Link></ListGroup.Item>
                                     <ListGroup.Item><Link to={'/shop/category=notebook-and-computer-equipment'}>{t("Notbuk və kompüter texnikası")}</Link></ListGroup.Item>
                                 </ListGroup>
+
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Fotoaparatlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Body>
+                                        <ListGroup>
+                                            <ListGroup.Item>Canon</ListGroup.Item>
+                                            <ListGroup.Item>Fujifilm</ListGroup.Item>
+                                            <ListGroup.Item>Nikon</ListGroup.Item>
+                                            <ListGroup.Item>Jabra</ListGroup.Item>
+                                        </ListGroup>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+
+                                <Accordion.Item eventKey="2">
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Linzalar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Body>
+                                        <ListGroup>
+                                            <ListGroup.Item>Nikon</ListGroup.Item>
+                                        </ListGroup>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
@@ -61,14 +107,16 @@ function PhotoTechniqueComponents() {
 
 
             <div className="shopMain">
+                {isLoading && <img style={{ width: "150px", height: "150px", objectFit: "contain", margin: "100px auto" }} src="https://superstorefinder.net/support/wp-content/uploads/2018/01/orange_circles.gif" alt="" />}
                 {reversedItems ?
                     reversedItems.map((data, index) => {
                         return (
                             <Card key={index} style={{ width: '18rem' }}>
-                                <Card.Link href={'/shop/' + data._id + "/details"}><Card.Img style={{ width: "100%", height: "200px", objectFit: "contain", marginTop: "30px" }} variant="top" src={data.img1} /></Card.Link>
+                                <Card.Link href={'/shop/category=' + data.categories[0] + '/' + data._id + '/details'}><Card.Img style={{ width: "100%", height: "200px", objectFit: "contain", marginTop: "50px" }} variant="top" src={data.img1} /></Card.Link>
                                 <Card.Body>
-                                    {data.category ? <p id=' '>{t(data.category)}</p> : <></>}
-                                    <Card.Link className="cardTitle" href={'/shop/' + data._id + "/details"}><Card.Title>{data.productname}</Card.Title></Card.Link>
+                                    {data.category ? <p id='category'>{t(data.category)}</p> : <></>}
+                                    {data.salePrice ? <p id='negdalis'>{t('Nəğd alışda')} {data.salePrice - data.price} {t('manat endirim')}</p> : <></>}
+                                    <Card.Link className="cardTitle" href={'/shop/category=' + data.categories[0] + '/' + data._id + '/details'}><Card.Title>{data.productname}</Card.Title></Card.Link>
                                     {/* <Card.Text>
                                         Some quick example text to build on the card title and make up the
                                         bulk of the card's content.
@@ -86,7 +134,7 @@ function PhotoTechniqueComponents() {
                                     {data.ram ? <ListGroup.Item><p>RAM: {data.ram}</p></ListGroup.Item> : <></>}
                                 </ListGroup>
                                 <Card.Body style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-                                    <Card.Link href={'/shop/' + data._id + "/details"}>{t("More details")}</Card.Link>
+                                    <Card.Link href={'/shop/category=' + data.categories[0] + '/' + data._id + '/details'}>{t("More details")}</Card.Link>
                                     {/* <Button variant='success' style={{ cursor: "pointer", borderRadius: "10px" }} onClick={handleClick} >{t("Add to basket")}</Button> */}
                                 </Card.Body>
                             </Card>

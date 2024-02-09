@@ -46,6 +46,15 @@ router.post("/", (req, res) => {
         coolingPower: req.body.coolingPower,
         compressorType: req.body.compressorType,
         basicModes: req.body.basicModes,
+
+
+        productWeight: req.body.productWeight,
+        dishwasherCapacity: req.body.dishwasherCapacity,
+        warrantyPeriod: req.body.warrantyPeriod,
+        dimensions: req.body.dimensions,
+        management: req.body.management,
+        soundLevel: req.body.soundLevel,
+        waterConsumption: req.body.waterConsumption,
     })
     products.save()
     res.send("Success")

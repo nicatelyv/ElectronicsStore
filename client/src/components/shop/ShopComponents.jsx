@@ -5,27 +5,24 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
-// import Button from 'react-bootstrap/Button';
-// import { useDispatch } from "react-redux";
-// import { addProduct } from '../../redux/cartRedux';
 import { Link } from 'react-router-dom'
 
 function ShopComponents() {
     const { t } = useTranslation();
     const [product, setProduct] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
+
 
     const getData = async () => {
+        setIsLoading(true)
         const response = await axios.get("https://electronics-store-api.vercel.app/api/products/");
         setProduct(response.data);
+        setIsLoading(false)
     };
     useEffect(() => {
         getData();
     }, [])
 
-    // const dispatch = useDispatch();
-    // const handleClick = () => {
-    //     dispatch(addProduct({ ...product }))
-    // }
 
     const reversedItems = [...product].reverse();
     return (
@@ -33,7 +30,7 @@ function ShopComponents() {
             <div className="shopLeftBar">
                 <Accordion className="filterPC" defaultActiveKey={['0']} alwaysOpen>
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -50,7 +47,7 @@ function ShopComponents() {
                 <div className="filterMobile">
                     <Accordion defaultActiveKey={[]} alwaysOpen>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></Accordion.Header>
+                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                             <Accordion.Body>
                                 <ListGroup>
                                     <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -69,14 +66,16 @@ function ShopComponents() {
 
 
             <div className="shopMain">
+                {isLoading && <img style={{ width: "150px", height: "150px", objectFit: "contain", margin: "100px auto" }} src="https://superstorefinder.net/support/wp-content/uploads/2018/01/orange_circles.gif" alt="" />}
                 {reversedItems ?
                     reversedItems.map((data, index) => {
                         return (
                             <Card key={index} style={{ width: '18rem' }}>
-                                <Card.Link href={'/shop/' + data._id + "/details"}><Card.Img style={{ width: "100%", height: "200px", objectFit: "contain", marginTop: "30px" }} variant="top" src={data.img1} /></Card.Link>
+                                <Card.Link href={'/shop/category=' + data.categories[0] + '/' + data._id + '/details'}><Card.Img style={{ width: "100%", height: "200px", objectFit: "contain", marginTop: "50px" }} variant="top" src={data.img1} /></Card.Link>
                                 <Card.Body>
-                                    {data.category ? <p id=' '>{t(data.category)}</p> : <></>}
-                                    <Card.Link className="cardTitle" href={'/shop/' + data._id + "/details"}><Card.Title>{data.productname}</Card.Title></Card.Link>
+                                    {data.category ? <p id='category'>{t(data.category)}</p> : <></>}
+                                    {data.salePrice ? <p id='negdalis'>{t('Nəğd alışda')} {data.salePrice - data.price} {t('manat endirim')}</p> : <></>}
+                                    <Card.Link className="cardTitle" href={'/shop/category=' + data.categories[0] + '/' + data._id + '/details'}><Card.Title>{data.productname}</Card.Title></Card.Link>
                                     {/* <Card.Text>
                                         Some quick example text to build on the card title and make up the
                                         bulk of the card's content.
@@ -90,6 +89,7 @@ function ShopComponents() {
                                         </ListGroup.Item>
                                         : <ListGroup.Item>AZN {data.price}</ListGroup.Item>
                                     }
+                                    {data.dishwasherCapacity ? <ListGroup.Item>{t("Dishwasher capacity")}: {t(data.dishwasherCapacity)}</ListGroup.Item> : <></>}
                                     {data.storage ? <ListGroup.Item><p>{t("Storage")}: {data.storage}</p></ListGroup.Item> : <></>}
                                     {data.ram ? <ListGroup.Item><p>RAM: {data.ram}</p></ListGroup.Item> : <></>}
                                     {data.typeOfCooling ? <ListGroup.Item>{t("Type of cooling")}: {data.typeOfCooling}</ListGroup.Item> : <></>}
@@ -100,7 +100,7 @@ function ShopComponents() {
                                     {data.compressorType ? <ListGroup.Item>{t("Compressor type")}: {data.compressorType}</ListGroup.Item> : <></>}
                                 </ListGroup>
                                 <Card.Body style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-                                    <Card.Link href={'/shop/' + data._id + "/details"}>{t("More details")}</Card.Link>
+                                    <Card.Link href={'/shop/category=' + data.categories[0] + '/' + data._id + '/details'}>{t("More details")}</Card.Link>
                                     {/* <Button variant='success' style={{ cursor: "pointer", borderRadius: "10px" }} onClick={handleClick} >{t("Add to basket")}</Button> */}
                                 </Card.Body>
                             </Card>

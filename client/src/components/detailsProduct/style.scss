@@ -107,6 +107,7 @@ img {
                 text-align: start;
                 justify-content: center;
                 gap: 10px;
+                margin-top: 50px !important;
 
                 #detailsH2 {
                     font-size: 50px;
@@ -187,6 +188,7 @@ img {
         @include themify($themes) {
             .detailpageMain {
                 flex-direction: column;
+                min-height: 100vh;
 
                 .detailImgs {
                     width: 800px;
@@ -213,6 +215,8 @@ img {
                 .detailsItemTexts {
                     width: 100%;
                     height: 50vh;
+                    padding-top: 50px;
+                    margin-bottom: 30px;
 
                     #detailsH2 {
                         font-size: 50px;
@@ -368,8 +372,8 @@ img {
                 .detailsItemTexts {
                     width: 100%;
                     height: 60vh;
-                    padding-bottom: 50px;
-                    margin-top: 50px;
+                    padding-bottom: 100px !important;
+                    margin-top: 100px !important;
 
                     #detailsH2 {
                         font-size: 40px;

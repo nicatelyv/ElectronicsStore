@@ -41,6 +41,15 @@ const ProductSchema = new mongoose.Schema({
     coolingPower: { type: String },
     compressorType: { type: String },
     basicModes: { type: String },
+
+
+    productWeight: { type: String },
+    dishwasherCapacity: { type: String },
+    warrantyPeriod: { type: String },
+    dimensions: { type: String },
+    management: { type: String },
+    soundLevel: { type: String },
+    waterConsumption: { type: String },
 },
     { timestamps: true }
 );

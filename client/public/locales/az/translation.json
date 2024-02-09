@@ -16,8 +16,16 @@
     "Total price:": "Ümumi qiymət:",
     "See more": "Daha çox gör",
     "Color": "Rəng",
+    "Warranty period":"Zəmanət müddəti",
+    "1 il":"1 il",
+    "2 il":"2 il",
+    "Weight":"Çəki",
+    "Dimensions":"Ölçülər",
 
- 
+    "Nəğd alışda":"Nəğd alışda",
+    "manat endirim":"manat endirim",
+    
+    
     "Recommended room area":"Tövsiyə olunan otaq sahəsi",
     "Thermal power":"İstilik gücü",
     "Cooling power":"Soyutma gücü",
@@ -25,6 +33,12 @@
     "Basic modes":"Əsas rejimlər",
     "Soyutma/Isitmə":"Soyutma/Isitmə",
 
+
+    "Dishwasher":"Qabyuyan",
+    "Water consumption (lt)":"Su sərfiyyatı (lt)",
+    "Sound level":"Səs səviyyəsi",
+    "Management":"İdarəetmə",
+    "Dishwasher capacity":"Qabyuyan maşının tutumu",
 
     "Refrigeration": "Soyuducu",
     "Class of energy consumption": "Enerji sərfiyyatının sinfi",

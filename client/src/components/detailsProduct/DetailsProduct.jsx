@@ -109,11 +109,22 @@ function DetailsProduct() {
                     {/* : <Link to={'/giris'}><i id='addtowishlist' className="fa-regular fa-heart"></i></Link>} */}
 
 
-                    {/* Telephone */}
-                    {product.color ? <h3 id='detailsH3'>{t("Color")}: {t(product.color)}</h3> : <></>}
                     {product.brand ? <h4 id='detailsH4'>{t("Brand")}: {product.brand}</h4> : <></>}
+                    {product.color ? <h3 id='detailsH3'>{t("Color")}: {t(product.color)}</h3> : <></>}
+
+
+                    {/* Telephone */}
                     {product.storage ? <h4 id='detailsH4'>{t("Storage")}: {product.storage}</h4> : <></>}
                     {product.ram ? <h4 id='detailsH4'>{t("RAM")}: {product.ram}</h4> : <></>}
+
+
+                    {/* Dishwashers */}
+                    {product.waterConsumption ? <h4 id='detailsH4'>{t("Water consumption (lt)")}: {t(product.waterConsumption)}</h4> : <></>}
+                    {product.dimensions ? <h4 id='detailsH4'>{t("Dimensions")}: {t(product.dimensions)}</h4> : <></>}
+                    {product.soundLevel ? <h4 id='detailsH4'>{t("Sound level")}: {t(product.soundLevel)}</h4> : <></>}
+                    {product.dishwasherCapacity ? <h4 id='detailsH4'>{t("Dishwasher capacity")}: {t(product.dishwasherCapacity)}</h4> : <></>}
+                    {product.management ? <h4 id='detailsH4'>{t("Management")}: {t(product.management)}</h4> : <></>}
+
 
                     {/* Refrigator */}
                     {product.typeOfCooling ? <h4 id='detailsH4'>{t("Type of cooling")}: {product.typeOfCooling}</h4> : <></>}
@@ -123,10 +134,10 @@ function DetailsProduct() {
                     {/* Washing machine */}
                     {product.washingMachineCapacity ? <h4 id='detailsH4'>{t("Washing machine capacity")}: {t(product.washingMachineCapacity)}</h4> : <></>}
                     {product.washingMachineSpinSpeed ? <h4 id='detailsH4'>{t("Washing machine spin speed")}: {t(product.washingMachineSpinSpeed)}</h4> : <></>}
-                    {product.weightWashingMachine ? <h4 id='detailsH4'>{t("Washing machine weight")}: {t(product.weightWashingMachine)}</h4> : <></>}
-                    {product.displayWashingMachine ? <h4 id='detailsH4'>{t("Display")}: {t(product.displayWashingMachine)}</h4> : <></>}
-                    {product.programCountWashingMachine ? <h4 id='detailsH4'>{t("Program count")}: {t(product.programCountWashingMachine)}</h4> : <></>}
                     {product.energyClassWashingMachine ? <h4 id='detailsH4'>{t("Energy class")}: {t(product.energyClassWashingMachine)}</h4> : <></>}
+                    {product.weightWashingMachine ? <h4 id='detailsH4'>{t("Washing machine weight")}: {t(product.weightWashingMachine)}</h4> : <></>}
+                    {product.programCountWashingMachine ? <h4 id='detailsH4'>{t("Program count")}: {t(product.programCountWashingMachine)}</h4> : <></>}
+                    {product.displayWashingMachine ? <h4 id='detailsH4'>{t("Display")}: {t(product.displayWashingMachine)}</h4> : <></>}
 
 
                     {/* Air Conditioning */}
@@ -137,7 +148,9 @@ function DetailsProduct() {
                     {product.basicModes ? <h4 id='detailsH4'>{t("Basic modes")}: {t(product.basicModes)}</h4> : <></>}
 
 
+                    {product.productWeight ? <h4 id='detailsH4'>{t("Weight")}: {t(product.productWeight)}</h4> : <></>}
                     {product.producingCountry ? <h4 id='detailsH4'>{t("Producing country")}: {t(product.producingCountry)}</h4> : <></>}
+                    {product.warrantyPeriod ? <h4 id='detailsH4'>{t("Warranty period")}: {t(product.warrantyPeriod)}</h4> : <></>}
                     {product.category ? <h3 id='detailsH3'>{t("Category")}: <Link to={'/shop/category=' + product.categories[0]}>{t(product.categories[0])}</Link></h3> : <></>}
                     {/* {product.categories == 'large-appliances' ? <h3 id='detailsH3'>{t("Category")}: <Link to={'/shop/category=' + product.categories}>{t(product.categories)}, {product.category}</Link></h3> : <></>} */}
                 </div>

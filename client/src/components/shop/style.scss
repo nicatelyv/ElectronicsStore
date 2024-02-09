@@ -20,7 +20,7 @@
         .shopLeftBar {
             width: 350px;
             min-height: 80vh;
-            border-right: 1px solid themed("border");
+            // border-right: 1px solid themed("border");
             display: flex;
             flex-direction: column;
             overflow: auto;
@@ -49,6 +49,17 @@
                 .accordion-item {
                     @include mobile {
                         padding-top: 20px;
+                    }
+
+                    .accordion-header {
+                        .accordion-button {
+                            .list-group-item {
+                                background-color: themed('bg') !important;
+                                color: themed("textColor") !important;
+                                transition: .5s;
+
+                            }
+                        }
                     }
 
                     .accordion-collapse {
@@ -115,8 +126,18 @@
                 }
 
                 .accordion-item {
-                    .accordion-collapse {
+                    .accordion-header {
+                        .accordion-button {
+                            .list-group-item {
+                                background-color: themed('bg') !important;
+                                color: themed("textColor") !important;
+                                transition: .5s;
 
+                            }
+                        }
+                    }
+
+                    .accordion-collapse {
                         .accordion-body {
                             .list-group {
                                 .list-group-item {
@@ -186,6 +207,21 @@
                 height: 580px;
 
                 .card-body {
+                    #category {
+                        color: themed("textColorSoft");
+                        transition: .5s;
+                    }
+
+                    #negdalis {
+                        color: themed("green-lightgreen");
+                        position: absolute;
+                        align-self: center;
+                        top: 15px;
+                        font-size: 14px;
+                        opacity: .7;
+                        transition: .5s;
+                    }
+
                     #detailsP {
                         color: themed('textColorSoft');
                         text-transform: capitalize;
@@ -201,6 +237,7 @@
                         border: 1px solid themed('bgSoft');
                         border-left: none;
                         border-right: none;
+                        transition: .5s;
 
                         p {
                             margin: 0;
@@ -211,6 +248,7 @@
 
                 .cardTitle {
                     color: themed('textColor');
+                    transition: .5s;
 
                     .h5 {
                         margin: 0;
