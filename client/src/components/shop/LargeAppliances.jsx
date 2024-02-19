@@ -139,7 +139,7 @@ function LargeAppliances() {
                                 <Card.Link href={'/shop/category=' + data.categories[0] + '/' + data._id + '/details'}><Card.Img style={{ width: "100%", height: "200px", objectFit: "contain", marginTop: "50px" }} variant="top" src={data.img1} /></Card.Link>
                                 <Card.Body>
                                     {data.category ? <p id='category'>{t(data.category)}</p> : <></>}
-                                    {data.salePrice ? <p id='negdalis'>{t('Nəğd alışda')} {data.salePrice - data.price} {t('manat endirim')}</p> : <></>}
+                                    {data.salePrice ? <p id='negdalis'>{t('Nağd alışda')} {data.salePrice - data.price} {t('manat endirim')}</p> : <></>}
                                     <Card.Link className="cardTitle" href={'/shop/category=' + data.categories[0] + '/' + data._id + '/details'}><Card.Title>{data.productname}</Card.Title></Card.Link>
                                     {/* {data.stock == 'true' && <Card.Text>Stokda var</Card.Text>} */}
                                 </Card.Body>

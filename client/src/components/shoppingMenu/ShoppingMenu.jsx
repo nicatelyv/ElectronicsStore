@@ -52,6 +52,12 @@ export default function TemporaryDrawer() {
                                 {/* <p id='cartItemP'>AZN {product.price}</p> */}
                                 {product.color ? <p id='cartItemP'>{t("Color")}: {product.color}</p> : <></>}
                                 {product.storage ? <p id='cartItemP'>{t("Storage")}: {product.storage}</p> : <></>}
+                                {product.typeOfCooling ? <p id='cartItemP'>{t("Type of cooling")}: {product.typeOfCooling}</p> : <></>}
+                                {product.classOfEnergyConsumption ? <p id='cartItemP'>{t("Class of energy consumption")}: {product.classOfEnergyConsumption}</p> : <></>}
+                                {product.washingMachineCapacity ? <p id='cartItemP'>{t("Washing machine capacity")}: {t(product.washingMachineCapacity)}</p> : <></>}
+                                {product.energyClassWashingMachine ? <p id='cartItemP'>{t("Energy class")}: {product.energyClassWashingMachine}</p> : <></>}
+                                {product.recommendedRoomArea ? <p id='cartItemP'>{t("Recommended room area")}: {product.recommendedRoomArea}</p> : <></>}
+                                {product.compressorType ? <p id='cartItemP'>{t("Compressor type")}: {product.compressorType}</p> : <></>}
                             </div>
                         </div>
                         <div id='cartItemCount'>
