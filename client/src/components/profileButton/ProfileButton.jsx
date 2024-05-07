@@ -74,7 +74,7 @@ export default function AccountMenu() {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <Link className='profileA' to={'/hesabim'}>
+                <Link className='profileA' to={'/my-account'}>
                     <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                         <Avatar /> {t("My Account")}
                     </MenuItem>
@@ -87,7 +87,7 @@ export default function AccountMenu() {
                     {t("Add another account")}
                 </MenuItem>
                 </Link> */}
-                <Link className='profileA' to={'/hesabim/parametrler'}>
+                <Link className='profileA' to={'/my-account/settings'}>
                     <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                         <ListItemIcon>
                             <i class="fa-solid fa-gear"></i>

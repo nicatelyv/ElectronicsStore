@@ -66,14 +66,14 @@ export const router = createBrowserRouter([
     // User
     localStorage.getItem("username") ? {
         path: "/giris",
-        element: <Home />,
+        element: <ErrorPage />,
     } : {
         path: "/giris",
         element: <LoginPage />
     },
     localStorage.getItem("username") ? {
         path: "/qeydiyyat",
-        element: <Home />
+        element: <ErrorPage />
     } : {
         path: "/qeydiyyat",
         element: <RegisterPage />

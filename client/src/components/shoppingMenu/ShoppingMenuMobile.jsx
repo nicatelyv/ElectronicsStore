@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { clearBasket } from '../../redux/cartRedux'
 import { useTranslation } from 'react-i18next';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useSound from 'use-sound';
 import sound from "../../assets/sounds/success-1-6297.mp3"
 
@@ -14,6 +14,16 @@ export default function TemporaryDrawer() {
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
     const { t } = useTranslation();
+
+    const navigate = useNavigate()
+    const handleNavigate = () => {
+        if (window.location.pathname === '/shop') {
+            window.location.reload();
+        }
+        else {
+            navigate("/shop")
+        }
+    }
 
     const [playSound] = useSound(sound);
     function handleClick() {
@@ -64,8 +74,18 @@ export default function TemporaryDrawer() {
                         </div>
                     </div>
                 ))}
-                <h2 id='cartTotalPriceMobile'>{t('Total price:')} {(cart.total).toFixed(2)} AZN</h2>
-                <Button onClick={handleClick} className='cartBtnMobile'>{t("Confirm")}</Button>
+                {cart.total === 0 &&
+                    <>
+                        <h5>{t("Səbətinizdə məhsul yoxdur")}</h5>
+                        <Button onClick={handleNavigate} className='cartBtnMobile'>{t("Alış-verişə davam edin")}</Button>
+                    </>
+                }
+                {cart.total !== 0 &&
+                    <>
+                        <h2 id='cartTotalPriceMobile'>{t('Total price:')} {(cart.total).toFixed(2)} AZN</h2>
+                        <Button onClick={handleClick} className='cartBtnMobile'>{t("Confirm")}</Button>
+                    </>
+                }
             </div>
         </Box>
     );
