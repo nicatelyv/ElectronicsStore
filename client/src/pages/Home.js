@@ -10,6 +10,7 @@ import UpButton from '../components/upButton/UpButton'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next';
 import HomeVideo from '../components/homeVideo/homeVideo'
+import Chatbot from '../components/chatbot/Chatbot'
 
 function Home() {
     const { t } = useTranslation();
@@ -26,6 +27,7 @@ function Home() {
             <SlideBrands />
             <NewProducts />
             <HomeVideo />
+            {/* <Chatbot /> */}
             <Footer />
             <UpButton />
         </>

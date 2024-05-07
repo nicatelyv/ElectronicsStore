@@ -16,10 +16,10 @@ export default function TemporaryDrawer() {
     const { t } = useTranslation();
 
     const [playSound] = useSound(sound);
-    function handleClick() {
-        playSound()
-        dispatch(clearBasket())
-    }
+        function handleClick() {
+            playSound()
+            dispatch(clearBasket())
+        }
 
 
     const [state, setState] = React.useState({

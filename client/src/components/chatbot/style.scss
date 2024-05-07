@@ -1,0 +1,15 @@
+@import "../../style.scss";
+
+.chatbot {
+    @include themify($themes) {
+        background-color: themed("bg");
+        position: fixed;
+        bottom: 0;
+        right: 100px;
+        height: 500px !important;
+
+        input{
+            outline: none;
+        }
+    }
+}
