@@ -2,17 +2,13 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import "./style.scss"
-import { useDispatch, useSelector } from 'react-redux'
-import { clearBasket } from '../../redux/cartRedux'
+import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
-import useSound from 'use-sound';
-import sound from "../../assets/sounds/success-1-6297.mp3"
 
 export default function TemporaryDrawer() {
     const cart = useSelector(state => state.cart)
-    const dispatch = useDispatch()
     const { t } = useTranslation();
 
     const navigate = useNavigate()
@@ -25,10 +21,8 @@ export default function TemporaryDrawer() {
         }
     }
 
-    const [playSound] = useSound(sound);
     function handleClick() {
-        playSound()
-        dispatch(clearBasket())
+        navigate('/shop/checkout')
     }
 
 
@@ -84,7 +78,7 @@ export default function TemporaryDrawer() {
                 }
                 {cart.total !== 0 &&
                     <div className="total">
-                        <h2 id='cartTotalPrice'>{t('Total price:')} {(cart.total).toFixed(2)} AZN</h2>
+                        <h2 id='cartTotalPrice'>{t('Total price')}: {(cart.total).toFixed(2)} AZN</h2>
                         <Button onClick={handleClick} className='cartBtn'>{t("Confirm")}</Button>
                     </div>
                 }

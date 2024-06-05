@@ -12,6 +12,8 @@ import ShopTvAndAudio from "../pages/ShopTvAndAudio";
 import ShopPhotoTechnique from "../pages/ShopPhotoTechnique";
 import ShopNotebookAndComputerEquipment from "../pages/ShopNotebookAndComputerEquipment";
 import Details from "../pages/Details";
+import Checkout from "../pages/Checkout"
+import ConfirmPage from "../pages/ConfirmPage"
 
 export const router = createBrowserRouter([
     {
@@ -60,6 +62,14 @@ export const router = createBrowserRouter([
     {
         path: "/shop/:categories/:id/details",
         element: <Details />
+    },
+    {
+        path: "/shop/checkout",
+        element: <Checkout />
+    },
+    {
+        path: "/shop/confirm-order",
+        element: <ConfirmPage />
     },
 
 
