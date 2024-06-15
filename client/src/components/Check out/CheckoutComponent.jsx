@@ -28,7 +28,11 @@ function CheckoutComponent() {
     const [error, setError] = useState("")
     console.log(setError);
     const [useDifferentShippingAddress, setUseDifferentShippingAddress] = useState(false);
-    const [usePaymentMethod, setUsePaymentMethod] = useState(true);
+    const [usePaymentMethod, setUsePaymentMethod] = useState({
+        card: true,
+        cash: false,
+        paypal: false,
+    });
 
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
@@ -245,13 +249,13 @@ function CheckoutComponent() {
                                         id="creditCard"
                                         name="paymentMethod"
                                         value="creditCard"
-                                        checked={usePaymentMethod}
-                                        onChange={() => setUsePaymentMethod(true)}
+                                        checked={usePaymentMethod.card}
+                                        onChange={() => setUsePaymentMethod({ card: true, cash: false, paypal: false })}
                                         className={style.radioButton}
                                     />{t("Credit Card")}</label>
                                 <p>{t("We accept all major credit cards.")}</p>
                             </div>
-                            {usePaymentMethod && (
+                            {usePaymentMethod.card && (
                                 <div className={style.cardDetail}>
                                     <div className={style.cardType}>
                                         <img src="/img/CardType/GPay.png" alt="" />
@@ -280,8 +284,8 @@ function CheckoutComponent() {
                                         id="cashOnDelivery"
                                         name="paymentMethod"
                                         value="cashOnDelivery"
-                                        checked={!usePaymentMethod}
-                                        onChange={() => setUsePaymentMethod(false)}
+                                        checked={usePaymentMethod.cash}
+                                        onChange={() => setUsePaymentMethod({ card: false, cash: true, paypal: false })}
                                         className={style.radioButton}
                                     /> {t("Cash on delivery")}</label>
                                 <p>{t("Pay with cash upon delivery.")}</p>
@@ -294,8 +298,8 @@ function CheckoutComponent() {
                                         id="paypal"
                                         name="paymentMethod"
                                         value="paypal"
-                                        checked={!usePaymentMethod}
-                                        onChange={() => setUsePaymentMethod(false)}
+                                        checked={usePaymentMethod.paypal}
+                                        onChange={() => setUsePaymentMethod({ card: false, cash: false, paypal: true })}
                                         className={style.radioButton}
                                     /> {t("PayPal")}</label>
                             </div>
