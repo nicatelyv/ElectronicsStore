@@ -14,6 +14,8 @@ import ShopNotebookAndComputerEquipment from "../pages/ShopNotebookAndComputerEq
 import Details from "../pages/Details";
 import Checkout from "../pages/Checkout"
 import ConfirmPage from "../pages/ConfirmPage"
+import { MyAccount } from "../pages/MyAccount";
+import Wishlist from "../components/Wishlist/Wishlist";
 
 export const router = createBrowserRouter([
     {
@@ -70,6 +72,25 @@ export const router = createBrowserRouter([
     {
         path: "/shop/confirm-order",
         element: <ConfirmPage />
+    },
+    {
+        path: "/my-account",
+        element: <MyAccount />,
+        children: [
+            {
+                path: "/my-account/wishlist",
+                element: <Wishlist />
+            },
+            {
+                path: "/my-account/my-orders",
+            },
+            {
+                path: "/my-account/settings",
+            },
+            {
+                path: "/my-account/sign-out",
+            },
+        ]
     },
 
 

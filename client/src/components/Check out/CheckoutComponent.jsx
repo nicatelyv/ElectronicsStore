@@ -26,6 +26,7 @@ const getNewWeekDate = () => {
 function CheckoutComponent() {
     const { t } = useTranslation();
     const [error, setError] = useState("")
+    console.log(setError);
     const [useDifferentShippingAddress, setUseDifferentShippingAddress] = useState(false);
     const [usePaymentMethod, setUsePaymentMethod] = useState(true);
 
@@ -45,14 +46,17 @@ function CheckoutComponent() {
     let subtotal = 0
     let savingPrice = 0
     let shippingPrice = 0
-    let deliveryPrice = 0
+    // let deliveryPrice = 0
     cart.products.forEach((e) => {
-        subtotal += e.quantity * e.salePrice
-        savingPrice += e.quantity * (e.salePrice - e.price)
-        deliveryPrice += e.quantity * 1
+        if (e.salePrice) {
+            subtotal += e.quantity * e.salePrice
+            savingPrice += e.quantity * (e.salePrice - e.price)
+        } else {
+            subtotal += e.quantity * e.price
+        }
+        // deliveryPrice += e.quantity * 1
     })
     shippingPrice += cart.products.length * 5
-
     let total = subtotal + shippingPrice - savingPrice
 
     const navigate = useNavigate()
@@ -307,38 +311,38 @@ function CheckoutComponent() {
                     <div className={style.orderDiv}>
                         {cart.products.map((product, i) =>
                             <div className={style.product} key={i}>
-                                <img src={product.img1} alt="" />
+                                <img onClick={() => navigate('/shop/' + product._id + "/details")} src={product.img1} alt="" />
                                 <div className={style.text}>
-                                    <h4>{product.productname} <span> x {product.quantity}</span></h4>
+                                    <h4 style={{ cursor: "pointer" }} onClick={() => navigate('/shop/' + product._id + "/details")}>{product.productname} <span> x {product.quantity}</span></h4>
                                     <h4>{t("Color")} <span>{product.color}</span></h4>
                                 </div>
-                                <h5>{product.salePrice}AZN</h5>
+                                {product.salePrice ? <h5>{product.salePrice}AZN</h5> : <h5>{product.price}AZN</h5>}
                             </div>
                         )}
 
                         <div className={style.text}>
                             <h4>{t("Subtotal")} <span>( {cart.products.length} {t("items")} )</span></h4>
-                            <h4>{subtotal}AZN</h4>
+                            <h4>{subtotal.toFixed(2)}AZN</h4>
                         </div>
                         {
-                            cart.products.length == 0 ? <></> :
+                            cart.products.length === 0 ? <></> :
                                 <div className={style.text}>
                                     <h4>{t("Savings")}</h4>
                                     <h4>-{savingPrice}AZN</h4>
                                 </div>
                         }
                         {
-                            cart.products.length == 0 ? <></> :
+                            cart.products.length === 0 ? <></> :
                                 <div className={style.shipping}>
                                     <h4>{t("Shipping")}</h4>
                                     <h4>+{shippingPrice}AZN</h4>
                                 </div>
                         }
                         {
-                            cart.products.length == 0 ? <></> :
+                            cart.products.length === 0 ? <></> :
                                 <div className={style.text}>
                                     <h4>{t("Total price")}</h4>
-                                    <h4>{total}AZN</h4>
+                                    <h4>{total.toFixed(2)}AZN</h4>
                                 </div>
                         }
                     </div>

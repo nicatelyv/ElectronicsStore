@@ -2,13 +2,23 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import "./style.scss"
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
+import { increaseQuantity, decreaseQuantity } from '../../redux/cartRedux';
 
 export default function TemporaryDrawer() {
     const cart = useSelector(state => state.cart)
+    const dispatch = useDispatch();
+    const handleIncrease = (productId) => {
+        dispatch(increaseQuantity({ _id: productId }));
+    };
+
+    const handleDecrease = (productId) => {
+        dispatch(decreaseQuantity({ _id: productId }));
+    };
+
     const { t } = useTranslation();
 
     const navigate = useNavigate()
@@ -22,7 +32,12 @@ export default function TemporaryDrawer() {
     }
 
     function handleClick() {
-        navigate('/shop/checkout')
+        if (window.location.pathname === '/shop/checkout') {
+            window.location.reload();
+        }
+        else {
+            navigate('/shop/checkout')
+        }
     }
 
 
@@ -65,8 +80,13 @@ export default function TemporaryDrawer() {
                             </div>
                         </div>
                         <div id='cartItemCount'>
-                            <h4 id='cartItemH4'>{product.quantity}x</h4>
-                            <h3 id='cartItemH3'>{(product.price * product.quantity).toFixed(2)} AZN</h3>
+                            <h4 id='cartItemH4'>
+                                <button onClick={() => handleDecrease(product._id)}>-</button>
+                                {product.quantity}x
+                                <button onClick={() => handleIncrease(product._id)}>+</button>
+                            </h4>
+                            {/* <h3 id='cartItemH3'>{(product.price * product.quantity).toFixed(2)} AZN</h3> */}
+                            <h3 id='cartItemH3'>{(product.price).toFixed(2)} AZN</h3>
                         </div>
                     </div>
                 ))}

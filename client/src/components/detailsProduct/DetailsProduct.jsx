@@ -2,13 +2,14 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { addProduct } from '../../redux/cartRedux';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next';
 import Backdrop from '@mui/material/Backdrop';
 import Button from 'react-bootstrap/Button';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './style.scss'
+import { toggleProductInWishlist } from '../../redux/wishlistRedux';
 
 function DetailsProduct() {
     const [open, setOpen] = React.useState(false);
@@ -18,7 +19,6 @@ function DetailsProduct() {
     const handleOpen = () => {
         setOpen(true);
     };
-
 
     const { id } = useParams();
     const [product, setProduct] = useState({});
@@ -41,6 +41,13 @@ function DetailsProduct() {
     const handleClick = () => {
         dispatch(addProduct({ ...product, quantity, }))
     }
+
+    const wishlist = useSelector(state => state.wishlist.products);
+    const isProductInWishlist = wishlist.some(wishlistProduct => wishlistProduct._id === product._id);
+
+    const handleToggleWishlist = () => {
+        dispatch(toggleProductInWishlist(product));
+    };
 
 
     const getData = async () => {
@@ -85,7 +92,7 @@ function DetailsProduct() {
                             : <></>
                         }
                     </div>
-                    : <img src='https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493bb08m8f32c9282ywxu9mv1rh3ldfmt6psbs52uxtn&rid=200w.gif&ct=g' alt='Loading' />
+                    : <img src='https://i.gifer.com/ZKZg.gif' alt='Loading' />
                 }
 
                 <div className='detailsItemTexts'>
@@ -104,9 +111,12 @@ function DetailsProduct() {
                         <Button variant='success' style={{ cursor: "pointer", borderRadius: "10px" }} onClick={handleClick} >{t("Add to basket")}</Button>
                         {/* : <Link to={'/giris'}><button style={{ cursor: "pointer" }} id='addtobasket'>{t("Add to basket")}</button></Link>} */}
                     </div>
-                    {/* {localStorage.getItem('username') ? */}
-                    <i id='addtowishlist' className="fa-regular fa-heart"></i>
-                    {/* : <Link to={'/giris'}><i id='addtowishlist' className="fa-regular fa-heart"></i></Link>} */}
+
+
+                    {isProductInWishlist
+                        ? <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-solid fa-heart" style={{ color: "red" }}></i>
+                        : <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-regular fa-heart"></i>
+                    }
 
 
                     {product.brand ? <h4 id='detailsH4'>{t("Brand")}: {product.brand}</h4> : <></>}

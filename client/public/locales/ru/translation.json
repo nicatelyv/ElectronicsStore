@@ -1,5 +1,7 @@
 {
     "Nicat Əliyev": "Ниджат Алиев",
+    "Hello":"Привет",
+    "Welcome to your Account":"Добро пожаловать в ваш аккаунт",
     "Ana səhifə": "Домашняя Страница",
     "Oops! Page Not Found": "Упс! Страница не найдена",
     "Sorry but the page you are looking for does not exist, have been removed or is temporarily unavailable": "Извините, но страница, которую вы ищете, не существует, была удалена или временно недоступна.",
@@ -218,5 +220,9 @@
     "Məlumat mərkəzi": "Дата-центр",
     "hər gün": "каждый день",
     "Zəng et": "Позвони",
-    "Saytın hazırlanması": "Подготовка места"
+    "Saytın hazırlanması": "Подготовка места",
+
+    "My Orders":"Мои заказы",
+    "Wishlist":"Список желаний",
+    "My info":"Моя информация"
 }

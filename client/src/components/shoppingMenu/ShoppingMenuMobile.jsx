@@ -3,17 +3,22 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import "./styleMobile.scss"
 import { useDispatch, useSelector } from 'react-redux'
-import { clearBasket } from '../../redux/cartRedux'
 import { useTranslation } from 'react-i18next';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
-import useSound from 'use-sound';
-import sound from "../../assets/sounds/success-1-6297.mp3"
+import { increaseQuantity, decreaseQuantity } from '../../redux/cartRedux';
 
 export default function TemporaryDrawer() {
     const cart = useSelector(state => state.cart)
-    const dispatch = useDispatch()
     const { t } = useTranslation();
+    const dispatch = useDispatch();
+    const handleIncrease = (productId) => {
+        dispatch(increaseQuantity({ _id: productId }));
+    };
+
+    const handleDecrease = (productId) => {
+        dispatch(decreaseQuantity({ _id: productId }));
+    };
 
     const navigate = useNavigate()
     const handleNavigate = () => {
@@ -25,10 +30,13 @@ export default function TemporaryDrawer() {
         }
     }
 
-    const [playSound] = useSound(sound);
     function handleClick() {
-        playSound()
-        dispatch(clearBasket())
+        if (window.location.pathname === '/shop/checkout') {
+            window.location.reload();
+        }
+        else {
+            navigate('/shop/checkout')
+        }
     }
 
     const [state, setState] = React.useState({
@@ -69,7 +77,11 @@ export default function TemporaryDrawer() {
                             </div>
                         </div>
                         <div id='cartItemCountMobile'>
-                            <h4 id='cartItemH4Mobile'>{product.quantity}x</h4>
+                            <h4 id='cartItemH4Mobile'>
+                                <button onClick={() => handleDecrease(product._id)}>-</button>
+                                {product.quantity}x
+                                <button onClick={() => handleIncrease(product._id)}>+</button>
+                            </h4>
                             <h3 id='cartItemH3Mobile'>{(product.price * product.quantity).toFixed(2)} AZN</h3>
                         </div>
                     </div>

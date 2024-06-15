@@ -11,7 +11,8 @@ import Badge from '@mui/material/Badge';
 export default function MobileNavbar() {
     const { t } = useTranslation()
     const quantity = useSelector(state => state.cart.quantity)
-
+    const quantityWishlist = useSelector(state => state.wishlist.products.length)
+    
     return (
         <div className='mobileNavbar'>
             <div className="mobilNavContainer">
@@ -26,10 +27,12 @@ export default function MobileNavbar() {
                     {/* {localStorage.getItem("username") ? <NavLink to={"/logout"}><h4>{t("Çıxış")}</h4></NavLink> : <></>} */}
 
                     <input type="text" placeholder={t("Axtarış")} />
-                    <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
+                    <Badge badgeContent={quantityWishlist} color="primary">
+                        <Link to={'/my-account/wishlist'}><i className="fa-solid fa-heart"></i></Link>
+                    </Badge>
                     {localStorage.getItem("username") ?
                         <ProfileButton />
-                        : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade" style={{color:"#74C0FC"}}></i></NavLink>
+                        : <NavLink to={"/giris"}><i className="fa-solid fa-user fa-fade" style={{ color: "#74C0FC" }}></i></NavLink>
                     }
                 </div>
             </div>

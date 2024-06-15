@@ -24,6 +24,7 @@ function Navbar() {
     }
 
     const quantity = useSelector(state => state.cart.quantity)
+    const quantityWishlist = useSelector(state => state.wishlist.products.length)
     return (
         <nav id='nav'>
             <div className="container">
@@ -313,7 +314,9 @@ function Navbar() {
                             <ShoppingMenu />
                         </Badge>
                     </div>
-                    <Link to={'/wishlist'}><i className="fa-solid fa-heart"></i></Link>
+                    <Badge badgeContent={quantityWishlist} color="primary">
+                        <Link to={'/my-account/wishlist'}><i className="fa-solid fa-heart"></i></Link>
+                    </Badge>
                     {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "#FFD43B", cursor: "pointer" }} class="fa-solid fa-sun"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
                     <Languageoption onChange={e => handleClick(e)} />
                 </div>

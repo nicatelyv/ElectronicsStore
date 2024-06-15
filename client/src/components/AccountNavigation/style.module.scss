@@ -1,0 +1,190 @@
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 998px) {
+        @content;
+    }
+}
+
+.accountNav {
+    min-width: 400px;
+    padding-top: 105px;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include tablet {
+        min-width: 80px;
+        padding-left: 30px;
+    }
+
+    @include mobile {
+        padding-top: 20px;
+    }
+
+    &>.menuIcon {
+        display: none;
+
+        @include tablet {
+            display: block;
+            margin-top: 47px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .menuInActive {
+        display: none;
+    }
+
+    //Tablet
+    @include tablet {
+        .menuInActive {
+            display: flex;
+            position: absolute;
+            left: -1000px !important;
+            background-color: white;
+            z-index: 99;
+            transition: left 0.5s ease-in-out;
+            margin-top: 30px;
+
+            &>.menuIcon {
+                width: 30px;
+                height: 30px;
+                margin-left: 30px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+
+            &>.navContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                &>h2 {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    &>div {
+                        width: 6px;
+                        height: 30px;
+                        background-color: #8a33fd;
+                        border-radius: 10px;
+                    }
+                }
+
+                &>.accountNavLinks {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 100%;
+                    margin-top: 40px;
+
+                    &>.navLink {
+                        padding-left: 40px;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        color: black;
+                        height: 45px;
+
+                        &.active {
+                            background-color: #F6F6F6;
+                            border-left: 3px solid gray;
+                            padding-left: 38px;
+                            border-top-right-radius: 8px;
+                            border-bottom-right-radius: 8px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .menuInActive.menuActive {
+            display: flex;
+            left: 0 !important;
+            width: 100%;
+            top: 70px;
+            margin-top: 60px;
+            gap: 30px;
+        }
+    }
+
+    &>.url {
+        display: flex;
+        gap: 20px;
+        position: absolute;
+
+        &>a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: gray;
+        }
+
+        &>p {
+            margin: 0;
+        }
+    }
+
+    //PC
+    &>.navContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 40px;
+
+        @include tablet {
+            display: none;
+        }
+
+        &>h2 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            &>div {
+                width: 6px;
+                height: 30px;
+                background-color: #8a33fd;
+                border-radius: 10px;
+            }
+        }
+
+        &>.accountNavLinks {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+
+            &>.navLink {
+                padding-left: 40px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                color: black;
+                height: 45px;
+
+                &.active {
+                    background-color: #F6F6F6;
+                    border-left: 3px solid gray;
+                    padding-left: 38px;
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+            }
+
+        }
+    }
+}
