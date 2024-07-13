@@ -25,17 +25,21 @@
         height: 50vh;
     }
 
-    &>img {
+    &>a {
         margin-top: 70px;
         width: 60%;
-        object-fit: cover;
 
         @include tablet {
-            width: 70%;
+            width: 80%;
         }
 
         @include mobile {
-            width: 80%;
+            width: 100%;
+        }
+
+        &>img {
+            object-fit: cover;
+            width: 100%;
         }
     }
 }

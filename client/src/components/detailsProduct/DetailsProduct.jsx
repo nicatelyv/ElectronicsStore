@@ -113,11 +113,17 @@ function DetailsProduct() {
                     </div>
 
 
-                    {isProductInWishlist
+                    {/* {isProductInWishlist
                         ? <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-solid fa-heart" style={{ color: "red" }}></i>
                         : <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-regular fa-heart"></i>
-                    }
+                    } */}
 
+                    {
+                        localStorage.getItem("username") ? isProductInWishlist
+                            ? <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-solid fa-heart" style={{ color: "red" }}></i>
+                            : <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-regular fa-heart"></i>
+                            : <Link to={'/giris'}><i id='addtowishlist' class="fa-regular fa-heart"></i></Link>
+                    }
 
                     {product.brand ? <h4 id='detailsH4'>{t("Brand")}: {product.brand}</h4> : <></>}
                     {product.color ? <h3 id='detailsH3'>{t("Color")}: {t(product.color)}</h3> : <></>}

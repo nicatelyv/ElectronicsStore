@@ -124,6 +124,7 @@
         display: flex;
         gap: 20px;
         position: absolute;
+        z-index: 5;
 
         &>a {
             display: flex;

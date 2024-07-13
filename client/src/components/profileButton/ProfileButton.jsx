@@ -7,12 +7,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import "./style.scss"
 
 export default function AccountMenu() {
-
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -21,7 +20,7 @@ export default function AccountMenu() {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
+    const navigate = useNavigate();
     const { t } = useTranslation();
     return (
         <React.Fragment>
@@ -95,7 +94,17 @@ export default function AccountMenu() {
                         {t("Settings")}
                     </MenuItem>
                 </Link>
-                <Link className='profileA' to={'/logout'}>
+                <Link className='profileA'
+                    // to={'/logout'}
+                    onClick={(e) => {
+                        e.preventDefault()
+                        handleClose()
+                        const userConfirmed = window.confirm(t("Are you sure you want to log out?"));
+                        if (userConfirmed) {
+                            navigate("/logout")
+                        }
+                    }}
+                >
                     <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                         <ListItemIcon>
                             <i class="fa-solid fa-right-from-bracket"></i>

@@ -16,6 +16,7 @@ import Checkout from "../pages/Checkout"
 import ConfirmPage from "../pages/ConfirmPage"
 import { MyAccount } from "../pages/MyAccount";
 import Wishlist from "../components/Wishlist/Wishlist";
+import Error404 from "../components/error404/Error404";
 
 export const router = createBrowserRouter([
     {
@@ -73,7 +74,7 @@ export const router = createBrowserRouter([
         path: "/shop/confirm-order",
         element: <ConfirmPage />
     },
-    {
+    localStorage.getItem("firstName") ? {
         path: "/my-account",
         element: <MyAccount />,
         children: [
@@ -81,17 +82,18 @@ export const router = createBrowserRouter([
                 path: "/my-account/wishlist",
                 element: <Wishlist />
             },
-            {
-                path: "/my-account/my-orders",
-            },
+            // {
+            //     path: "/my-account/my-orders",
+            // },
             {
                 path: "/my-account/settings",
+                element: <Error404 />
             },
             {
                 path: "/my-account/sign-out",
             },
         ]
-    },
+    } : <></>,
 
 
     // User

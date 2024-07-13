@@ -12,6 +12,7 @@ body {
 
 #notfound {
     @include themify($themes) {
+        width: 100%;
         position: relative;
         height: 100vh;
         background-color: themed("bgSoft");
@@ -126,6 +127,7 @@ body {
 
     #notfound {
         @include themify($themes) {
+            padding-top: 250px;
             height: 70vh;
         }
     }
@@ -142,6 +144,14 @@ body {
 
         &>p {
             text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #notfound {
+        @include themify($themes) {
+            padding-top: 80px;
         }
     }
 }

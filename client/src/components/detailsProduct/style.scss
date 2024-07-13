@@ -1,7 +1,3 @@
-img {
-    cursor: pointer;
-}
-
 @import "../../style.scss";
 
 .detailPage {
@@ -17,6 +13,10 @@ img {
         background-color: themed("bgSoft");
         color: themed("textColor") !important;
         transition: .5s;
+
+        img {
+            cursor: pointer;
+        }
 
         .detailpageMain {
             width: 90%;

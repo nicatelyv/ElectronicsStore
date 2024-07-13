@@ -68,10 +68,6 @@ function CheckoutComponent() {
         navigate('/shop/confirm-order')
         playSound()
         dispatch(clearBasket())
-        setTimeout(() => {
-            navigate("/")
-            window.location.reload(false);
-        }, 4000);
     }
 
     const deliveryDate = getNewWeekDate();
@@ -88,7 +84,11 @@ function CheckoutComponent() {
                 <div className={style.billingDetails}>
                     <h3>{t("Billing Details")}</h3>
                     <Formik
-                        initialValues={{ firstName: '', lastName: '', country: "", companyName: "", streetAddress: "", apt_suite_unit: "", city: "", state: '', postalCode: "", phone: "", saveInfo: false }}
+                        initialValues={{
+                            firstName: localStorage.getItem("firstName") ? localStorage.getItem("firstName") : '',
+                            lastName: localStorage.getItem("lastName") ? localStorage.getItem("lastName") : '',
+                            country: "", companyName: "", streetAddress: "", apt_suite_unit: "", city: "", state: '', postalCode: "", phone: "", saveInfo: false
+                        }}
                         validationSchema={Yup.object({
                             firstName: Yup.string().required("*"),
                             lastName: Yup.string().required("*"),
@@ -109,12 +109,18 @@ function CheckoutComponent() {
                                 <div id={style.commonDiv}>
                                     <div id={style.left}>
                                         <label htmlFor="firstName">{t("First Name")}*</label>
-                                        <Field className={`${style.inp} ${errors.firstName && touched.firstName && style.errorInp}`} name="firstName" type="text" placeholder="First Name" />
+                                        {localStorage.getItem('firstName') ?
+                                            <Field className={style.inp} name="firstName" type="text" value={localStorage.getItem('firstName')} />
+                                            : <Field className={`${style.inp} ${errors.firstName && touched.firstName && style.errorInp}`} name="firstName" type="text" placeholder="First Name" />
+                                        }
                                     </div>
 
                                     <div id={style.right}>
                                         <label htmlFor="lastName">{t("Last Name")}*</label>
-                                        <Field className={`${style.inp} ${errors.lastName && touched.lastName && style.errorInp}`} name="lastName" type="text" placeholder="Last Name" />
+                                        {localStorage.getItem('firstName') ?
+                                            <Field className={style.inp} name="lastName" type="text" value={localStorage.getItem('lastName')} />
+                                            : <Field className={`${style.inp} ${errors.lastName && touched.lastName && style.errorInp}`} name="lastName" type="text" placeholder="Last Name" />
+                                        }
                                     </div>
                                 </div>
 
