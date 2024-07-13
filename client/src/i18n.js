@@ -23,7 +23,7 @@ i18n
   .init({
     lng: localStorage.getItem("i18nextLng") || "az",
     fallbackLng: "en",
-    debug: true,
+    debug: false,
     whitelist: availableLanguages,
     interpolation: {
       escapeValue: false,

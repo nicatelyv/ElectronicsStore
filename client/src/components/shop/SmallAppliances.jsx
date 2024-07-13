@@ -29,7 +29,7 @@ function LargeAppliances() {
             <div className="shopLeftBar">
                 <Accordion className="filterPC" defaultActiveKey={['0']} alwaysOpen>
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -43,7 +43,7 @@ function LargeAppliances() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="1">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Mətbəx")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Mətbəx")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>{t("Ətçəkənlər")}</ListGroup.Item>
@@ -65,7 +65,7 @@ function LargeAppliances() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Robot tozsoranlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Robot tozsoranlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>Xiaomi</ListGroup.Item>
@@ -84,7 +84,7 @@ function LargeAppliances() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="3">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Tozsoran")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Tozsoran")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>Hotpoint Ariston</ListGroup.Item>
@@ -107,7 +107,7 @@ function LargeAppliances() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="4">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Qab-qacaq")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Qab-qacaq")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <li>{t("Qazanlar")}</li>
@@ -126,7 +126,7 @@ function LargeAppliances() {
                 <div className="filterMobile">
                     <Accordion defaultActiveKey={[]} alwaysOpen>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                             <Accordion.Body>
                                 <ListGroup>
                                     <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -137,7 +137,7 @@ function LargeAppliances() {
                                     <ListGroup.Item><Link to={'/shop/category=notebook-and-computer-equipment'}>{t("Notbuk və kompüter texnikası")}</Link></ListGroup.Item>
                                 </ListGroup>
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Mətbəx")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Mətbəx")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>{t("Ətçəkənlər")}</ListGroup.Item>
@@ -159,7 +159,7 @@ function LargeAppliances() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Robot tozsoranlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Robot tozsoranlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>Xiaomi</ListGroup.Item>
@@ -178,7 +178,7 @@ function LargeAppliances() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="3">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Tozsoran")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Tozsoran")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>Hotpoint Ariston</ListGroup.Item>
@@ -201,7 +201,7 @@ function LargeAppliances() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="4">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Qab-qacaq")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Qab-qacaq")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <li>{t("Qazanlar")}</li>

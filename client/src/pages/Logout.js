@@ -14,7 +14,7 @@ export default function Index() {
             localStorage.removeItem(key);
         });
         setTimeout(() => {
-            window.location.reload(false);
+            window.location.reload();
             navigate("/")
         }, 1000);
     }

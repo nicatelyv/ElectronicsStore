@@ -103,9 +103,9 @@ function DetailsProduct() {
                     </div>
                     <p id='detailsP'>{product.desc}</p>
                     <div id='addbasketDiv' style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                        <i onClick={() => handleQuantity("dec")} class="fa-solid fa-circle-minus" style={{ color: '#74C0FC', fontSize: "30px", cursor: "pointer" }}></i>
+                        <i onClick={() => handleQuantity("dec")} className="fa-solid fa-circle-minus" style={{ color: '#74C0FC', fontSize: "30px", cursor: "pointer" }}></i>
                         <p style={{ margin: "0", fontSize: "18px" }}>{quantity}</p>
-                        <i onClick={() => handleQuantity("inc")} class="fa-solid fa-circle-plus" style={{ color: '#74C0FC', fontSize: "30px", cursor: "pointer" }}></i>
+                        <i onClick={() => handleQuantity("inc")} className="fa-solid fa-circle-plus" style={{ color: '#74C0FC', fontSize: "30px", cursor: "pointer" }}></i>
 
                         {/* {localStorage.getItem('username') ? */}
                         <Button variant='success' style={{ cursor: "pointer", borderRadius: "10px" }} onClick={handleClick} >{t("Add to basket")}</Button>
@@ -114,15 +114,15 @@ function DetailsProduct() {
 
 
                     {/* {isProductInWishlist
-                        ? <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-solid fa-heart" style={{ color: "red" }}></i>
-                        : <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-regular fa-heart"></i>
+                        ? <i onClick={handleToggleWishlist} id='addtowishlist' className="fa-solid fa-heart" style={{ color: "red" }}></i>
+                        : <i onClick={handleToggleWishlist} id='addtowishlist' className="fa-regular fa-heart"></i>
                     } */}
 
                     {
                         localStorage.getItem("username") ? isProductInWishlist
-                            ? <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-solid fa-heart" style={{ color: "red" }}></i>
-                            : <i onClick={handleToggleWishlist} id='addtowishlist' class="fa-regular fa-heart"></i>
-                            : <Link to={'/giris'}><i id='addtowishlist' class="fa-regular fa-heart"></i></Link>
+                            ? <i onClick={handleToggleWishlist} id='addtowishlist' className="fa-solid fa-heart" style={{ color: "red" }}></i>
+                            : <i onClick={handleToggleWishlist} id='addtowishlist' className="fa-regular fa-heart"></i>
+                            : <Link to={'/giris'}><i id='addtowishlist' className="fa-regular fa-heart"></i></Link>
                     }
 
                     {product.brand ? <h4 id='detailsH4'>{t("Brand")}: {product.brand}</h4> : <></>}

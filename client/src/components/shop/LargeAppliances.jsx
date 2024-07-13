@@ -58,7 +58,7 @@ function LargeAppliances() {
             <div className="shopLeftBar">
                 <Accordion className="filterPC" defaultActiveKey={['0']} alwaysOpen>
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -71,7 +71,7 @@ function LargeAppliances() {
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Stasionar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Stasionar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item onClick={() => AllRefrigeration()}>{t("Soyuducu")}</ListGroup.Item>
@@ -81,7 +81,7 @@ function LargeAppliances() {
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("İqlim")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("İqlim")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item onClick={() => AllAirConditioning()}>{t("Kondisioner")}</ListGroup.Item>
@@ -94,7 +94,7 @@ function LargeAppliances() {
                 <div className="filterMobile">
                     <Accordion defaultActiveKey={[]} alwaysOpen>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                             <Accordion.Body>
                                 <ListGroup>
                                     <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -105,7 +105,7 @@ function LargeAppliances() {
                                     <ListGroup.Item><Link to={'/shop/category=notebook-and-computer-equipment'}>{t("Notbuk və kompüter texnikası")}</Link></ListGroup.Item>
                                 </ListGroup>
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Stasionar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Stasionar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item onClick={() => AllRefrigeration()}>{t("Soyuducu")}</ListGroup.Item>
@@ -115,7 +115,7 @@ function LargeAppliances() {
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("İqlim")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("İqlim")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item onClick={() => AllAirConditioning()}>{t("Kondisioner")}</ListGroup.Item>

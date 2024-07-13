@@ -30,7 +30,7 @@ function Navbar() {
             <div className="container">
                 <NavLink id='navH1' to={"/"}><h1>Electronics <span>Store</span></h1></NavLink>
                 <ul className='topnavUls'>
-                    <Link to={'/shop'}><i class="fa-solid fa-shop"></i></Link>
+                    <Link to={'/shop'}><i className="fa-solid fa-shop"></i></Link>
                     <li onClick={mobilnav} id='navLi'>{t('Kataloq')}
 
                         {mobilenav &&
@@ -317,10 +317,10 @@ function Navbar() {
                     <Badge badgeContent={quantityWishlist} color="primary">
                         <Link to={'/my-account/wishlist'}><i className="fa-solid fa-heart"></i></Link>
                     </Badge>
-                    {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "#FFD43B", cursor: "pointer" }} class="fa-solid fa-sun"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}
+                    {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "#FFD43B", cursor: "pointer" }} className="fa-solid fa-sun"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} className="fa-solid fa-moon"></i>}
                     <Languageoption onChange={e => handleClick(e)} />
                 </div>
-                <div className="darkmode"><Languageoption onChange={e => handleClick(e)} /> {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "#FFD43B", cursor: "pointer" }} class="fa-solid fa-sun"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} class="fa-solid fa-moon"></i>}</div>
+                <div className="darkmode"><Languageoption onChange={e => handleClick(e)} /> {darkMode ? <i title='Light Mode' onClick={toggle} style={{ color: "#FFD43B", cursor: "pointer" }} className="fa-solid fa-sun"></i> : <i title='Dark Mode' onClick={toggle} style={{ cursor: "pointer" }} className="fa-solid fa-moon"></i>}</div>
             </div>
         </nav>
     )

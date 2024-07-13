@@ -58,7 +58,7 @@ function NotebookAndComputerEquipment() {
             <div className="shopLeftBar">
                 <Accordion className="filterPC" defaultActiveKey={['0']} alwaysOpen>
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -72,7 +72,7 @@ function NotebookAndComputerEquipment() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="1">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Planşetlər")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Planşetlər")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item onClick={() => AppleTablet()}>Apple</ListGroup.Item>
@@ -84,7 +84,7 @@ function NotebookAndComputerEquipment() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Notbuklar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Notbuklar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>Apple</ListGroup.Item>
@@ -100,7 +100,7 @@ function NotebookAndComputerEquipment() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="3">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Masaüstü kompüterlər")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Masaüstü kompüterlər")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>HP</ListGroup.Item>
@@ -112,7 +112,7 @@ function NotebookAndComputerEquipment() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="4">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Monitorlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Monitorlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>Acer</ListGroup.Item>
@@ -129,7 +129,7 @@ function NotebookAndComputerEquipment() {
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="5">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Kompüter aksesuarları")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Kompüter aksesuarları")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>{t("Qulaqlıq")}</ListGroup.Item>
@@ -153,7 +153,7 @@ function NotebookAndComputerEquipment() {
                 <div className="filterMobile">
                     <Accordion defaultActiveKey={[]} alwaysOpen>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                             <Accordion.Body>
                                 <ListGroup>
                                     <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -165,7 +165,7 @@ function NotebookAndComputerEquipment() {
                                 </ListGroup>
 
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Planşetlər")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Planşetlər")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item onClick={() => AppleTablet()}>Apple</ListGroup.Item>
@@ -177,7 +177,7 @@ function NotebookAndComputerEquipment() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Notbuklar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Notbuklar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>Apple</ListGroup.Item>
@@ -193,7 +193,7 @@ function NotebookAndComputerEquipment() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="3">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Masaüstü kompüterlər")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Masaüstü kompüterlər")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>HP</ListGroup.Item>
@@ -205,7 +205,7 @@ function NotebookAndComputerEquipment() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="4">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Monitorlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Monitorlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>Acer</ListGroup.Item>
@@ -222,7 +222,7 @@ function NotebookAndComputerEquipment() {
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="5">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Kompüter aksesuarları")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Kompüter aksesuarları")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>{t("Qulaqlıq")}</ListGroup.Item>

@@ -29,7 +29,7 @@ function TvAndAuidio() {
             <div className="shopLeftBar">
                 <Accordion className="filterPC" defaultActiveKey={['0']} alwaysOpen>
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -43,7 +43,7 @@ function TvAndAuidio() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="1">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizorlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizorlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>Taube</ListGroup.Item>
@@ -62,7 +62,7 @@ function TvAndAuidio() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizor aksesuarları")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizor aksesuarları")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>{t("TV Box")}</ListGroup.Item>
@@ -74,7 +74,7 @@ function TvAndAuidio() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="3">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizor aksesuarları")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizor aksesuarları")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>{t("Səs gücləndiricilər")}</ListGroup.Item>
@@ -88,7 +88,7 @@ function TvAndAuidio() {
                 <div className="filterMobile">
                     <Accordion defaultActiveKey={[]} alwaysOpen>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                             <Accordion.Body>
                                 <ListGroup>
                                     <ListGroup.Item><Link to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -100,7 +100,7 @@ function TvAndAuidio() {
                                 </ListGroup>
 
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizorlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizorlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>Taube</ListGroup.Item>
@@ -119,7 +119,7 @@ function TvAndAuidio() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizor aksesuarları")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizor aksesuarları")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>{t("TV Box")}</ListGroup.Item>
@@ -131,7 +131,7 @@ function TvAndAuidio() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="3">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizor aksesuarları")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Televizor aksesuarları")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>{t("Səs gücləndiricilər")}</ListGroup.Item>

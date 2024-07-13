@@ -81,7 +81,7 @@ export default function AccountMenu() {
                 <Divider />
                 {/* <Link to={'/giris'}><MenuItem onClick={handleClose} style={{ color: 'black' }}>
                     <ListItemIcon>
-                        <i class="fa-solid fa-user-plus"></i>
+                        <i className="fa-solid fa-user-plus"></i>
                     </ListItemIcon>
                     {t("Add another account")}
                 </MenuItem>
@@ -89,7 +89,7 @@ export default function AccountMenu() {
                 <Link className='profileA' to={'/my-account/settings'}>
                     <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                         <ListItemIcon>
-                            <i class="fa-solid fa-gear"></i>
+                            <i className="fa-solid fa-gear"></i>
                         </ListItemIcon>
                         {t("Settings")}
                     </MenuItem>
@@ -107,7 +107,7 @@ export default function AccountMenu() {
                 >
                     <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                         <ListItemIcon>
-                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <i className="fa-solid fa-right-from-bracket"></i>
                         </ListItemIcon>
                         {t("Logout")}
                     </MenuItem>

@@ -99,7 +99,7 @@ function ShopPhoneComponents() {
             <div className="shopLeftBar" >
                 <Accordion className="filterPC" defaultActiveKey={['0']} alwaysOpen>
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item><Link onClick={() => window.location.reload(false)} to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -113,7 +113,7 @@ function ShopPhoneComponents() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="1">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Mobil telefonlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Mobil telefonlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item onClick={() => ApplePhone()}>Apple</ListGroup.Item>
@@ -130,7 +130,7 @@ function ShopPhoneComponents() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Telefon aksessuarları")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Telefon aksessuarları")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>{t("Qoruyucu şüşə")}</ListGroup.Item>
@@ -147,7 +147,7 @@ function ShopPhoneComponents() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="3">
-                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Qulaqlıqlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                        <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Qulaqlıqlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                         <Accordion.Body>
                             <ListGroup>
                                 <ListGroup.Item>Apple</ListGroup.Item>
@@ -172,7 +172,7 @@ function ShopPhoneComponents() {
                 <div className="filterMobile">
                     <Accordion defaultActiveKey={[]} alwaysOpen>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                            <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t('Kataloq')} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                             <Accordion.Body>
                                 <ListGroup>
                                     <ListGroup.Item><Link onClick={() => window.location.reload(false)} to={'/shop/category=phone'}>{t("Telefon və aksesuarlar")}</Link></ListGroup.Item>
@@ -184,7 +184,7 @@ function ShopPhoneComponents() {
                                 </ListGroup>
 
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Mobil telefonlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Mobil telefonlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item onClick={() => ApplePhone()}>Apple</ListGroup.Item>
@@ -201,7 +201,7 @@ function ShopPhoneComponents() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Telefon aksessuarları")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Telefon aksessuarları")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>{t("Qoruyucu şüşə")}</ListGroup.Item>
@@ -218,7 +218,7 @@ function ShopPhoneComponents() {
                                 </Accordion.Item>
 
                                 <Accordion.Item eventKey="3">
-                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Qulaqlıqlar")} <i class="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
+                                    <Accordion.Header><ListGroup.Item style={{ width: "100%" }}>{t("Qulaqlıqlar")} <i className="fa-solid fa-chevron-down"></i></ListGroup.Item></Accordion.Header>
                                     <Accordion.Body>
                                         <ListGroup>
                                             <ListGroup.Item>Apple</ListGroup.Item>
